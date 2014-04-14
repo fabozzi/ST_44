@@ -1,0 +1,1231 @@
+tmp/slc5_amd64_gcc434/MakeData/DirCache.mk:634: No such file exists: src/TopQuarkAnalysis/SingleTop/bin/fitsPlotsTestMC.cpp. Please fix src/TopQuarkAnalysis/SingleTop/bin/BuildFile.
+tmp/slc5_amd64_gcc434/MakeData/DirCache.mk:645: No such file exists: src/TopQuarkAnalysis/SingleTop/bin/fitsPlots2D.cpp. Please fix src/TopQuarkAnalysis/SingleTop/bin/BuildFile.
+tmp/slc5_amd64_gcc434/MakeData/DirCache.mk:656: No such file exists: src/TopQuarkAnalysis/SingleTop/bin/TopReconstructionEta.cpp. Please fix src/TopQuarkAnalysis/SingleTop/bin/BuildFile.
+tmp/slc5_amd64_gcc434/MakeData/DirCache.mk:667: No such file exists: src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_threecomp.cpp. Please fix src/TopQuarkAnalysis/SingleTop/bin/BuildFile.
+tmp/slc5_amd64_gcc434/MakeData/DirCache.mk:678: No such file exists: src/TopQuarkAnalysis/SingleTop/bin/TopReconstructionEtaTETR_one.cpp. Please fix src/TopQuarkAnalysis/SingleTop/bin/BuildFile.
+tmp/slc5_amd64_gcc434/MakeData/DirCache.mk:689: No such file exists: src/TopQuarkAnalysis/SingleTop/bin/fitsPlots2D_twocomp.cpp. Please fix src/TopQuarkAnalysis/SingleTop/bin/BuildFile.
+tmp/slc5_amd64_gcc434/MakeData/DirCache.mk:700: No such file exists: src/TopQuarkAnalysis/SingleTop/bin/Plotter.cpp. Please fix src/TopQuarkAnalysis/SingleTop/bin/BuildFile.
+tmp/slc5_amd64_gcc434/MakeData/DirCache.mk:711: No such file exists: src/TopQuarkAnalysis/SingleTop/bin/2DLikelihoodTreeMaker.cpp. Please fix src/TopQuarkAnalysis/SingleTop/bin/BuildFile.
+tmp/slc5_amd64_gcc434/MakeData/DirCache.mk:722: No such file exists: src/TopQuarkAnalysis/SingleTop/bin/Subtractor.cpp. Please fix src/TopQuarkAnalysis/SingleTop/bin/BuildFile.
+tmp/slc5_amd64_gcc434/MakeData/DirCache.mk:744: No such file exists: src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1DKarlsruhe.cpp. Please fix src/TopQuarkAnalysis/SingleTop/bin/BuildFile.
+tmp/slc5_amd64_gcc434/MakeData/DirCache.mk:755: No such file exists: src/TopQuarkAnalysis/SingleTop/bin/TopReconstructionEtaTETR.cpp. Please fix src/TopQuarkAnalysis/SingleTop/bin/BuildFile.
+tmp/slc5_amd64_gcc434/MakeData/DirCache.mk:766: No such file exists: src/TopQuarkAnalysis/SingleTop/bin/plots1DValidation.cpp. Please fix src/TopQuarkAnalysis/SingleTop/bin/BuildFile.
+tmp/slc5_amd64_gcc434/MakeData/DirCache.mk:788: No such file exists: src/TopQuarkAnalysis/SingleTop/bin/TopReconstructionCos.cpp. Please fix src/TopQuarkAnalysis/SingleTop/bin/BuildFile.
+tmp/slc5_amd64_gcc434/MakeData/DirCache.mk:799: No such file exists: src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D.cpp. Please fix src/TopQuarkAnalysis/SingleTop/bin/BuildFile.
+tmp/slc5_amd64_gcc434/MakeData/DirCache.mk:810: No such file exists: src/TopQuarkAnalysis/SingleTop/bin/fitsPlotsPDFs1D.cpp. Please fix src/TopQuarkAnalysis/SingleTop/bin/BuildFile.
+tmp/slc5_amd64_gcc434/MakeData/DirCache.mk:821: No such file exists: src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp.cpp. Please fix src/TopQuarkAnalysis/SingleTop/bin/BuildFile.
+tmp/slc5_amd64_gcc434/MakeData/DirCache.mk:832: No such file exists: src/TopQuarkAnalysis/SingleTop/bin/TopReconstructionEtaTETR_one_topmass.cpp. Please fix src/TopQuarkAnalysis/SingleTop/bin/BuildFile.
+tmp/slc5_amd64_gcc434/MakeData/DirCache.mk:843: No such file exists: src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_2j1t.cpp. Please fix src/TopQuarkAnalysis/SingleTop/bin/BuildFile.
+tmp/slc5_amd64_gcc434/MakeData/DirCache.mk:854: No such file exists: src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_ttbar.cpp. Please fix src/TopQuarkAnalysis/SingleTop/bin/BuildFile.
+tmp/slc5_amd64_gcc434/MakeData/DirCache.mk:865: No such file exists: src/TopQuarkAnalysis/SingleTop/bin/TopReconstructionEtaTETR_SEED.cpp. Please fix src/TopQuarkAnalysis/SingleTop/bin/BuildFile.
+tmp/slc5_amd64_gcc434/MakeData/DirCache.mk:876: No such file exists: src/TopQuarkAnalysis/SingleTop/bin/fitsPlots2DSFLikelihoodSummerDataDriven.cpp. Please fix src/TopQuarkAnalysis/SingleTop/bin/BuildFile.
+>> Local Products Rules ..... started
+>> Local Products Rules ..... done
+****WARNING: Invalid tool EGamma/EGammaAnalysisTools. Please fix src/PhysicsTools/PatAlgos/plugins/BuildFile.xml file.
+****WARNING: Invalid tool EgammaAnalysis/ElectronTools. Please fix src/PhysicsTools/PatAlgos/plugins/BuildFile.xml file.
+>> Building CMSSW version CMSSW_4_4_5 ----
+>> Entering Package TopQuarkAnalysis/SingleTop
+>> Entering Package DataFormats/PatCandidates
+>> Entering Package PhysicsTools/PatAlgos
+>> Entering Package PhysicsTools/PatExamples
+>> Entering Package PhysicsTools/PatUtils
+------- copying files from src/PhysicsTools/PatAlgos/scripts -------
+>> Entering Package PhysicsTools/Utilities
+>> Entering Package PhysicsTools/SelectorUtils
+------- copying files from src/PhysicsTools/Utilities/scripts -------
+>> copied patReplaceFast.pl
+>> Entering Package PhysicsTools/UtilAlgos
+>> Entering Package CommonTools/ParticleFlow
+>> Entering Package RecoParticleFlow/PFProducer
+>> copied edmCopyPickMerge
+>> copied patReplaceGenerator.sh
+>> Entering Package RecoBTag/PerformanceDB
+>> copied edmPickEvents.py
+>> Entering Package RecoEgamma/ElectronIdentification
+>> copied patReplaceParser.pl
+>>Creating project symlinks
+>> Entering Package RecoLuminosity/LumiDB
+>> copied pileupDistInMC.py
+------- copying files from src/RecoLuminosity/LumiDB/scripts -------
+>> copied applyCalibration.py
+>> copied csvLumiCalc.py
+  src/TopQuarkAnalysis/SingleTop/python -> python/TopQuarkAnalysis/SingleTop
+>> copied dumpFill.py
+>> copied dumpPrescale.py
+  src/PhysicsTools/PatAlgos/python -> python/PhysicsTools/PatAlgos
+>> copied dumpRunInfo.py
+  src/PhysicsTools/PatUtils/python -> python/PhysicsTools/PatUtils
+>> copied dumpTrg.py
+  src/PhysicsTools/PatExamples/python -> python/PhysicsTools/PatExamples
+  src/PhysicsTools/SelectorUtils/python -> python/PhysicsTools/SelectorUtils
+>> copied dumpWBM.py
+  src/PhysicsTools/UtilAlgos/python -> python/PhysicsTools/UtilAlgos
+>> copied estimatePileup.py
+  src/CommonTools/ParticleFlow/python -> python/CommonTools/ParticleFlow
+>> copied estimatePileup2.py
+  src/RecoParticleFlow/PFProducer/python -> python/RecoParticleFlow/PFProducer
+>> copied lumiCalc2.py
+  src/RecoBTag/PerformanceDB/python -> python/RecoBTag/PerformanceDB
+>> copied lumiContext.py
+  src/RecoEgamma/ElectronIdentification/python -> python/RecoEgamma/ElectronIdentification
+>> copied lumiDBFiller.py
+  src/RecoLuminosity/LumiDB/python -> python/RecoLuminosity/LumiDB
+>> copied lumiData.py
+>> copied lumiInstPlot.py
+>> copied lumiNorm.py
+>> copied lumiPatch.py
+>> copied lumiPlotFiller.py
+>> copied lumiSchema.py
+>> copied lumiSumPlot.py
+>> copied lumiValidate.py
+>> copied lumidb2Schema.py
+>> copied specificLumi-2011.py
+>> copied specificLumi.py
+>> copied summaryLumi.py
+Entering library rule at RecoBTag/PerformanceDB
+Entering library rule at PhysicsTools/Utilities
+>> Building LCG reflex dict from header file /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/DataFormats/PatCandidates/src/classes.h
+>> Building LCG reflex dict from header file /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatUtils/src/classes.h
+Entering library rule at CommonTools/ParticleFlow
+Entering library rule at RecoParticleFlow/PFProducer
+Entering library rule at src/RecoParticleFlow/PFProducer/test
+Entering library rule at src/RecoParticleFlow/PFProducer/test
+Entering library rule at src/RecoBTag/PerformanceDB/test
+Entering library rule at src/RecoBTag/PerformanceDB/test
+Entering library rule at RecoEgamma/ElectronIdentification
+>> Leaving Package RecoLuminosity/LumiDB
+>> Package RecoLuminosity/LumiDB built
+Entering library rule at PhysicsTools/UtilAlgos
+>> Building LCG reflex dict from header file /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/SelectorUtils/src/classes.h
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/Utilities/src/Lumi3DReWeighting.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/Utilities/src/LumiReWeighting.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/Utilities/src/NumericalIntegration.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/Utilities/src/SideBandSubtraction.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/Utilities/src/Variables.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoBTag/PerformanceDB/src/BtagPerformance.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/DataFormats/PatCandidates/test/testKinParametrizations.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/DataFormats/PatCandidates/test/testKinResolutions.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/DataFormats/PatCandidates/test/testRunner.cpp 
+Entering library rule at PhysicsTools/PatAlgos
+Entering library rule at src/PhysicsTools/PatAlgos/test
+Entering library rule at PhysicsTools/PatExamples
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/Utilities/test/testIntegralTiming.cpp 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/Utilities/test/testZMassFitExtLikelihood.cpp 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/Utilities/test/testZMassFitLikelihood.cpp 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/Utilities/test/testZMassFitSimple.cpp 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/Utilities/test/testSideBandSubtraction.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/Utilities/test/testZMassFit.cpp 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/Utilities/test/testRooFitFunction.cpp 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/Utilities/test/testExpressionFit.cpp 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/Utilities/test/testPolynomial.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/Utilities/test/testParameter.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/Utilities/test/testFunctions.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/Utilities/test/testSimplifications.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/Utilities/test/testFunctionsIO.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/Utilities/test/testVariables.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/Utilities/test/testDerivatives.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/Utilities/test/testPrimitive.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/Utilities/test/testIntegral.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/Utilities/test/testRunner.cpp 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/Utilities/test/testLumiReweight.cc 
+Entering library rule at src/PhysicsTools/UtilAlgos/plugins
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/UtilAlgos/test/runtestUtilAlgos.cpp 
+Entering library rule at src/CommonTools/ParticleFlow/plugins
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/CommonTools/ParticleFlow/src/EventHypothesis.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/CommonTools/ParticleFlow/src/PFIsoDepositAlgo.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/CommonTools/ParticleFlow/src/PFMETAlgo.cc 
+Entering library rule at src/RecoParticleFlow/PFProducer/plugins
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoParticleFlow/PFProducer/src/KDTreeLinkerAlgo.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoParticleFlow/PFProducer/src/KDTreeLinkerBase.cc 
+xml_find_template_parm encountered unsupported type call_expr
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoParticleFlow/PFProducer/src/KDTreeLinkerPSEcal.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoParticleFlow/PFProducer/src/KDTreeLinkerTrackEcal.cc 
+xml_find_template_parm encountered unsupported type call_expr
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoParticleFlow/PFProducer/src/KDTreeLinkerTrackHcal.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoParticleFlow/PFProducer/src/PFAlgo.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoParticleFlow/PFProducer/src/PFAlgoTestBenchConversions.cc 
+xml_find_template_parm encountered unsupported type call_expr
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoParticleFlow/PFProducer/src/PFAlgoTestBenchElectrons.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoParticleFlow/PFProducer/src/PFBlockAlgo.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoParticleFlow/PFProducer/src/PFBlockLink.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoParticleFlow/PFProducer/src/PFCandConnector.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoParticleFlow/PFProducer/src/PFElectronAlgo.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoParticleFlow/PFProducer/src/PFGeometry.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoParticleFlow/PFProducer/src/PFMuonAlgo.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoParticleFlow/PFProducer/src/PFPhotonAlgo.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoParticleFlow/PFProducer/src/PhotonSelectorAlgo.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoParticleFlow/PFProducer/src/Utils.cc 
+--->> genreflex: INFO: Parsing file /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/SelectorUtils/src/classes.h with GCC_XML OK
+--->> genreflex: INFO: Generating Reflex Dictionary
+class PFJetIDSelectionFunctor
+class JetIDSelectionFunctor
+class RunLumiSelector
+class ElectronVPlusJetsIDSelectionFunctor
+class MuonVPlusJetsIDSelectionFunctor
+class PVSelector
+class pat::strbitset
+class std::vector<pat::strbitset>
+class edm::Wrapper<std::vector<pat::strbitset> >
+class edm::Wrapper<pat::strbitset>
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoParticleFlow/PFProducer/test/PFSuperClusterReader.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoParticleFlow/PFProducer/test/PFIsoReader.cc 
+--->> genreflex: INFO: Parsing file /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatUtils/src/classes.h with GCC_XML OK
+--->> genreflex: INFO: Generating Reflex Dictionary
+class pat::DiObjectProxy
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoBTag/PerformanceDB/bin/getbtagPerformance.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoBTag/PerformanceDB/bin/TestPerformanceFWLite_ES.cc 
+Entering library rule at src/RecoBTag/PerformanceDB/plugins
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoBTag/PerformanceDB/test/TestPerformanceFW_ES.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoBTag/PerformanceDB/test/process/src/validateBTagDB.cc 
+Entering library rule at src/RecoEgamma/ElectronIdentification/plugins
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoEgamma/ElectronIdentification/src/ClassBasedElectronID.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoEgamma/ElectronIdentification/src/CutBasedElectronID.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoEgamma/ElectronIdentification/src/ElectronIDAlgo.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoEgamma/ElectronIdentification/src/ElectronLikelihood.cc 
+--->> genreflex: INFO: Parsing file /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/DataFormats/PatCandidates/src/classes.h with GCC_XML OK
+--->> genreflex: INFO: Generating Reflex Dictionary
+--->> genreflex: INFO: Using typedef pat::TriggerPathRef to select class edm::Ref<std::vector<pat::TriggerPath>,pat::TriggerPath,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerPath>,pat::TriggerPath> >
+--->> genreflex: INFO: Using typedef pat::TriggerObjectStandAloneRefVector to select class edm::RefVector<std::vector<pat::TriggerObjectStandAlone>,pat::TriggerObjectStandAlone,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerObjectStandAlone>,pat::TriggerObjectStandAlone> >
+--->> genreflex: INFO: Using typedef pat::TriggerObjectStandAloneRefProd to select class edm::RefProd<std::vector<pat::TriggerObjectStandAlone> >
+--->> genreflex: INFO: Using typedef pat::ParticleRefVector to select class edm::RefVector<std::vector<pat::Particle>,pat::Particle,edm::refhelper::FindUsingAdvance<std::vector<pat::Particle>,pat::Particle> >
+--->> genreflex: INFO: Using typedef pat::TriggerFilterRef to select class edm::Ref<std::vector<pat::TriggerFilter>,pat::TriggerFilter,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerFilter>,pat::TriggerFilter> >
+--->> genreflex: INFO: Using typedef pat::TriggerPathRefVectorIterator to select class edm::RefVectorIterator<std::vector<pat::TriggerPath>,pat::TriggerPath,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerPath>,pat::TriggerPath> >
+--->> genreflex: INFO: Using typedef pat::PhotonRefVector to select class edm::RefVector<std::vector<pat::Photon>,pat::Photon,edm::refhelper::FindUsingAdvance<std::vector<pat::Photon>,pat::Photon> >
+--->> genreflex: INFO: Using typedef pat::TriggerFilterRefProd to select class edm::RefProd<std::vector<pat::TriggerFilter> >
+--->> genreflex: INFO: Using typedef pat::TriggerAlgorithmRefVector to select class edm::RefVector<std::vector<pat::TriggerAlgorithm>,pat::TriggerAlgorithm,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerAlgorithm>,pat::TriggerAlgorithm> >
+--->> genreflex: INFO: Using typedef pat::TriggerObjectRef to select class edm::Ref<std::vector<pat::TriggerObject>,pat::TriggerObject,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerObject>,pat::TriggerObject> >
+--->> genreflex: INFO: Using typedef pat::JetRefVector to select class edm::RefVector<std::vector<pat::Jet>,pat::Jet,edm::refhelper::FindUsingAdvance<std::vector<pat::Jet>,pat::Jet> >
+--->> genreflex: INFO: Using typedef pat::GenericParticleRefVector to select class edm::RefVector<std::vector<pat::GenericParticle>,pat::GenericParticle,edm::refhelper::FindUsingAdvance<std::vector<pat::GenericParticle>,pat::GenericParticle> >
+--->> genreflex: INFO: Using typedef pat::ParticleRef to select class edm::Ref<std::vector<pat::Particle>,pat::Particle,edm::refhelper::FindUsingAdvance<std::vector<pat::Particle>,pat::Particle> >
+--->> genreflex: INFO: Using typedef pat::UserDataCollection to select class edm::OwnVector<pat::UserData,edm::ClonePolicy<pat::UserData> >
+--->> genreflex: INFO: Using typedef pat::TriggerAlgorithmRef to select class edm::Ref<std::vector<pat::TriggerAlgorithm>,pat::TriggerAlgorithm,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerAlgorithm>,pat::TriggerAlgorithm> >
+--->> genreflex: INFO: Using typedef pat::GenericParticleRef to select class edm::Ref<std::vector<pat::GenericParticle>,pat::GenericParticle,edm::refhelper::FindUsingAdvance<std::vector<pat::GenericParticle>,pat::GenericParticle> >
+--->> genreflex: INFO: Using typedef pat::TriggerConditionRefVectorIterator to select class edm::RefVectorIterator<std::vector<pat::TriggerCondition>,pat::TriggerCondition,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerCondition>,pat::TriggerCondition> >
+--->> genreflex: INFO: Using typedef pat::TriggerAlgorithmRefVectorIterator to select class edm::RefVectorIterator<std::vector<pat::TriggerAlgorithm>,pat::TriggerAlgorithm,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerAlgorithm>,pat::TriggerAlgorithm> >
+--->> genreflex: INFO: Using typedef pat::MuonRefVector to select class edm::RefVector<std::vector<pat::Muon>,pat::Muon,edm::refhelper::FindUsingAdvance<std::vector<pat::Muon>,pat::Muon> >
+--->> genreflex: INFO: Using typedef pat::CompositeCandidateRefVector to select class edm::RefVector<std::vector<pat::CompositeCandidate>,pat::CompositeCandidate,edm::refhelper::FindUsingAdvance<std::vector<pat::CompositeCandidate>,pat::CompositeCandidate> >
+--->> genreflex: INFO: Using typedef pat::PFParticleRef to select class edm::Ref<std::vector<pat::PFParticle>,pat::PFParticle,edm::refhelper::FindUsingAdvance<std::vector<pat::PFParticle>,pat::PFParticle> >
+--->> genreflex: INFO: Using typedef pat::ConversionRefVector to select class edm::RefVector<std::vector<pat::Conversion>,pat::Conversion,edm::refhelper::FindUsingAdvance<std::vector<pat::Conversion>,pat::Conversion> >
+--->> genreflex: INFO: Using typedef pat::TriggerConditionRef to select class edm::Ref<std::vector<pat::TriggerCondition>,pat::TriggerCondition,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerCondition>,pat::TriggerCondition> >
+--->> genreflex: INFO: Using typedef pat::TriggerFilterRefVector to select class edm::RefVector<std::vector<pat::TriggerFilter>,pat::TriggerFilter,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerFilter>,pat::TriggerFilter> >
+--->> genreflex: INFO: Using typedef pat::L1Seed to select class std::pair<bool,std::basic_string<char> >
+--->> genreflex: INFO: Using typedef pat::TriggerFilterRefVectorIterator to select class edm::RefVectorIterator<std::vector<pat::TriggerFilter>,pat::TriggerFilter,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerFilter>,pat::TriggerFilter> >
+--->> genreflex: INFO: Using typedef pat::TauRef to select class edm::Ref<std::vector<pat::Tau>,pat::Tau,edm::refhelper::FindUsingAdvance<std::vector<pat::Tau>,pat::Tau> >
+--->> genreflex: INFO: Using typedef pat::CompositeCandidateRef to select class edm::Ref<std::vector<pat::CompositeCandidate>,pat::CompositeCandidate,edm::refhelper::FindUsingAdvance<std::vector<pat::CompositeCandidate>,pat::CompositeCandidate> >
+--->> genreflex: INFO: Using typedef pat::TriggerObjectStandAloneRef to select class edm::Ref<std::vector<pat::TriggerObjectStandAlone>,pat::TriggerObjectStandAlone,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerObjectStandAlone>,pat::TriggerObjectStandAlone> >
+--->> genreflex: INFO: Using typedef pat::TauRefVector to select class edm::RefVector<std::vector<pat::Tau>,pat::Tau,edm::refhelper::FindUsingAdvance<std::vector<pat::Tau>,pat::Tau> >
+--->> genreflex: INFO: Using typedef pat::METRefVector to select class edm::RefVector<std::vector<pat::MET>,pat::MET,edm::refhelper::FindUsingAdvance<std::vector<pat::MET>,pat::MET> >
+--->> genreflex: INFO: Using typedef pat::TriggerConditionRefVector to select class edm::RefVector<std::vector<pat::TriggerCondition>,pat::TriggerCondition,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerCondition>,pat::TriggerCondition> >
+--->> genreflex: INFO: Using typedef pat::TriggerAlgorithmRefProd to select class edm::RefProd<std::vector<pat::TriggerAlgorithm> >
+--->> genreflex: INFO: Using typedef pat::TriggerObjectRefProd to select class edm::RefProd<std::vector<pat::TriggerObject> >
+--->> genreflex: INFO: Using typedef pat::TriggerConditionRefProd to select class edm::RefProd<std::vector<pat::TriggerCondition> >
+--->> genreflex: INFO: Using typedef pat::METRef to select class edm::Ref<std::vector<pat::MET>,pat::MET,edm::refhelper::FindUsingAdvance<std::vector<pat::MET>,pat::MET> >
+--->> genreflex: INFO: Using typedef pat::TriggerPathRefProd to select class edm::RefProd<std::vector<pat::TriggerPath> >
+--->> genreflex: INFO: Using typedef pat::PhotonRef to select class edm::Ref<std::vector<pat::Photon>,pat::Photon,edm::refhelper::FindUsingAdvance<std::vector<pat::Photon>,pat::Photon> >
+--->> genreflex: INFO: Using typedef pat::ElectronRef to select class edm::Ref<std::vector<pat::Electron>,pat::Electron,edm::refhelper::FindUsingAdvance<std::vector<pat::Electron>,pat::Electron> >
+--->> genreflex: INFO: Using typedef pat::Ca>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoEgamma/ElectronIdentification/src/ElectronNeuralNet.cc 
+ndKinResolutionValueMap to select class edm::ValueMap<pat::CandKinResolution>
+--->> genreflex: INFO: Using typedef pat::HemisphereRefVector to select class edm::RefVector<std::vector<pat::Hemisphere>,pat::Hemisphere,edm::refhelper::FindUsingAdvance<std::vector<pat::Hemisphere>,pat::Hemisphere> >
+--->> genreflex: INFO: Using typedef pat::PFParticleRefVector to select class edm::RefVector<std::vector<pat::PFParticle>,pat::PFParticle,edm::refhelper::FindUsingAdvance<std::vector<pat::PFParticle>,pat::PFParticle> >
+--->> genreflex: INFO: Using typedef pat::MuonRef to select class edm::Ref<std::vector<pat::Muon>,pat::Muon,edm::refhelper::FindUsingAdvance<std::vector<pat::Muon>,pat::Muon> >
+--->> genreflex: INFO: Using typedef pat::JetRef to select class edm::Ref<std::vector<pat::Jet>,pat::Jet,edm::refhelper::FindUsingAdvance<std::vector<pat::Jet>,pat::Jet> >
+--->> genreflex: INFO: Using typedef pat::TriggerObjectRefVector to select class edm::RefVector<std::vector<pat::TriggerObject>,pat::TriggerObject,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerObject>,pat::TriggerObject> >
+--->> genreflex: INFO: Using typedef pat::HemisphereRef to select class edm::Ref<std::vector<pat::Hemisphere>,pat::Hemisphere,edm::refhelper::FindUsingAdvance<std::vector<pat::Hemisphere>,pat::Hemisphere> >
+--->> genreflex: INFO: Using typedef pat::TriggerObjectStandAloneRefVectorIterator to select class edm::RefVectorIterator<std::vector<pat::TriggerObjectStandAlone>,pat::TriggerObjectStandAlone,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerObjectStandAlone>,pat::TriggerObjectStandAlone> >
+--->> genreflex: INFO: Using typedef pat::ElectronRefVector to select class edm::RefVector<std::vector<pat::Electron>,pat::Electron,edm::refhelper::FindUsingAdvance<std::vector<pat::Electron>,pat::Electron> >
+--->> genreflex: INFO: Using typedef pat::TriggerObjectRefVectorIterator to select class edm::RefVectorIterator<std::vector<pat::TriggerObject>,pat::TriggerObject,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerObject>,pat::TriggerObject> >
+--->> genreflex: INFO: Using typedef pat::TriggerPathRefVector to select class edm::RefVector<std::vector<pat::TriggerPath>,pat::TriggerPath,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerPath>,pat::TriggerPath> >
+--->> genreflex: INFO: Using typedef pat::ConversionRef to select class edm::Ref<std::vector<pat::Conversion>,pat::Conversion,edm::refhelper::FindUsingAdvance<std::vector<pat::Conversion>,pat::Conversion> >
+--->> genreflex: INFO: Using typedef std::vector<pat::Conversion>::const_iterator to select class __gnu_cxx::__normal_iterator<const pat::Conversion*,std::vector<pat::Conversion> >
+--->> genreflex: INFO: Using typedef std::vector<pat::Hemisphere>::const_iterator to select class __gnu_cxx::__normal_iterator<const pat::Hemisphere*,std::vector<pat::Hemisphere> >
+--->> genreflex: INFO: Using typedef std::vector<pat::GenericParticle>::const_iterator to select class __gnu_cxx::__normal_iterator<const pat::GenericParticle*,std::vector<pat::GenericParticle> >
+--->> genreflex: INFO: Using typedef std::vector<pat::PFParticle>::const_iterator to select class __gnu_cxx::__normal_iterator<const pat::PFParticle*,std::vector<pat::PFParticle> >
+--->> genreflex: INFO: Using typedef std::vector<pat::CompositeCandidate>::const_iterator to select class __gnu_cxx::__normal_iterator<const pat::CompositeCandidate*,std::vector<pat::CompositeCandidate> >
+--->> genreflex: INFO: Using typedef std::vector<pat::Particle>::const_iterator to select class __gnu_cxx::__normal_iterator<const pat::Particle*,std::vector<pat::Particle> >
+--->> genreflex: INFO: Using typedef std::vector<pat::MHT>::const_iterator to select class __gnu_cxx::__normal_iterator<const pat::MHT*,std::vector<pat::MHT> >
+--->> genreflex: INFO: Using typedef std::vector<pat::MET>::const_iterator to select class __gnu_cxx::__normal_iterator<const pat::MET*,std::vector<pat::MET> >
+--->> genreflex: INFO: Using typedef std::vector<pat::Jet>::const_iterator to select class __gnu_cxx::__normal_iterator<const pat::Jet*,std::vector<pat::Jet> >
+->> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoEgamma/ElectronIdentification/src/LikelihoodPdf.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoEgamma/ElectronIdentification/src/LikelihoodPdfProduct.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoEgamma/ElectronIdentification/src/LikelihoodSpecies.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoEgamma/ElectronIdentification/src/PTDRElectronID.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoEgamma/ElectronIdentification/src/T_ElectronLikelihood.cc 
+>> Subsystem RecoLuminosity built
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/UtilAlgos/src/BasicMuonAnalyzer.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/UtilAlgos/src/CachingVariable.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/UtilAlgos/src/InputTagDistributor.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/UtilAlgos/src/ToolsPluginsFactory.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/UtilAlgos/src/VariableHelper.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp 
+Entering library rule at TopQuarkAnalysis/SingleTop
+>> Compiling LCG dictionary: tmp/slc5_amd64_gcc434/src/PhysicsTools/SelectorUtils/src/PhysicsToolsSelectorUtils/a/xr.cc
+Entering library rule at src/PhysicsTools/PatAlgos/plugins
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatAlgos/src/BaseIsolator.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatAlgos/src/EfficiencyLoader.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatAlgos/src/HemisphereAlgo.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatAlgos/src/IsoDepositIsolator.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatAlgos/src/KinResolutionsLoader.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatAlgos/src/KinematicResolutionRcd.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatAlgos/src/MultiIsolator.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatAlgos/src/OverlapTest.cc 
+-->> genreflex: INFO: Using typedef std::vector<pat::Photon>::const_iterator to select class __gnu_cxx::__normal_iterator<const pat::Photon*,std::vector<pat::Photon> >
+--->> genreflex: INFO: Using typedef std::vector<pat::Tau>::const_iterator to select class __gnu_cxx::__normal_iterator<const pat::Tau*,std::vector<pat::Tau> >
+--->> genreflex: INFO: Using typedef std::vector<pat::Muon>::const_iterator to select class __gnu_cxx::__normal_iterator<const pat::Muon*,std::vector<pat::Muon> >
+--->> genreflex: INFO: Using typedef std::vector<pat::Electron>::const_iterator to select class __gnu_cxx::__normal_iterator<const pat::Electron*,std::vector<pat::Electron> >
+--->> genreflex: INFO: Using typedef std::vector<pat::TriggerFilter>::const_iterator to select class __gnu_cxx::__normal_iterator<const pat::TriggerFilter*,std::vector<pat::TriggerFilter> >
+--->> genreflex: INFO: Using typedef std::vector<pat::TriggerPath>::const_iterator to select class __gnu_cxx::__normal_iterator<const pat::TriggerPath*,std::vector<pat::TriggerPath> >
+--->> genreflex: INFO: Using typedef std::vector<pat::TriggerCondition>::const_iterator to select class __gnu_cxx::__normal_iterator<const pat::TriggerCondition*,std::vector<pat::TriggerCondition> >
+--->> genreflex: INFO: Using typedef std::vector<pat::TriggerAlgorithm>::const_iterator to select class __gnu_cxx::__normal_iterator<const pat::TriggerAlgorithm*,std::vector<pat::TriggerAlgorithm> >
+--->> genreflex: INFO: Using typedef std::vector<pat::TriggerObjectStandAlone>::const_iterator to select class __gnu_cxx::__normal_iterator<const pat::TriggerObjectStandAlone*,std::vector<pat::TriggerObjectStandAlone> >
+--->> genreflex: INFO: Using typedef std::vector<pat::TriggerObject>::const_iterator to select class __gnu_cxx::__normal_iterator<const pat::TriggerObject*,std::vector<pat::TriggerObject> >
+--->> genreflex: INFO: Using typedef std::map<std::basic_string<char>,edm::RefProd<edm::Association<std::vector<pat::TriggerObject> > > >::const_iterator to select class std::_Rb_tree_const_iterator<std::pair<const std::basic_string<char>,edm::RefProd<edm::Association<std::vector<pat::TriggerObject> > > > >
+--->> genreflex: INFO: Replacing selection name "std::pair<std::string, pat::TriggerObjectRef>" with "std::pair<std::basic_string<char> , edm::Ref<std::vector<pat::TriggerObject>,pat::TriggerObject,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerObject>,pat::TriggerObject> > >"
+--->> genreflex: INFO: Replacing selection name "std::vector<pat::JetCorrFactors::CorrectionFactor>" with "std::vector<std::pair<std::basic_string<char>,std::vector<float> > >"
+--->> genreflex: INFO: Replacing selection name "std::vector<pat::L1Seed>" with "std::vector<std::pair<bool,std::basic_string<char> > >"
+--->> genreflex: INFO: Replacing selection name "std::map<std::string, pat::TriggerObjectRef>" with "std::map<std::basic_string<char> , edm::Ref<std::vector<pat::TriggerObject>,pat::TriggerObject,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerObject>,pat::TriggerObject> > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<pat::CandKinResolutionValueMap>" with "edm::Wrapper<edm::ValueMap<pat::CandKinResolution> >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<pat::UserDataCollection>" with "edm::Wrapper<edm::OwnVector<pat::UserData,edm::ClonePolicy<pat::UserData> > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<pat::TriggerAlgorithmRefProd >" with "edm::Wrapper<edm::RefProd<std::vector<pat::TriggerAlgorithm> >  >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<pat::TriggerConditionRefProd >" with "edm::Wrapper<edm::RefProd<std::vector<pat::TriggerCondition> >  >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<pat::TriggerPathRefProd >" with "edm::Wrapper<edm::RefProd<std::vector<pat::TriggerPath> >  >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<pat::TriggerFilterRefProd >" with "edm::Wrapper<edm::RefProd<std::vector<pat::TriggerFilter> >  >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<pat::Trig/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp: In function 'int main(int, char**)':
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:1360: warning: suggest parentheses around && within || [-Wparentheses]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:2211: warning: unused variable 'lepEff' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:2197: warning: unused variable 'totweight' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:1293: warning: unused variable 'integralTotUp' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:1294: warning: unused variable 'integralTotDown' [-Wunused-variable]
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatAlgos/src/PATPrimaryVertexSelector.cc 
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:2990: warning: suggest parentheses around && within || [-Wparentheses]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:2907: warning: unused variable 'isEleControl' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:3050: warning: unused variable 'W' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:4759: warning: unused variable 'isInvariant' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:4703: warning: unused variable 'nentriesSR2' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:4704: warning: unused variable 'nentriesSR1' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:4710: warning: unused variable 'KSDistribution' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:4581: warning: unused variable 'chargesAll' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:4931: warning: unused variable 'nentriesSR2' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:4932: warning: unused variable 'nentriesSR1' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:4935: warning: unused variable 'lumiMult' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:196: warning: unused variable 'nbinsVarA' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:196: warning: unused variable 'minVarA' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:196: warning: unused variable 'maxVarA' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:196: warning: unused variable 'nbinsVarB' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:196: warning: unused variable 'minVarB' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:196: warning: unused variable 'maxVarB' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:197: warning: unused variable 'nbinsMTWMass' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:279: warning: unused variable 'SignalStrengths' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:285: warning: unused variable 'CombinedLikelihood' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:357: warning: unused variable 'topMassvseta' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:358: warning: unused variable 'useproduct' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:360: warning: unused variable 'SampleBThr' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:431: warning: unused variable 'pdf_weights_full' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:783: warning: unused variable 'binsvar' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:783: warning: unused variable 'first' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:783: warning: unused variable 'last' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:788: warning: unused variable 'leptonRelIsoCut' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:789: warning: unused variable 'leptonRelIsoThr' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:790: warning: unused variable 'leptonRelIsoThrEle' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:791: warning: unused variable 'fJetRMSCut' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:794: warning: unused variable 'costhetalj_bJet' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:794: warning: unused variable 'highBTag' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:794: warning: unused variable 'fJetRMS' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:794: warning: unused variable 'leptonEffB' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:794: warning: unused variable 'bJetRMS' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:794: warning: unused variable 'HT' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:794: warning: unused variable 'secondJetPt' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:794: warning: unused variable 'bJet1Phi' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:794: warning: unused variable 'bJet1Eta' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:794: warning: unused variable 'bJet1Pt' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:794: warning: unused variable 'bJet2Phi' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:794: warning: unused variable 'bJet2Eta' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:794: warning: unused variable 'bJet2Pt' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:796: warning: unused variable 'topPtReweightNorm' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:826: warning: unused variable 'etaWSampleLow' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:826: warning: unused variable 'etaWSampleHigh' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:826: warning: unused variable 'costhetaljWSample' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:826: warning: unused variable 'weightWSample' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:826: warning: unused variable 'mtwMassWSample' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:826: warning: unused variable 'mtwCutWSample' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:826: warning: unused variable 'topMassWSample' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:826: warning: unused variable 'leptonRelIsoWSample' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:830: warning: unused variable 'QCDeta' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:830: warning: unused variable 'QCDetaLow' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:830: warning: unused variable 'QCDetaHigh' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:830: warning: unused variable 'QCDcosthetalj' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:830: warning: unused variable 'QCDweight' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:830: warning: unused variable 'QCDmtwMass' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:830: warning: unused variable 'QCDmtwCut' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:830: warning: unused variable 'QCDtopMass' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:830: warning: unused variable 'QCDleptonRelIso' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:833: warning: unused variable 'QCDetaWSampleLow' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:833: warning: unused variable 'QCDetaWSampleHigh' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:833: warning: unused variable 'QCDcosthetaljWSample' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:833: warning: unused variable 'QCDweightWSample' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:833: warning: unused variable 'QCDmtwMassWSample' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:833: warning: unused variable 'QCDmtwCutWSample' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:833: warning: unused variable 'QCDtopMassWSample' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:833: warning: unused variable 'QCDleptonRelIsoWSample' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:837: warning: unused variable 'chargeWSample' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:838: warning: unused variable 'QCDcharge' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:839: warning: unused variable 'QCDchargeWSample' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:913: warning: unused variable 'eta_TopSR1_Remodel_Func3J1T' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:916: warning: unused variable 'eta_TopSR2_Remodel_Func3J1T' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:962: warning: unused variable 'eta_EWKSR1_Remodel_Down_Mu' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:965: warning: unused variable 'eta_EWKSR1_Remodel_Down_Ele' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:968: warning: unused variable 'eta_EWKSR1_Remodel_Up_Mu' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:971: warning: unused variable 'eta_EWKSR1_Remodel_Up_Ele' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:1094: warning: unused variable 'eta_WJets_wbb_Remodel_Ele' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:1097: warning: unused variable 'eta_WJets_wcc_Remodel_Ele' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:1118: warning: unused variable 'eta_WJets_wcc_Remodel_Mu' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:1144: warning: unused variable 'CombinedDataSet' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:1146: warning: unused variable 'MTWDataSetMu' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:1147: warning: unused variable 'MTWDataSetEle' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp: In function 'double setWeight(std::string, std::string, std::string, std::string, double, double)':
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:5372: warning: unused variable 'isControlRegion' [-Wunused-variable]
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatAlgos/src/PATUserDataMerger.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatAlgos/src/SimpleIsolator.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatAlgos/src/StringResolutionProvider.cc 
+gerObjectStandAloneRefProd>" with "edm::Wrapper<edm::RefProd<std::vector<pat::TriggerObjectStandAlone> > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<pat::TriggerObjectRefProd>" with "edm::Wrapper<edm::RefProd<std::vector<pat::TriggerObject> > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<std::vector<pat::JetCorrFactors::CorrectionFactor> >" with "edm::Wrapper<std::vector<std::pair<std::basic_string<char>,std::vector<float> > > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<pat::ConversionRefVector>" with "edm::Wrapper<edm::RefVector<std::vector<pat::Conversion>,pat::Conversion,edm::refhelper::FindUsingAdvance<std::vector<pat::Conversion>,pat::Conversion> > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<pat::HemisphereRefVector>" with "edm::Wrapper<edm::RefVector<std::vector<pat::Hemisphere>,pat::Hemisphere,edm::refhelper::FindUsingAdvance<std::vector<pat::Hemisphere>,pat::Hemisphere> > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<pat::GenericParticleRefVector>" with "edm::Wrapper<edm::RefVector<std::vector<pat::GenericParticle>,pat::GenericParticle,edm::refhelper::FindUsingAdvance<std::vector<pat::GenericParticle>,pat::GenericParticle> > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<pat::PFParticleRefVector>" with "edm::Wrapper<edm::RefVector<std::vector<pat::PFParticle>,pat::PFParticle,edm::refhelper::FindUsingAdvance<std::vector<pat::PFParticle>,pat::PFParticle> > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<pat::CompositeCandidateRefVector>" with "edm::Wrapper<edm::RefVector<std::vector<pat::CompositeCandidate>,pat::CompositeCandidate,edm::refhelper::FindUsingAdvance<std::vector<pat::CompositeCandidate>,pat::CompositeCandidate> > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<pat::ParticleRefVector>" with "edm::Wrapper<edm::RefVector<std::vector<pat::Particle>,pat::Particle,edm::refhelper::FindUsingAdvance<std::vector<pat::Particle>,pat::Particle> > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<pat::METRefVector>" with "edm::Wrapper<edm::RefVector<std::vector<pat::MET>,pat::MET,edm::refhelper::FindUsingAdvance<std::vector<pat::MET>,pat::MET> > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<pat::JetRefVector>" with "edm::Wrapper<edm::RefVector<std::vector<pat::Jet>,pat::Jet,edm::refhelper::FindUsingAdvance<std::vector<pat::Jet>,pat::Jet> > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<pat::PhotonRefVector>" with "edm::Wrapper<edm::RefVector<std::vector<pat::Photon>,pat::Photon,edm::refhelper::FindUsingAdvance<std::vector<pat::Photon>,pat::Photon> > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<pat::TauRefVector>" with "edm::Wrapper<edm::RefVector<std::vector<pat::Tau>,pat::Tau,edm::refhelper::FindUsingAdvance<std::vector<pat::Tau>,pat::Tau> > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<pat::MuonRefVector>" with "edm::Wrapper<edm::RefVector<std::vector<pat::Muon>,pat::Muon,edm::refhelper::FindUsingAdvance<std::vector<pat::Muon>,pat::Muon> > >"
+--->> genreflex: INFO: Replacing selection name "edm::Wrapper<pat::ElectronRefVector>" with "edm::Wrapper<edm::RefVector<std::vector<pat::Electron>,pat::Electron,edm::refhelper::FindUsingAdvance<std::vector<pat::Electron>,pat::Electron> > >"
+--->> genreflex: INFO: Replacing selection name "std::vector<pat::L1Seed>::const_iterator" with "__gnu_cxx::__normal_iterator<const std::pair<bool,std::basic_string<char> >*,std::vector<std::pair<bool,std::basic_string<char> > > > "
+--->> genreflex: INFO: Replacing selection name "edm::reftobase::VectorHolder<reco::Candidate, pat::CompositeCandidateRefVector>" with "edm::reftobase::VectorHolder<reco::Candidate, edm::RefVector<std::vector<pat::CompositeCandidate>,pat::CompositeCandidate,edm::refhelper::FindUsingAdvance<std::vector<pat::CompositeCandidate>,pat::CompositeCandidate> > >"
+--->> genreflex: INFO: Replacing selection name "edm::reftobase::RefVectorHolder<pat::CompositeCandidateRefVector>" with "edm::reftobase::RefVectorHolder<edm::RefVector<std::vector<pat::CompositeCandidate>,pat::CompositeCandidate,edm::refhelper::FindUsingAdvance<std::vector<pat::CompositeCandidate>,pat::CompositeCandidate> > >"
+--->> genreflex: INFO: Replacing selection name "edm::reftobase::RefHolder<pat::TriggerObjectStandAloneRef>" with "edm::reftobase::RefHolder<edm::Ref<std::vector<pat::TriggerObjectStandAlone>,pat::TriggerObjectStandAlone,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerObjectStandAlone>,pat::TriggerObjectStandAlone> > >"
+--->> genreflex: INFO: Replacing selection name "edm::reftobase::RefHolder<pat::TriggerObjectRef>" with "edm::reftobase::RefHolder<edm::Ref<std::vector<pat::TriggerObject>,pat::TriggerObject,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerObject>,pat::TriggerObject> > >"
+--->> genreflex: INFO: Replacing selection name "edm::reftobase::RefHolder<pat::GenericParticleRef>" with "edm::reftobase::RefHolder<edm::Ref<std::vector<pat::GenericParticle>,pat::GenericParticle,edm::refhelper::FindUsingAdvance<std::vector<pat::GenericParticle>,pat::GenericParticle> > >"
+--->> genreflex: INFO: Replacing selection name "edm::reftobase::RefHolder<pat::PFParticleRef>" with "edm::reftobase::RefHolder<edm::Ref<std::vector<pat::PFParticle>,pat::PFParticle,edm::refhelper::FindUsingAdvance<std::vector<pat::PFParticle>,pat::PFParticle> > >"
+--->> genreflex: INFO: Replacing selection name "edm::reftobase::RefHolder<pat::CompositeCandidateRef>" with "edm::reftobase::RefHolder<edm::Ref<std::vector<pat::CompositeCandidate>,pat::CompositeCandidate,edm::refhelper::FindUsingAdvance<std::vector<pat::CompositeCandidate>,pat::CompositeCandidate> > >"
+--->> genreflex: INFO: Replacing selection name "edm::reftobase::RefHolder<pat::ParticleRef>" with "edm::reftobase::RefHolder<edm::Ref<std::vector<pat::Particle>,pat::Particle,edm::refhelper::FindUsingAdvance<std::vector<pat::Particle>,pat::Particle> > >"
+--->> genreflex: INFO: Replacing selection name "edm::reftobase::RefHolder<pat::METRef>" with "edm::reftobase::RefHolder<edm::Ref<std::vector<pat::MET>,pat::MET,edm::refhelper::FindUsingAdvance<std::vector<pat::MET>,pat::MET> > >"
+--->> genreflex: INFO: Replacing selection name "edm::reftobase::RefHolder<pat::JetRef>" with "edm::reftobase::RefHolder<edm::Ref<std::vector<pat::Jet>,pat::Jet,edm::refhelper::FindUsingAdvance<std::vector<pat::Jet>,pat::Jet> > >"
+--->> genreflex: INFO: Replacing selection name "edm::reftobase::RefHolder<pat::PhotonRef>" with "edm::reftobase::RefHolder<edm::Ref<std::vector<pat::Photon>,pat::Photon,edm::refhelper::FindUsingAdvance<std::vector<pat::Photon>,pat::Photon> > >"
+--->> genreflex: INFO: Replacing selection name "edm::reftobase::RefHolder<pat::TauRef>" with "edm::reftobase::RefHolder<edm::Ref<std::vector<pat::Tau>,pat::Tau,edm::refhelper::FindUsingAdvance<std::vector<pat::Tau>,pat::Tau> > >"
+--->> genreflex: INFO: Replacing selection name "edm::reftobase::RefHolder<pat::MuonRef>" with "edm::reftobase::RefHolder<edm::Ref<std::vector<pat::Muon>,pat::Muon,edm::refhelper::FindUsingAdvance<std::vector<pat::Muon>,pat::Muon> > >"
+--->> genreflex: INFO: Replacing selection name "edm::reftobase::RefHolder<pat::ElectronRef>" with "edm::reftobase::RefHolder<edm::Ref<std::vector<pat::Electron>,pat::Electron,edm::refhelper::FindUsingAdvance<std::vector<pat::Electron>,pat::Electron> > >"
+--->> genreflex: INFO: Replacing selection name "edm::reftobase::Holder<reco::Candidate,pat::TriggerObjectStandAloneRef>" with "edm::reftobase::Holder<reco::Candidate,edm::Ref<std::vector<pat::TriggerObjectStandAlone>,pat::TriggerObjectStandAlone,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerObjectStandAlone>,pat::TriggerObjectStandAlone> > >"
+--->> genreflex: INFO: Replacing selection name "edm::reftobase::Holder<reco::Candidate,pat::TriggerObjectRef>" with "edm::reftobase::Holder<reco::Candidate,edm::Ref<std::vector<pat::TriggerObject>,pat::TriggerObject,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerObject>,pat::TriggerObject> > >"
+--->> genreflex: INFO: Replacing selection name "edm::ref>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatAlgos/src/VertexingHelper.cc 
+>> Compiling LCG dictionary: tmp/slc5_amd64_gcc434/src/PhysicsTools/PatUtils/src/PhysicsToolsPatUtils/a/xr.cc
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatAlgos/test/private/PATUserDataTestModule.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatAlgos/test/private/TestEventHypothesisReader.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatAlgos/test/private/TestEventHypothesisWriter.cc 
+>> Compiling capabilities tmp/slc5_amd64_gcc434/src/PhysicsTools/PatUtils/src/PhysicsToolsPatUtils/a/xi.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatExamples/src/AnalysisTasksAnalyzerBTag.cc 
+tobase::Holder<reco::Candidate, pat::GenericParticleRef>" with "edm::reftobase::Holder<reco::Candidate, edm::Ref<std::vector<pat::GenericParticle>,pat::GenericParticle,edm::refhelper::FindUsingAdvance<std::vector<pat::GenericParticle>,pat::GenericParticle> > >"
+--->> genreflex: INFO: Replacing selection name "edm::reftobase::Holder<reco::Candidate, pat::PFParticleRef>" with "edm::reftobase::Holder<reco::Candidate, edm::Ref<std::vector<pat::PFParticle>,pat::PFParticle,edm::refhelper::FindUsingAdvance<std::vector<pat::PFParticle>,pat::PFParticle> > >"
+--->> genreflex: INFO: Replacing selection name "edm::reftobase::Holder<reco::Candidate, pat::CompositeCandidateRef>" with "edm::reftobase::Holder<reco::Candidate, edm::Ref<std::vector<pat::CompositeCandidate>,pat::CompositeCandidate,edm::refhelper::FindUsingAdvance<std::vector<pat::CompositeCandidate>,pat::CompositeCandidate> > >"
+--->> genreflex: INFO: Replacing selection name "edm::reftobase::Holder<reco::Candidate, pat::ParticleRef>" with "edm::reftobase::Holder<reco::Candidate, edm::Ref<std::vector<pat::Particle>,pat::Particle,edm::refhelper::FindUsingAdvance<std::vector<pat::Particle>,pat::Particle> > >"
+--->> genreflex: INFO: Replacing selection name "edm::reftobase::Holder<reco::Candidate, pat::METRef>" with "edm::reftobase::Holder<reco::Candidate, edm::Ref<std::vector<pat::MET>,pat::MET,edm::refhelper::FindUsingAdvance<std::vector<pat::MET>,pat::MET> > >"
+--->> genreflex: INFO: Replacing selection name "edm::reftobase::Holder<reco::Candidate, pat::JetRef>" with "edm::reftobase::Holder<reco::Candidate, edm::Ref<std::vector<pat::Jet>,pat::Jet,edm::refhelper::FindUsingAdvance<std::vector<pat::Jet>,pat::Jet> > >"
+--->> genreflex: INFO: Replacing selection name "edm::reftobase::Holder<reco::Candidate, pat::PhotonRef>" with "edm::reftobase::Holder<reco::Candidate, edm::Ref<std::vector<pat::Photon>,pat::Photon,edm::refhelper::FindUsingAdvance<std::vector<pat::Photon>,pat::Photon> > >"
+--->> genreflex: INFO: Replacing selection name "edm::reftobase::Holder<reco::Candidate, pat::TauRef>" with "edm::reftobase::Holder<reco::Candidate, edm::Ref<std::vector<pat::Tau>,pat::Tau,edm::refhelper::FindUsingAdvance<std::vector<pat::Tau>,pat::Tau> > >"
+--->> genreflex: INFO: Replacing selection name "edm::reftobase::Holder<reco::Candidate, pat::MuonRef>" with "edm::reftobase::Holder<reco::Candidate, edm::Ref<std::vector<pat::Muon>,pat::Muon,edm::refhelper::FindUsingAdvance<std::vector<pat::Muon>,pat::Muon> > >"
+--->> genreflex: INFO: Replacing selection name "edm::reftobase::Holder<reco::Candidate, pat::ElectronRef>" with "edm::reftobase::Holder<reco::Candidate, edm::Ref<std::vector<pat::Electron>,pat::Electron,edm::refhelper::FindUsingAdvance<std::vector<pat::Electron>,pat::Electron> > >"
+class StringMap
+class std::pair<pat::IsolationKeys,reco::IsoDeposit>
+class pat::TriggerObject
+class std::vector<pat::TriggerObject>
+class edm::Association<std::vector<pat::TriggerObject> >
+class std::pair<std::basic_string<char>,edm::RefProd<edm::Association<std::vector<pat::TriggerObject> > > >
+class std::pair<std::basic_string<char>,std::vector<float> >
+class pat::CandKinResolution
+class std::vector<pat::CandKinResolution>
+class pat::LookupTableRecord
+class std::vector<pat::LookupTableRecord>
+class pat::UserData
+class edm::Ptr<pat::UserData>
+class std::vector<edm::Ptr<pat::UserData> >
+class std::vector<std::pair<pat::IsolationKeys,reco::IsoDeposit> >
+class pat::EventHypothesis
+class std::vector<pat::EventHypothesis>
+class pat::VertexAssociation
+class std::vector<pat::VertexAssociation>
+class pat::TauJetCorrFactors
+class std::vector<pat::TauJetCorrFactors>
+class pat::JetCorrFactors
+class std::vector<pat::JetCorrFactors>
+class pat::Conversion
+class std::vector<pat::Conversion>
+class pat::Hemisphere
+class std::vector<pat::Hemisphere>
+class pat::GenericParticle
+class std::vector<pat::GenericParticle>
+class pat::PFParticle
+class std::vector<pat::PFParticle>
+class pat::CompositeCandidate
+class std::vector<pat::CompositeCandidate>
+class pat::Particle
+class std::vector<pat::Particle>
+class pat::MHT
+class std>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatExamples/src/AnalysisTasksAnalyzerJEC.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatExamples/src/PatBTagCommonHistos.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatExamples/src/PatMuonAnalyzer.cc 
+::vector<pat::MHT>
+class pat::MET
+class std::vector<pat::MET>
+class pat::Jet
+class std::vector<pat::Jet>
+class pat::Photon
+class std::vector<pat::Photon>
+class pat::Tau
+class std::vector<pat::Tau>
+class pat::Muon
+class std::vector<pat::Muon>
+class pat::Electron
+class std::vector<pat::Electron>
+class pat::TriggerFilter
+class std::vector<pat::TriggerFilter>
+class pat::TriggerPath
+class std::vector<pat::TriggerPath>
+class pat::TriggerCondition
+class std::vector<pat::TriggerCondition>
+class pat::TriggerAlgorithm
+class std::vector<pat::TriggerAlgorithm>
+class pat::TriggerObjectStandAlone
+class std::vector<pat::TriggerObjectStandAlone>
+class pat::tau::TauPFSpecific
+class std::vector<pat::tau::TauPFSpecific>
+class pat::tau::TauCaloSpecific
+class std::vector<pat::tau::TauCaloSpecific>
+class std::vector<pat::UserData*>
+class std::map<std::basic_string<char>,edm::RefProd<edm::Association<std::vector<pat::TriggerObject> > > >
+class edm::ValueMap<pat::LookupTableRecord>
+class edm::Wrapper<edm::ValueMap<pat::LookupTableRecord> >
+class edm::ValueMap<edm::Ptr<pat::UserData> >
+class edm::Wrapper<edm::ValueMap<edm::Ptr<pat::UserData> > >
+class pat::TriggerEvent
+class edm::Wrapper<pat::TriggerEvent>
+class edm::Wrapper<std::vector<pat::TriggerAlgorithm> >
+class edm::Wrapper<std::vector<pat::TriggerCondition> >
+class edm::Wrapper<std::vector<pat::TriggerPath> >
+class edm::Wrapper<std::vector<pat::TriggerFilter> >
+class edm::Association<std::vector<pat::TriggerObjectStandAlone> >
+class edm::Wrapper<edm::Association<std::vector<pat::TriggerObjectStandAlone> > >
+class edm::Wrapper<std::vector<pat::TriggerObjectStandAlone> >
+class edm::Wrapper<std::map<std::basic_string<char>,edm::RefProd<edm::Association<std::vector<pat::TriggerObject> > > > >
+class edm::Wrapper<edm::Association<std::vector<pat::TriggerObject> > >
+class edm::Wrapper<std::vector<pat::TriggerObject> >
+class edm::Wrapper<std::vector<pat::EventHypothesis> >
+class edm::ValueMap<pat::VertexAssociation>
+class edm::Wrapper<edm::ValueMap<pat::VertexAssociation> >
+class edm::Wrapper<StringMap>
+class edm::ValueMap<pat::TauJetCorrFactors>
+class edm::Wrapper<edm::ValueMap<pat::TauJetCorrFactors> >
+class edm::ValueMap<pat::JetCorrFactors>
+class edm::Wrapper<edm::ValueMap<pat::JetCorrFactors> >
+class edm::Wrapper<std::pair<std::basic_string<char>,std::vector<float> > >
+class edm::Wrapper<std::vector<pat::Conversion> >
+class edm::Wrapper<std::vector<pat::Hemisphere> >
+class edm::Wrapper<std::vector<pat::GenericParticle> >
+class edm::Wrapper<std::vector<pat::PFParticle> >
+class edm::Wrapper<std::vector<pat::CompositeCandidate> >
+class edm::Wrapper<std::vector<pat::Particle> >
+class edm::Wrapper<std::vector<pat::MHT> >
+class edm::Wrapper<std::vector<pat::MET> >
+class edm::Wrapper<std::vector<pat::Jet> >
+class edm::Wrapper<std::vector<pat::Photon> >
+class edm::Wrapper<std::vector<pat::Tau> >
+class edm::Wrapper<std::vector<pat::Muon> >
+class edm::Wrapper<std::vector<pat::Electron> >
+class edm::RefProd<edm::Association<std::vector<pat::TriggerObject> > >
+class edm::Ptr<pat::Tau>
+class edm::Ptr<pat::Muon>
+class edm::Ptr<pat::Conversion>
+class edm::Ptr<pat::Electron>
+class edm::Ptr<pat::MET>
+class edm::Ptr<pat::Jet>
+class pat::Lepton<reco::BaseTau>
+class pat::Lepton<reco::Muon>
+class pat::Lepton<reco::GsfElectron>
+class pat::UserHolder<reco::Vertex>
+class pat::UserHolder<reco::Track>
+class pat::UserHolder<ROOT::Math::SVector<double,5> >
+class pat::UserHolder<ROOT::Math::SVector<double,4> >
+class pat::UserHolder<ROOT::Math::SVector<double,3> >
+class pat::UserHolder<ROOT::Math::SVector<double,2> >
+class pat::UserHolder<ROOT::Math::SMatrix<double,5,5,ROOT::Math::MatRepSym<double,5> > >
+class pat::UserHolder<ROOT::Math::SMatrix<double,4,4,ROOT::Math::MatRepSym<double,4> > >
+class pat::UserHolder<ROOT::Math::SMatrix<double,3,3,ROOT::Math::MatRepSym<double,3> > >
+class pat::UserHolder<ROOT::Math::SMatrix<double,2,2,ROOT::Math::MatRepSym<double,2> > >
+class pat::UserHolder<ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<double> > >
+class pat::UserHolder<ROOT::Math::LorentzVector<ROOT::Math::PxPyPzE4D<douEntering library rule at src/PhysicsTools/PatExamples/plugins
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/SelectorUtils/bin/testSelection_wplusjets.C 
+>> Compiling capabilities tmp/slc5_amd64_gcc434/src/PhysicsTools/SelectorUtils/src/PhysicsToolsSelectorUtils/a/xi.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/UtilAlgos/bin/FWLiteWithBasicAnalyzer.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/UtilAlgos/bin/mergeTFileServiceHistograms.cpp 
+ble> > >
+class pat::UserHolder<ROOT::Math::PositionVector3D<ROOT::Math::Cartesian3D<double>,ROOT::Math::DefaultCoordinateSystemTag> >
+class pat::UserHolder<ROOT::Math::DisplacementVector3D<ROOT::Math::Cartesian3D<double>,ROOT::Math::DefaultCoordinateSystemTag> >
+class pat::PATObject<reco::RecoCandidate>
+class pat::PATObject<reco::PFCandidate>
+class pat::PATObject<reco::CompositeCandidate>
+class pat::PATObject<reco::LeafCandidate>
+class pat::PATObject<reco::MET>
+class pat::PATObject<reco::Jet>
+class pat::PATObject<reco::Photon>
+class pat::PATObject<reco::BaseTau>
+class pat::PATObject<reco::Muon>
+class pat::PATObject<reco::GsfElectron>
+class edm::Ref<std::vector<pat::TriggerPath>,pat::TriggerPath,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerPath>,pat::TriggerPath> >
+class edm::RefVector<std::vector<pat::TriggerObjectStandAlone>,pat::TriggerObjectStandAlone,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerObjectStandAlone>,pat::TriggerObjectStandAlone> >
+class edm::RefProd<std::vector<pat::TriggerObjectStandAlone> >
+class edm::RefVector<std::vector<pat::Particle>,pat::Particle,edm::refhelper::FindUsingAdvance<std::vector<pat::Particle>,pat::Particle> >
+class edm::Ref<std::vector<pat::TriggerFilter>,pat::TriggerFilter,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerFilter>,pat::TriggerFilter> >
+class edm::RefVectorIterator<std::vector<pat::TriggerPath>,pat::TriggerPath,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerPath>,pat::TriggerPath> >
+class edm::RefVector<std::vector<pat::Photon>,pat::Photon,edm::refhelper::FindUsingAdvance<std::vector<pat::Photon>,pat::Photon> >
+class edm::RefProd<std::vector<pat::TriggerFilter> >
+class edm::RefVector<std::vector<pat::TriggerAlgorithm>,pat::TriggerAlgorithm,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerAlgorithm>,pat::TriggerAlgorithm> >
+class edm::Ref<std::vector<pat::TriggerObject>,pat::TriggerObject,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerObject>,pat::TriggerObject> >
+class edm::RefVector<std::vector<pat::Jet>,pat::Jet,edm::refhelper::FindUsingAdvance<std::vector<pat::Jet>,pat::Jet> >
+class edm::RefVector<std::vector<pat::GenericParticle>,pat::GenericParticle,edm::refhelper::FindUsingAdvance<std::vector<pat::GenericParticle>,pat::GenericParticle> >
+class edm::Ref<std::vector<pat::Particle>,pat::Particle,edm::refhelper::FindUsingAdvance<std::vector<pat::Particle>,pat::Particle> >
+class edm::OwnVector<pat::UserData,edm::ClonePolicy<pat::UserData> >
+class edm::Ref<std::vector<pat::TriggerAlgorithm>,pat::TriggerAlgorithm,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerAlgorithm>,pat::TriggerAlgorithm> >
+class edm::Ref<std::vector<pat::GenericParticle>,pat::GenericParticle,edm::refhelper::FindUsingAdvance<std::vector<pat::GenericParticle>,pat::GenericParticle> >
+class edm::RefVectorIterator<std::vector<pat::TriggerCondition>,pat::TriggerCondition,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerCondition>,pat::TriggerCondition> >
+class edm::RefVectorIterator<std::vector<pat::TriggerAlgorithm>,pat::TriggerAlgorithm,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerAlgorithm>,pat::TriggerAlgorithm> >
+class edm::RefVector<std::vector<pat::Muon>,pat::Muon,edm::refhelper::FindUsingAdvance<std::vector<pat::Muon>,pat::Muon> >
+class edm::RefVector<std::vector<pat::CompositeCandidate>,pat::CompositeCandidate,edm::refhelper::FindUsingAdvance<std::vector<pat::CompositeCandidate>,pat::CompositeCandidate> >
+class edm::Ref<std::vector<pat::PFParticle>,pat::PFParticle,edm::refhelper::FindUsingAdvance<std::vector<pat::PFParticle>,pat::PFParticle> >
+class edm::RefVector<std::vector<pat::Conversion>,pat::Conversion,edm::refhelper::FindUsingAdvance<std::vector<pat::Conversion>,pat::Conversion> >
+class edm::Ref<std::vector<pat::TriggerCondition>,pat::TriggerCondition,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerCondition>,pat::TriggerCondition> >
+class edm::RefVector<std::vector<pat::TriggerFilter>,pat::TriggerFilter,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerFilter>,pat::TriggerFilter> >
+cl>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/UtilAlgos/plugins/ConfigurableAnalysis.cc 
+ass std::pair<bool,std::basic_string<char> >
+class edm::RefVectorIterator<std::vector<pat::TriggerFilter>,pat::TriggerFilter,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerFilter>,pat::TriggerFilter> >
+class edm::Ref<std::vector<pat::Tau>,pat::Tau,edm::refhelper::FindUsingAdvance<std::vector<pat::Tau>,pat::Tau> >
+class edm::Ref<std::vector<pat::CompositeCandidate>,pat::CompositeCandidate,edm::refhelper::FindUsingAdvance<std::vector<pat::CompositeCandidate>,pat::CompositeCandidate> >
+class edm::Ref<std::vector<pat::TriggerObjectStandAlone>,pat::TriggerObjectStandAlone,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerObjectStandAlone>,pat::TriggerObjectStandAlone> >
+class edm::RefVector<std::vector<pat::Tau>,pat::Tau,edm::refhelper::FindUsingAdvance<std::vector<pat::Tau>,pat::Tau> >
+class edm::RefVector<std::vector<pat::MET>,pat::MET,edm::refhelper::FindUsingAdvance<std::vector<pat::MET>,pat::MET> >
+class edm::RefVector<std::vector<pat::TriggerCondition>,pat::TriggerCondition,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerCondition>,pat::TriggerCondition> >
+class edm::RefProd<std::vector<pat::TriggerAlgorithm> >
+class edm::RefProd<std::vector<pat::TriggerObject> >
+class edm::RefProd<std::vector<pat::TriggerCondition> >
+class edm::Ref<std::vector<pat::MET>,pat::MET,edm::refhelper::FindUsingAdvance<std::vector<pat::MET>,pat::MET> >
+class edm::RefProd<std::vector<pat::TriggerPath> >
+class edm::Ref<std::vector<pat::Photon>,pat::Photon,edm::refhelper::FindUsingAdvance<std::vector<pat::Photon>,pat::Photon> >
+class edm::Ref<std::vector<pat::Electron>,pat::Electron,edm::refhelper::FindUsingAdvance<std::vector<pat::Electron>,pat::Electron> >
+class edm::ValueMap<pat::CandKinResolution>
+class edm::RefVector<std::vector<pat::Hemisphere>,pat::Hemisphere,edm::refhelper::FindUsingAdvance<std::vector<pat::Hemisphere>,pat::Hemisphere> >
+class edm::RefVector<std::vector<pat::PFParticle>,pat::PFParticle,edm::refhelper::FindUsingAdvance<std::vector<pat::PFParticle>,pat::PFParticle> >
+class edm::Ref<std::vector<pat::Muon>,pat::Muon,edm::refhelper::FindUsingAdvance<std::vector<pat::Muon>,pat::Muon> >
+class edm::Ref<std::vector<pat::Jet>,pat::Jet,edm::refhelper::FindUsingAdvance<std::vector<pat::Jet>,pat::Jet> >
+class edm::RefVector<std::vector<pat::TriggerObject>,pat::TriggerObject,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerObject>,pat::TriggerObject> >
+class edm::Ref<std::vector<pat::Hemisphere>,pat::Hemisphere,edm::refhelper::FindUsingAdvance<std::vector<pat::Hemisphere>,pat::Hemisphere> >
+class edm::RefVectorIterator<std::vector<pat::TriggerObjectStandAlone>,pat::TriggerObjectStandAlone,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerObjectStandAlone>,pat::TriggerObjectStandAlone> >
+class edm::RefVector<std::vector<pat::Electron>,pat::Electron,edm::refhelper::FindUsingAdvance<std::vector<pat::Electron>,pat::Electron> >
+class edm::RefVectorIterator<std::vector<pat::TriggerObject>,pat::TriggerObject,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerObject>,pat::TriggerObject> >
+class edm::RefVector<std::vector<pat::TriggerPath>,pat::TriggerPath,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerPath>,pat::TriggerPath> >
+class edm::Ref<std::vector<pat::Conversion>,pat::Conversion,edm::refhelper::FindUsingAdvance<std::vector<pat::Conversion>,pat::Conversion> >
+class __gnu_cxx::__normal_iterator<const pat::Conversion*,std::vector<pat::Conversion> >
+class __gnu_cxx::__normal_iterator<const pat::Hemisphere*,std::vector<pat::Hemisphere> >
+class __gnu_cxx::__normal_iterator<const pat::GenericParticle*,std::vector<pat::GenericParticle> >
+class __gnu_cxx::__normal_iterator<const pat::PFParticle*,std::vector<pat::PFParticle> >
+class __gnu_cxx::__normal_iterator<const pat::CompositeCandidate*,std::vector<pat::CompositeCandidate> >
+class __gnu_cxx::__normal_iterator<const pat::Particle*,std::vector<pat::Particle> >
+class __gnu_cxx::__normal_iterator<const pat::MHT*,std::vector<pat::MHT> >
+class __gnu_cxx::__normal_iterator<const pat::MET*,std::vector<pat::MET> >
+class __gnu_cxx::__normal_iter>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/UtilAlgos/plugins/ErrorSummaryFilter.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/UtilAlgos/plugins/JetIDSelectionFunctorFilter.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/UtilAlgos/plugins/NTuplingDevice.cc 
+ator<const pat::Jet*,std::vector<pat::Jet> >
+class __gnu_cxx::__normal_iterator<const pat::Photon*,std::vector<pat::Photon> >
+class __gnu_cxx::__normal_iterator<const pat::Tau*,std::vector<pat::Tau> >
+class __gnu_cxx::__normal_iterator<const pat::Muon*,std::vector<pat::Muon> >
+class __gnu_cxx::__normal_iterator<const pat::Electron*,std::vector<pat::Electron> >
+class __gnu_cxx::__normal_iterator<const pat::TriggerFilter*,std::vector<pat::TriggerFilter> >
+class __gnu_cxx::__normal_iterator<const pat::TriggerPath*,std::vector<pat::TriggerPath> >
+class __gnu_cxx::__normal_iterator<const pat::TriggerCondition*,std::vector<pat::TriggerCondition> >
+class __gnu_cxx::__normal_iterator<const pat::TriggerAlgorithm*,std::vector<pat::TriggerAlgorithm> >
+class __gnu_cxx::__normal_iterator<const pat::TriggerObjectStandAlone*,std::vector<pat::TriggerObjectStandAlone> >
+class __gnu_cxx::__normal_iterator<const pat::TriggerObject*,std::vector<pat::TriggerObject> >
+class std::_Rb_tree_const_iterator<std::pair<const std::basic_string<char>,edm::RefProd<edm::Association<std::vector<pat::TriggerObject> > > > >
+class std::pair<std::basic_string<char>,edm::Ref<std::vector<pat::TriggerObject>,pat::TriggerObject,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerObject>,pat::TriggerObject> > >
+class std::vector<std::pair<std::basic_string<char>,std::vector<float> > >
+class std::vector<std::pair<bool,std::basic_string<char> > >
+class std::map<std::basic_string<char>,edm::Ref<std::vector<pat::TriggerObject>,pat::TriggerObject,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerObject>,pat::TriggerObject> > >
+class edm::Wrapper<edm::ValueMap<pat::CandKinResolution> >
+class edm::Wrapper<edm::OwnVector<pat::UserData,edm::ClonePolicy<pat::UserData> > >
+class edm::Wrapper<edm::RefProd<std::vector<pat::TriggerAlgorithm> > >
+class edm::Wrapper<edm::RefProd<std::vector<pat::TriggerCondition> > >
+class edm::Wrapper<edm::RefProd<std::vector<pat::TriggerPath> > >
+class edm::Wrapper<edm::RefProd<std::vector<pat::TriggerFilter> > >
+class edm::Wrapper<edm::RefProd<std::vector<pat::TriggerObjectStandAlone> > >
+class edm::Wrapper<edm::RefProd<std::vector<pat::TriggerObject> > >
+class edm::Wrapper<std::vector<std::pair<std::basic_string<char>,std::vector<float> > > >
+class edm::Wrapper<edm::RefVector<std::vector<pat::Conversion>,pat::Conversion,edm::refhelper::FindUsingAdvance<std::vector<pat::Conversion>,pat::Conversion> > >
+class edm::Wrapper<edm::RefVector<std::vector<pat::Hemisphere>,pat::Hemisphere,edm::refhelper::FindUsingAdvance<std::vector<pat::Hemisphere>,pat::Hemisphere> > >
+class edm::Wrapper<edm::RefVector<std::vector<pat::GenericParticle>,pat::GenericParticle,edm::refhelper::FindUsingAdvance<std::vector<pat::GenericParticle>,pat::GenericParticle> > >
+class edm::Wrapper<edm::RefVector<std::vector<pat::PFParticle>,pat::PFParticle,edm::refhelper::FindUsingAdvance<std::vector<pat::PFParticle>,pat::PFParticle> > >
+class edm::Wrapper<edm::RefVector<std::vector<pat::CompositeCandidate>,pat::CompositeCandidate,edm::refhelper::FindUsingAdvance<std::vector<pat::CompositeCandidate>,pat::CompositeCandidate> > >
+class edm::Wrapper<edm::RefVector<std::vector<pat::Particle>,pat::Particle,edm::refhelper::FindUsingAdvance<std::vector<pat::Particle>,pat::Particle> > >
+class edm::Wrapper<edm::RefVector<std::vector<pat::MET>,pat::MET,edm::refhelper::FindUsingAdvance<std::vector<pat::MET>,pat::MET> > >
+class edm::Wrapper<edm::RefVector<std::vector<pat::Jet>,pat::Jet,edm::refhelper::FindUsingAdvance<std::vector<pat::Jet>,pat::Jet> > >
+class edm::Wrapper<edm::RefVector<std::vector<pat::Photon>,pat::Photon,edm::refhelper::FindUsingAdvance<std::vector<pat::Photon>,pat::Photon> > >
+class edm::Wrapper<edm::RefVector<std::vector<pat::Tau>,pat::Tau,edm::refhelper::FindUsingAdvance<std::vector<pat::Tau>,pat::Tau> > >
+class edm::Wrapper<edm::RefVector<std::vector<pat::Muon>,pat::Muon,edm::refhelper::FindUsingAdvance<std::vector<pat::Muon>,pat::Muon> > >
+class edm::Wrapper<edm::RefVector<std::vector<pat::Electron>,pat::Electron,edm::refhelper::FindUsingAdvance<std::vector<>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/UtilAlgos/plugins/PFJetIDSelectionFunctorFilter.cc 
+pat::Electron>,pat::Electron> > >
+class __gnu_cxx::__normal_iterator<const std::pair<bool,std::basic_string<char> >*,std::vector<std::pair<bool,std::basic_string<char> > > >
+class edm::reftobase::VectorHolder<reco::Candidate,edm::RefVector<std::vector<pat::CompositeCandidate>,pat::CompositeCandidate,edm::refhelper::FindUsingAdvance<std::vector<pat::CompositeCandidate>,pat::CompositeCandidate> > >
+class edm::reftobase::RefVectorHolder<edm::RefVector<std::vector<pat::CompositeCandidate>,pat::CompositeCandidate,edm::refhelper::FindUsingAdvance<std::vector<pat::CompositeCandidate>,pat::CompositeCandidate> > >
+class edm::reftobase::RefHolder<edm::Ref<std::vector<pat::TriggerObjectStandAlone>,pat::TriggerObjectStandAlone,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerObjectStandAlone>,pat::TriggerObjectStandAlone> > >
+class edm::reftobase::RefHolder<edm::Ref<std::vector<pat::TriggerObject>,pat::TriggerObject,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerObject>,pat::TriggerObject> > >
+class edm::reftobase::RefHolder<edm::Ref<std::vector<pat::GenericParticle>,pat::GenericParticle,edm::refhelper::FindUsingAdvance<std::vector<pat::GenericParticle>,pat::GenericParticle> > >
+class edm::reftobase::RefHolder<edm::Ref<std::vector<pat::PFParticle>,pat::PFParticle,edm::refhelper::FindUsingAdvance<std::vector<pat::PFParticle>,pat::PFParticle> > >
+class edm::reftobase::RefHolder<edm::Ref<std::vector<pat::CompositeCandidate>,pat::CompositeCandidate,edm::refhelper::FindUsingAdvance<std::vector<pat::CompositeCandidate>,pat::CompositeCandidate> > >
+class edm::reftobase::RefHolder<edm::Ref<std::vector<pat::Particle>,pat::Particle,edm::refhelper::FindUsingAdvance<std::vector<pat::Particle>,pat::Particle> > >
+class edm::reftobase::RefHolder<edm::Ref<std::vector<pat::MET>,pat::MET,edm::refhelper::FindUsingAdvance<std::vector<pat::MET>,pat::MET> > >
+class edm::reftobase::RefHolder<edm::Ref<std::vector<pat::Jet>,pat::Jet,edm::refhelper::FindUsingAdvance<std::vector<pat::Jet>,pat::Jet> > >
+class edm::reftobase::RefHolder<edm::Ref<std::vector<pat::Photon>,pat::Photon,edm::refhelper::FindUsingAdvance<std::vector<pat::Photon>,pat::Photon> > >
+class edm::reftobase::RefHolder<edm::Ref<std::vector<pat::Tau>,pat::Tau,edm::refhelper::FindUsingAdvance<std::vector<pat::Tau>,pat::Tau> > >
+class edm::reftobase::RefHolder<edm::Ref<std::vector<pat::Muon>,pat::Muon,edm::refhelper::FindUsingAdvance<std::vector<pat::Muon>,pat::Muon> > >
+class edm::reftobase::RefHolder<edm::Ref<std::vector<pat::Electron>,pat::Electron,edm::refhelper::FindUsingAdvance<std::vector<pat::Electron>,pat::Electron> > >
+class edm::reftobase::Holder<reco::Candidate,edm::Ref<std::vector<pat::TriggerObjectStandAlone>,pat::TriggerObjectStandAlone,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerObjectStandAlone>,pat::TriggerObjectStandAlone> > >
+class edm::reftobase::Holder<reco::Candidate,edm::Ref<std::vector<pat::TriggerObject>,pat::TriggerObject,edm::refhelper::FindUsingAdvance<std::vector<pat::TriggerObject>,pat::TriggerObject> > >
+class edm::reftobase::Holder<reco::Candidate,edm::Ref<std::vector<pat::GenericParticle>,pat::GenericParticle,edm::refhelper::FindUsingAdvance<std::vector<pat::GenericParticle>,pat::GenericParticle> > >
+class edm::reftobase::Holder<reco::Candidate,edm::Ref<std::vector<pat::PFParticle>,pat::PFParticle,edm::refhelper::FindUsingAdvance<std::vector<pat::PFParticle>,pat::PFParticle> > >
+class edm::reftobase::Holder<reco::Candidate,edm::Ref<std::vector<pat::CompositeCandidate>,pat::CompositeCandidate,edm::refhelper::FindUsingAdvance<std::vector<pat::CompositeCandidate>,pat::CompositeCandidate> > >
+class edm::reftobase::Holder<reco::Candidate,edm::Ref<std::vector<pat::Particle>,pat::Particle,edm::refhelper::FindUsingAdvance<std::vector<pat::Particle>,pat::Particle> > >
+class edm::reftobase::Holder<reco::Candidate,edm::Ref<std::vector<pat::MET>,pat::MET,edm::refhelper::FindUsingAdvance<std::vector<pat::MET>,pat::MET> > >
+class edm::reftobase::Holder<reco::Candidate,edm::Ref<std::vector<pat::Jet>,pat::Jet,edm::refhelper::FindUsingAdvance<std::vector<pat::Jet>,pat::Jet> > >
+class edm::reftobase::Holder<reco::Candidate,edm::Ref<std::vector<pat::Photon>,pat::Photon,edm::refhelper::FindUsingAdvance<std::vector<pat::Photon>,pat::Photon> > >
+class edm::reftobase::Holder<reco::Candidate,edm::Ref<std::vector<pat::Tau>,pat::Tau,edm::refhelper::FindUsingAdvance<std::vector<pat::Tau>,pat::Tau> > >
+class edm::reftobase::Holder<reco::Candidate,edm::Ref<std::vector<pat::Muon>,pat::Muon,edm::refhelper::FindUsingAdvance<std::vector<pat::Muon>,pat::Muon> > >
+class edm::reftobase::Holder<reco::Candidate,edm::Ref<std::vector<pat::Electron>,pat::Electron,edm::refhelper::FindUsingAdvance<std::vector<pat::Electron>,pat::Electron> > >
+enum pat::IsolationKeys
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/UtilAlgos/plugins/PlottingDevice.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/UtilAlgos/plugins/PrimaryVertexFilter.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/UtilAlgos/plugins/WrappedEDMuonAnalyzer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/UtilAlgos/plugins/modules.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/CommonTools/ParticleFlow/plugins/ElectronIDPFCandidateSelector.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/CommonTools/ParticleFlow/plugins/GenericPFCandidateSelector.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/CommonTools/ParticleFlow/plugins/GenericPFJetSelector.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/CommonTools/ParticleFlow/plugins/IPCutPFCandidateSelector.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/CommonTools/ParticleFlow/plugins/IsolatedPFCandidateMerger.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/CommonTools/ParticleFlow/plugins/MuonIDPFCandidateSelector.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/CommonTools/ParticleFlow/plugins/IsolatedPFCandidateSelector.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/CommonTools/ParticleFlow/plugins/PFMET.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/CommonTools/ParticleFlow/plugins/PFPileUp.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/CommonTools/ParticleFlow/plugins/PdgIdPFCandidateSelector.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/CommonTools/ParticleFlow/plugins/PtMinPFCandidateSelector.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/CommonTools/ParticleFlow/plugins/SealModule.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/CommonTools/ParticleFlow/plugins/TopProjector.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/CommonTools/ParticleFlow/plugins/Type1PFMET.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoParticleFlow/PFProducer/plugins/EFilter.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoParticleFlow/PFProducer/plugins/PFBlockProducer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoParticleFlow/PFProducer/plugins/PFCandidateChecker.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoParticleFlow/PFProducer/plugins/PFConcretePFCandidateProducer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoParticleFlow/PFProducer/plugins/PFElectronTranslator.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoParticleFlow/PFProducer/plugins/PFLinker.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoParticleFlow/PFProducer/plugins/PFPhotonTranslator.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoParticleFlow/PFProducer/plugins/PFProducer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoParticleFlow/PFProducer/plugins/SealModule.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoBTag/PerformanceDB/plugins/BTagPerformaceRootProducerFromSQLITE.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoBTag/PerformanceDB/plugins/BtagPerformanceESProducer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoBTag/PerformanceDB/plugins/PhysicsPerformanceDBWriterFromFile_WPandPayload.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoBTag/PerformanceDB/plugins/PhysicsPerformanceDBWriterFromFile_WPandPayload_IOV.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoBTag/PerformanceDB/plugins/PhysicsPerformanceDBWriterTFormula_fromfile_WPandPL.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoEgamma/ElectronIdentification/plugins/ElectronIDSelectorCutBased.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoEgamma/ElectronIdentification/plugins/ElectronIDSelectorLikelihood.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoEgamma/ElectronIdentification/plugins/ElectronIDSelectorNeuralNet.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoEgamma/ElectronIdentification/plugins/ElectronLikelihoodESSource.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/RecoEgamma/ElectronIdentification/plugins/SealModule.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/03-tmva-train.cpp 
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/03-tmva-train.cpp: In function 'int main()':
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/03-tmva-train.cpp:158: warning: unused variable 'isW' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/03-tmva-train.cpp:67: warning: unused variable 'variableList' [-Wunused-variable]
+>> Compiling LCG dictionary: tmp/slc5_amd64_gcc434/src/DataFormats/PatCandidates/src/DataFormatsPatCandidates/a/xr.cc
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/CandOrCounter.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/CandOrCounterNoOverlap.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/NamedCompositeCandidateBooster.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/PATBoosters.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/PDFInfoDumper.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SimpleEventDumper.cc 
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/CandOrCounter.cc: In member function 'virtual bool CandOrCounter::filter(edm::Event&, const edm::EventSetup&)':
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/CandOrCounter.cc:37: warning: unused variable 'non_overlapping' [-Wunused-variable]
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopAnalyzer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopBJetsProducer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopDoubleCounter.cc 
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SimpleEventDumper.cc: In member function 'virtual void SimpleEventDumper::analyze(const edm::Event&, const edm::EventSetup&)':
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SimpleEventDumper.cc:543: warning: unused variable 'metL5' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SimpleEventDumper.cc:544: warning: unused variable 'phiL5' [-Wunused-variable]
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopDoubleFilter.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopElectronProducer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopGenJetPtEtaProducer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopJetsProducer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopLeptonCounter.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopMTWFilter.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopMuonProducer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopNGenParticlesProducer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopPileUpDumper.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopPileUpProducer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopPileUpWeighter.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSyncDumper.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsDumper.cc 
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsDumper.cc:30:74: warning: extra tokens at end of #include directive
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumper.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumperTTBar.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopTChanProducer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopTChannelMCProducer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopTriggers.cc 
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsDumper.cc: In member function 'virtual void SingleTopSystematicsDumper::analyze(const edm::Event&, const edm::EventSetup&)':
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsDumper.cc:370: warning: unused variable 'leptonE' [-Wunused-variable]
+In file included from /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSyncDumper.cc:17:
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/interface/SingleTopSyncDumper.h: In constructor 'SingleTopSyncDumper::BTagWeight::BTagWeight()':
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/interface/SingleTopSyncDumper.h:310: warning: 'SingleTopSyncDumper::BTagWeight::minTags' will be initialized after [-Wreorder]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/interface/SingleTopSyncDumper.h:309: warning:   'int SingleTopSyncDumper::BTagWeight::maxTags' [-Wreorder]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/interface/SingleTopSyncDumper.h:301: warning:   when initialized here [-Wreorder]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSyncDumper.cc: In member function 'virtual void SingleTopSyncDumper::analyze(const edm::Event&, const edm::EventSetup&)':
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSyncDumper.cc:715: warning: unused variable 'eid' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSyncDumper.cc:684: warning: unused variable 'leptonQCDRelIso' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSyncDumper.cc:965: warning: unused variable 'rndm' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSyncDumper.cc:575: warning: unused variable 'RelIsoQCDCut' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSyncDumper.cc: In member function 'double SingleTopSyncDumper::jetUncertainty(double, double, int)':
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSyncDumper.cc:1868: warning: unused variable 'JES_PU' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSyncDumper.cc: In member function 'double SingleTopSyncDumper::BScaleFactor(std::string, std::string)':
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSyncDumper.cc:1951: warning: unused variable 'tcheeff' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSyncDumper.cc: In member function 'double SingleTopSyncDumper::EventScaleFactor(std::string, std::string)':
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSyncDumper.cc:2014: warning: unused variable 'tcheeff' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSyncDumper.cc: In member function 'double SingleTopSyncDumper::MisTagScaleFactor(std::string, std::string, double, double, double)':
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSyncDumper.cc:2062: warning: unused variable 'tcheeff' [-Wunused-variable]
+In file included from /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumperTTBar.cc:17:
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/interface/SingleTopSystematicsTreesDumperTTBar.h: In constructor 'SingleTopSystematicsTreesDumperTTBar::BTagWeight::BTagWeight()':
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/interface/SingleTopSystematicsTreesDumperTTBar.h:301: warning: 'SingleTopSystematicsTreesDumperTTBar::BTagWeight::minTags' will be initialized after [-Wreorder]
+n file included from /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumper.cc:17:
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/interface/SingleTopSystematicsTreesDumper.h: In constructor 'SingleTopSystematicsTreesDumper::BTagWeight::BTagWeight()':
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/interface/SingleTopSystematicsTreesDumper.h:448: warning: 'SingleTopSystematicsTreesDumper::BTagWeight::minTags' will be initialized after [-Wreorder]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/interface/SingleTopSystematicsTreesDumper.h:447: warning:   'int SingleTopSystematicsTreesDumper::BTagWeight::maxTags' [-Wreorder]
+/afs/cern./afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/interface/SingleTopSystematicsTreesDumperTTBar.h:292: warning:   when initialized h
+re [-Wreorder]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumper.cc: In constructor 'SingleTopSystematicsTreesDumper::SingleTopSystematicsTreesDumper(const edm::ParameterSet&)':
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumper.cc:691: warning: unused variable 'doGaussianResol' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumperTTBar.cc: In member function 'virtual void SingleTopSystematicsTreesDumperTTBar::analyze(const edm::Event&, const edm::EventSetup&)':
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumperTTBar.cc:643: warning: unused variable 'leptonQCDRelIso' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumperTTBar.cc:909: warning: unused variable 'rndm' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumperTTBar.cc:962: warning: unused variable 'valueAlgo2' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumper.cc: In member function 'virtual void SingleTopSystematicsTreesDumper::analyze(const edm::Event&, const edm::EventSetup&)':
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumper.cc:1051: warning: unused variable 'passesOneLepton' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumperTTBar.cc:507: warning: unused variable 'passesSignal' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumperTTBar.cc:507: warning: unused variable 'passesSampleA' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumperTTBar.cc:507: warning: unused variable 'passesSampleB' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumperTTBar.cc:507: warning: unused variable 'passesQCDSampleA' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumperTTBar.cc:507: warning: unused variable 'passesQCDSampleB' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumperTTBar.cc:537: warning: unused variable 'RelIsoQCDCut' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumperTTBar.cc:558: warning: unused variable 'b_weight_signal_region_noSyst' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumperTTBar.cc:558: warning: unused variable 'b_weight_sample_A_noSyst' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumperTTBar.cc:558: warning: unused variable 'b_weight_sample_B_noSyst' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumper.cc:1277: warning: unused variable 'rndm' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumper.cc:1400: warning: unused variable 'passesMediumBTag' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumper.cc:1402: warning: unused variable 'passesBTag' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumper.cc:1403: warning: unused variable 'passesLooseBTag' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumper.cc:1408: warning: unused variable 'pos' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumper.cc:1935: warning: unused variable 'pt' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumper.cc:1168: warning: unused variable 'hasTurnOnWeight' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumper.cc:853: warning: unused variable 'MTWValueQCD' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumper.cc:854: warning: unused variable 'RelIsoQCDCut' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumper.cc:862: warning: unused variable 'myWeight' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumper.cc:869: warning: unused variable 'didJetLoop' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumperTTBar.cc: In member function 'double SingleTopSystematicsTreesDumperTTBar::jetUncertainty(double, double, int)':
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumperTTBar.cc:1631: warning: unused variable 'JES_PU' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumperTTBar.cc: In member function 'double SingleTopSystematicsTreesDumperTTBar::BScaleFactor(std::string, std::string)':
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumperTTBar.cc:1653: warning: unused variable 'tcheeff' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumperTTBar.cc: In member function 'double SingleTopSystematicsTreesDumperTTBar::EventScaleFactor(std::string, std::string)':
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumperTTBar.cc:1716: warning: unused variable 'tcheeff' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumperTTBar.cc: In member function 'double SingleTopSystematicsTreesDumperTTBar::MisTagScaleFactor(std::string, std::string, double, double, double)':
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumperTTBar.cc:1764: warning: unused variable 'tcheeff' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumper.cc: In member function 'double SingleTopSystematicsTreesDumper::BScaleFactor(std::string, std::string)':
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumper.cc:2533: warning: unused variable 'tcheeff' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumper.cc: In member function 'double SingleTopSystematicsTreesDumper::MisTagScaleFactor(std::string, std::string, double, double, double)':
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumper.cc:2590: warning: unused variable 'tcheeff' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumper.cc: In member function 'double SingleTopSystematicsTreesDumper::EventScaleFactor(std::string, std::string)':
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumper.cc:2838: warning: unused variable 'tcheeff' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopTChannelMCProducer.cc: In member function 'virtual void SingleTopTChannelMCProducer::produce(edm::Event&, const edm::EventSetup&)':
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopTChannelMCProducer.cc:181: warning: unused variable 'bSecond' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopTriggers.cc: In member function 'virtual bool SingleTopTriggers::filter(edm::Event&, const edm::EventSetup&)':
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopTriggers.cc:92: warning: unused variable 'passesTrigger' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopTriggers.cc:47: warning: unused variable 'ievt' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopTriggers.cc:49: warning: unused variable 'ils' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopTriggers.cc:50: warning: unused variable 'bx' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopTriggers.cc:70: warning: unused variable 'eleNonIso' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopTriggers.cc:71: warning: unused variable 'muonNonIso' [-Wunused-variable]
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopUnclusteredMETProducer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopVertexFilter.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopVertexInfoDumper.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/TopCosThetaStarDumper.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/TopCosThetaStarDumperData.cc 
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumper.cc: In member function 'virtual void SingleTopSystematicsTreesDumper::analyze(const edm::Event&, const edm::EventSetup&)':
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumper.cc:2024: warning: 'topmass_m' may be used uninitialized in this function [-Wuninitialized]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/SingleTopSystematicsTreesDumper.cc:2024: warning: 'topmass_h' may be used uninitialized in this function [-Wuninitialized]
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/TopProducer.cc 
+Entering library rule at PhysicsTools/SelectorUtils
+>> Building shared library tmp/slc5_amd64_gcc434/src/PhysicsTools/Utilities/src/PhysicsToolsUtilities/libPhysicsToolsUtilities.so
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/TopCosThetaStarDumper.cc: In member function 'virtual void TopCosThetaStarDumper::produce(edm::Event&, const edm::EventSetup&)':
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/TopCosThetaStarDumper.cc:132: warning: unused variable 'MET' [-Wunused-variable]
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/TopCosThetaStarDumperData.cc: In member function 'virtual void TopCosThetaStarDumperData::produce(edm::Event&, const edm::EventSetup&)':
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/src/TopCosThetaStarDumperData.cc:116: warning: unused variable 'MET' [-Wunused-variable]
+>> Building shared library tmp/slc5_amd64_gcc434/src/RecoBTag/PerformanceDB/src/RecoBTagPerformanceDB/libRecoBTagPerformanceDB.so
+>> Compiling capabilities tmp/slc5_amd64_gcc434/src/DataFormats/PatCandidates/src/DataFormatsPatCandidates/a/xi.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatAlgos/plugins/CandidateSummaryTable.cc 
+Copying tmp/slc5_amd64_gcc434/src/RecoBTag/PerformanceDB/src/RecoBTagPerformanceDB/libRecoBTagPerformanceDB.so to productstore area:
+Copying tmp/slc5_amd64_gcc434/src/PhysicsTools/Utilities/src/PhysicsToolsUtilities/libPhysicsToolsUtilities.so to productstore area:
+Leaving library rule at RecoBTag/PerformanceDB
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatAlgos/plugins/DuplicatedElectronCleaner.cc 
+Leaving library rule at PhysicsTools/Utilities
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatAlgos/plugins/JetCorrFactorsProducer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatAlgos/plugins/ObjectEnergyScale.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatAlgos/plugins/ObjectSpatialResolution.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatAlgos/plugins/PATCleaner.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatAlgos/plugins/PATCompositeCandidateProducer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatAlgos/plugins/PATConversionProducer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatAlgos/plugins/PATElectronProducer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatAlgos/plugins/PATGenCandsFromSimTracksProducer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatAlgos/plugins/PATGenericParticleProducer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatAlgos/plugins/PATHeavyIonProducer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatAlgos/plugins/PATHemisphereProducer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatAlgos/plugins/PATJetProducer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatAlgos/plugins/PATLeptonCountFilter.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatAlgos/plugins/PATMETProducer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatAlgos/plugins/PATMHTProducer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatAlgos/plugins/PATMuonProducer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatAlgos/plugins/PATObjectFilter.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatAlgos/plugins/PATObjectSelector.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatAlgos/plugins/PATPFParticleProducer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatAlgos/plugins/PATPhotonProducer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatAlgos/plugins/PATPrimaryVertexCleaner.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatAlgos/plugins/PATSingleVertexSelector.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatAlgos/plugins/PATTauProducer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatAlgos/plugins/PATTriggerEventProducer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatAlgos/plugins/PATTriggerMatchEmbedder.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatAlgos/plugins/PATTriggerMatcher.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatAlgos/plugins/PATTriggerProducer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatAlgos/plugins/StringResolutionProviderESProducer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatAlgos/plugins/TauJetCorrFactorsProducer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatAlgos/plugins/VertexAssociationProducer.cc 
+Entering library rule at PhysicsTools/PatUtils
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatExamples/bin/PatMuonEDMAnalyzer.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatExamples/bin/PatCleaningExercise.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatExamples/bin/PatBasicFWLiteJetAnalyzer.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatExamples/bin/PatBasicFWLiteAnalyzer.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatExamples/bin/PatAnalysisTasksExercise.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatExamples/bin/PatBasicFWLiteJetAnalyzer_Selector.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatExamples/bin/PatBasicFWLiteJetUnitTest.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatExamples/bin/PatMuonFWLiteAnalyzer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatExamples/plugins/JetEnergyShift.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatExamples/plugins/MuonAnalyzer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatExamples/plugins/PatBJetTagAnalyzer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatExamples/plugins/PatBJetTrackAnalyzer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatExamples/plugins/PatBJetVertexAnalyzer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatExamples/plugins/PatBTagAnalyzer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatExamples/plugins/PatBasicAnalyzer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatExamples/plugins/PatElectronAnalyzer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatExamples/plugins/PatJPsiProducer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatExamples/plugins/PatJetAnalyzer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatExamples/plugins/PatMCMatching.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatExamples/plugins/PatMCMatchingExtended.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatExamples/plugins/PatMuonEDAnalyzer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatExamples/plugins/PatTauAnalyzer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatExamples/plugins/PatTopSelectionAnalyzer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatExamples/plugins/PatTrackAnalyzer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatExamples/plugins/PatTriggerAnalyzer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatExamples/plugins/PatTriggerTagAndProbe.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatExamples/plugins/PatVertexAnalyzer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatExamples/plugins/PatZToMuMuAnalyzer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatExamples/plugins/PatZjetsElectronAnalyzer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatExamples/plugins/PatZjetsJetAnalyzer.cc 
+>> Compiling edm plugin /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatExamples/plugins/WrappedEDAnalysisTasksAnalyzer.cc 
+>> Building binary runtestUtilAlgos
+Copying tmp/slc5_amd64_gcc434/src/PhysicsTools/UtilAlgos/test/runtestUtilAlgos/runtestUtilAlgos to productstore area:
+>> Building shared library tmp/slc5_amd64_gcc434/src/RecoParticleFlow/PFProducer/src/RecoParticleFlowPFProducer/libRecoParticleFlowPFProducer.so
+>> Building edm plugin tmp/slc5_amd64_gcc434/src/RecoParticleFlow/PFProducer/test/RecoParticleFlowPFSuperClusterReader/libRecoParticleFlowPFSuperClusterReader.so
+>> Building edm plugin tmp/slc5_amd64_gcc434/src/RecoParticleFlow/PFProducer/test/RecoParticleFlowPFIsoReader/libRecoParticleFlowPFIsoReader.so
+>> Building shared library tmp/slc5_amd64_gcc434/src/RecoEgamma/ElectronIdentification/src/RecoEgammaElectronIdentification/libRecoEgammaElectronIdentification.so
+Entering library rule at DataFormats/PatCandidates
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/SelectorUtils/src/EventSelector.cc 
+Leaving library rule at src/RecoParticleFlow/PFProducer/test
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/SelectorUtils/src/PFElectronSelector.cc 
+Leaving library rule at src/RecoParticleFlow/PFProducer/test
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/SelectorUtils/src/PFMuonSelector.cc 
+Copying tmp/slc5_amd64_gcc434/src/RecoParticleFlow/PFProducer/src/RecoParticleFlowPFProducer/libRecoParticleFlowPFProducer.so to productstore area:
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/SelectorUtils/src/SimpleCutBasedElectronIDSelectionFunctor.cc 
+Copying tmp/slc5_amd64_gcc434/src/RecoEgamma/ElectronIdentification/src/RecoEgammaElectronIdentification/libRecoEgammaElectronIdentification.so to productstore area:
+Leaving library rule at RecoParticleFlow/PFProducer
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/SelectorUtils/src/WPlusJetsEventSelector.cc 
+Leaving library rule at RecoEgamma/ElectronIdentification
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/SelectorUtils/src/strbitset.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatUtils/src/CaloIsolationEnergy.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatUtils/src/CaloJetSelector.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatUtils/src/CandRefHelper.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatUtils/src/DuplicatedElectronRemover.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatUtils/src/DuplicatedPhotonRemover.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatUtils/src/ElectronSelector.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatUtils/src/EventHypothesisTools.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatUtils/src/LeptonJetIsolationAngle.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatUtils/src/LeptonVertexSignificance.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatUtils/src/MuonSelector.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatUtils/src/ObjectResolutionCalc.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatUtils/src/PATDiObjectProxy.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatUtils/src/SimpleJetTrackAssociator.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatUtils/src/StringParserTools.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatUtils/src/TrackerIsolationPt.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatUtils/src/TriggerHelper.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatUtils/src/VertexAssociationSelector.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatUtils/src/bJetSelector.cc 
+>> Building binary testIntegralTiming
+Copying tmp/slc5_amd64_gcc434/src/PhysicsTools/Utilities/test/testIntegralTiming/testIntegralTiming to productstore area:
+>> Building binary testZMassFitExtLikelihood
+>> Building binary testZMassFitLikelihood
+Copying tmp/slc5_amd64_gcc434/src/PhysicsTools/Utilities/test/testZMassFitExtLikelihood/testZMassFitExtLikelihood to productstore area:
+Copying tmp/slc5_amd64_gcc434/src/PhysicsTools/Utilities/test/testZMassFitLikelihood/testZMassFitLikelihood to productstore area:
+>> Building binary testZMassFitSimple
+>> Building binary testSideBandSubtraction
+>> Building binary testZMassFit
+>> Building binary testRooFitFunction
+Copying tmp/slc5_amd64_gcc434/src/PhysicsTools/Utilities/test/testZMassFitSimple/testZMassFitSimple to productstore area:
+Copying tmp/slc5_amd64_gcc434/src/PhysicsTools/Utilities/test/testSideBandSubtraction/testSideBandSubtraction to productstore area:
+Copying tmp/slc5_amd64_gcc434/src/PhysicsTools/Utilities/test/testZMassFit/testZMassFit to productstore area:
+>> Building binary testExpressionFit
+Copying tmp/slc5_amd64_gcc434/src/PhysicsTools/Utilities/test/testRooFitFunction/testRooFitFunction to productstore area:
+>> Building edm plugin tmp/slc5_amd64_gcc434/src/RecoParticleFlow/PFProducer/plugins/RecoParticleFlowPFProducerPlugins/libRecoParticleFlowPFProducerPlugins.so
+@@@@ Running edmWriteConfigs for RecoParticleFlowPFSuperClusterReader
+@@@@ Running edmWriteConfigs for RecoParticleFlowPFIsoReader
+Copying tmp/slc5_amd64_gcc434/src/PhysicsTools/Utilities/test/testExpressionFit/testExpressionFit to productstore area:
+>> Building binary getbtagPerformance
+>> Building binary TestPerformanceFWLite_ES
+>> Building edm plugin tmp/slc5_amd64_gcc434/src/RecoEgamma/ElectronIdentification/plugins/RecoEgammaElectronIdentificationPlugins/libRecoEgammaElectronIdentificationPlugins.so
+--- Registered EDM Plugin: RecoParticleFlowPFIsoReader
+--- Registered EDM Plugin: RecoParticleFlowPFSuperClusterReader
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/DataFormats/PatCandidates/src/CandKinResolution.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/DataFormats/PatCandidates/src/CompositeCandidate.cc 
+Copying tmp/slc5_amd64_gcc434/src/RecoBTag/PerformanceDB/bin/TestPerformanceFWLite_ES/TestPerformanceFWLite_ES to productstore area:
+Copying tmp/slc5_amd64_gcc434/src/RecoBTag/PerformanceDB/bin/getbtagPerformance/getbtagPerformance to productstore area:
+Leaving library rule at src/RecoParticleFlow/PFProducer/plugins
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/DataFormats/PatCandidates/src/Conversion.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/DataFormats/PatCandidates/src/Electron.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/DataFormats/PatCandidates/src/EventHypothesis.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/DataFormats/PatCandidates/src/Flags.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/DataFormats/PatCandidates/src/GenericParticle.cc 
+Leaving library rule at src/RecoEgamma/ElectronIdentification/plugins
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/DataFormats/PatCandidates/src/HardEventHypothesis.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/DataFormats/PatCandidates/src/Jet.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/DataFormats/PatCandidates/src/JetCorrFactors.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/DataFormats/PatCandidates/src/MET.cc 
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp: In function 'int main(int, char**)':
+/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal.cpp:1639: warning: 'fQCD' may be used uninitialized in this function [-Wuninitialized]
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/DataFormats/PatCandidates/src/MHT.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/DataFormats/PatCandidates/src/Muon.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/DataFormats/PatCandidates/src/PFParticle.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/DataFormats/PatCandidates/src/ParametrizationHelper.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/DataFormats/PatCandidates/src/Particle.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/DataFormats/PatCandidates/src/Photon.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/DataFormats/PatCandidates/src/ResolutionHelper.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/DataFormats/PatCandidates/src/StringMap.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/DataFormats/PatCandidates/src/Tau.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/DataFormats/PatCandidates/src/TauCaloSpecific.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/DataFormats/PatCandidates/src/TauJetCorrFactors.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/DataFormats/PatCandidates/src/TauPFSpecific.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/DataFormats/PatCandidates/src/TriggerAlgorithm.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/DataFormats/PatCandidates/src/TriggerCondition.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/DataFormats/PatCandidates/src/TriggerEvent.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/DataFormats/PatCandidates/src/TriggerFilter.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/DataFormats/PatCandidates/src/TriggerObject.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/DataFormats/PatCandidates/src/TriggerObjectStandAlone.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/DataFormats/PatCandidates/src/TriggerPath.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/DataFormats/PatCandidates/src/UserData.cc 
+>> Compiling  /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/DataFormats/PatCandidates/src/Vertexing.cc 
+@@@@ Running edmWriteConfigs for RecoParticleFlowPFProducerPlugins
+@@@@ Running edmWriteConfigs for RecoEgammaElectronIdentificationPlugins
+--- Registered EDM Plugin: RecoParticleFlowPFProducerPlugins
+>> Leaving Package RecoParticleFlow/PFProducer
+>> Package RecoParticleFlow/PFProducer built
+>> Subsystem RecoParticleFlow built
+--- Registered EDM Plugin: RecoEgammaElectronIdentificationPlugins
+>> Leaving Package RecoEgamma/ElectronIdentification
+>> Package RecoEgamma/ElectronIdentification built
+>> Subsystem RecoEgamma built
+>> Building shared library tmp/slc5_amd64_gcc434/src/DataFormats/PatCandidates/src/DataFormatsPatCandidates/libDataFormatsPatCandidates.so
+Copying tmp/slc5_amd64_gcc434/src/DataFormats/PatCandidates/src/DataFormatsPatCandidates/libDataFormatsPatCandidates.so to productstore area:
+Leaving library rule at DataFormats/PatCandidates
+>> Building shared library tmp/slc5_amd64_gcc434/src/PhysicsTools/UtilAlgos/src/PhysicsToolsUtilAlgos/libPhysicsToolsUtilAlgos.so
+>> Building shared library tmp/slc5_amd64_gcc434/src/PhysicsTools/SelectorUtils/src/PhysicsToolsSelectorUtils/libPhysicsToolsSelectorUtils.so
+>> Building capability library tmp/slc5_amd64_gcc434/src/DataFormats/PatCandidates/src/DataFormatsPatCandidates/libDataFormatsPatCandidatesCapabilities.so
+>> Building binary testKinResolutions
+>> Building shared library tmp/slc5_amd64_gcc434/src/PhysicsTools/PatUtils/src/PhysicsToolsPatUtils/libPhysicsToolsPatUtils.so
+>> Building binary testPhysicsToolsUtilities
+>> Building shared library tmp/slc5_amd64_gcc434/src/CommonTools/ParticleFlow/src/CommonToolsParticleFlow/libCommonToolsParticleFlow.so
+>> Building edm plugin tmp/slc5_amd64_gcc434/src/RecoBTag/PerformanceDB/test/validateRecoBTagPerformanceDBPlugins/libvalidateRecoBTagPerformanceDBPlugins.so
+>> Checking EDM Class Version for /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/DataFormats/PatCandidates/src/classes_def.xml in libDataFormatsPatCandidatesCapabilities.so
+Copying tmp/slc5_amd64_gcc434/src/CommonTools/ParticleFlow/src/CommonToolsParticleFlow/libCommonToolsParticleFlow.so to productstore area:
+Copying tmp/slc5_amd64_gcc434/src/PhysicsTools/UtilAlgos/src/PhysicsToolsUtilAlgos/libPhysicsToolsUtilAlgos.so to productstore area:
+Copying tmp/slc5_amd64_gcc434/src/DataFormats/PatCandidates/test/testKinResolutions/testKinResolutions to productstore area:
+Copying tmp/slc5_amd64_gcc434/src/PhysicsTools/SelectorUtils/src/PhysicsToolsSelectorUtils/libPhysicsToolsSelectorUtils.so to productstore area:
+Copying tmp/slc5_amd64_gcc434/src/PhysicsTools/Utilities/test/testPhysicsToolsUtilities/testPhysicsToolsUtilities to productstore area:
+Leaving library rule at CommonTools/ParticleFlow
+>> Building edm plugin tmp/slc5_amd64_gcc434/src/RecoBTag/PerformanceDB/test/testRecoBTagTestPerformanceDBPlugins/libtestRecoBTagTestPerformanceDBPlugins.so
+Leaving library rule at src/RecoBTag/PerformanceDB/test
+Copying tmp/slc5_amd64_gcc434/src/PhysicsTools/PatUtils/src/PhysicsToolsPatUtils/libPhysicsToolsPatUtils.so to productstore area:
+>> Building edm plugin tmp/slc5_amd64_gcc434/src/CommonTools/ParticleFlow/plugins/CommonToolsParticleFlow_plugins/libCommonToolsParticleFlow_plugins.so
+Leaving library rule at PhysicsTools/UtilAlgos
+>> Building binary trainLL
+@@@@ Running edmWriteConfigs for validateRecoBTagPerformanceDBPlugins
+Leaving library rule at PhysicsTools/SelectorUtils
+>> Building binary FWLiteWithBasicAnalyzer
+>> Building binary mergeTFileServiceHistograms
+Copying tmp/slc5_amd64_gcc434/src/TopQuarkAnalysis/SingleTop/bin/trainLL/trainLL to productstore area:
+Leaving library rule at src/RecoBTag/PerformanceDB/test
+>> Building edm plugin tmp/slc5_amd64_gcc434/src/RecoBTag/PerformanceDB/plugins/RecoBTagPerformanceDBplugins/libRecoBTagPerformanceDBplugins.so
+@@@@ Running edmWriteConfigs for testRecoBTagTestPerformanceDBPlugins
+--- Registered EDM Plugin: validateRecoBTagPerformanceDBPlugins
+Leaving library rule at PhysicsTools/PatUtils
+>> Building edm plugin tmp/slc5_amd64_gcc434/src/TopQuarkAnalysis/SingleTop/src/TopQuarkAnalysisSingleTop/libTopQuarkAnalysisSingleTop.so
+Copying tmp/slc5_amd64_gcc434/src/PhysicsTools/UtilAlgos/bin/FWLiteWithBasicAnalyzer/FWLiteWithBasicAnalyzer to productstore area:
+Copying tmp/slc5_amd64_gcc434/src/PhysicsTools/UtilAlgos/bin/mergeTFileServiceHistograms/mergeTFileServiceHistograms to productstore area:
+>> Building shared library tmp/slc5_amd64_gcc434/src/PhysicsTools/PatAlgos/src/PhysicsToolsPatAlgos/libPhysicsToolsPatAlgos.so
+Leaving library rule at src/CommonTools/ParticleFlow/plugins
+>> Building edm plugin tmp/slc5_amd64_gcc434/src/PhysicsTools/PatAlgos/test/PhysicsToolsPatAlgos_testAnalyzers/libPhysicsToolsPatAlgos_testAnalyzers.so
+>> Building capability library tmp/slc5_amd64_gcc434/src/PhysicsTools/PatUtils/src/PhysicsToolsPatUtils/libPhysicsToolsPatUtilsCapabilities.so
+>> Building shared library tmp/slc5_amd64_gcc434/src/PhysicsTools/PatExamples/src/PhysicsToolsPatExamples/libPhysicsToolsPatExamples.so
+Leaving library rule at src/RecoBTag/PerformanceDB/plugins
+>> Leaving Package PhysicsTools/Utilities
+>> Package PhysicsTools/Utilities built
+--- Registered EDM Plugin: testRecoBTagTestPerformanceDBPlugins
+>> Building binary testSelection_wplusjets
+>> Building capability library tmp/slc5_amd64_gcc434/src/PhysicsTools/SelectorUtils/src/PhysicsToolsSelectorUtils/libPhysicsToolsSelectorUtilsCapabilities.so
+Copying tmp/slc5_amd64_gcc434/src/PhysicsTools/PatAlgos/src/PhysicsToolsPatAlgos/libPhysicsToolsPatAlgos.so to productstore area:
+>> Checking EDM Class Version for /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/SelectorUtils/src/classes_def.xml in libPhysicsToolsSelectorUtilsCapabilities.so
+>> Checking EDM Class Version for /afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5/src/PhysicsTools/PatUtils/src/classes_def.xml in libPhysicsToolsPatUtilsCapabilities.so
+Copying tmp/slc5_amd64_gcc434/src/PhysicsTools/SelectorUtils/bin/testSelection_wplusjets/testSelection_wplusjets to productstore area:
+Copying tmp/slc5_amd64_gcc434/src/PhysicsTools/PatExamples/src/PhysicsToolsPatExamples/libPhysicsToolsPatExamples.so to productstore area:
+>> Building edm plugin tmp/slc5_amd64_gcc434/src/PhysicsTools/UtilAlgos/plugins/PhysicsToolsUtilAlgos_plugins/libPhysicsToolsUtilAlgos_plugins.so
+Leaving library rule at PhysicsTools/PatAlgos
+@@@@ Running edmWriteConfigs for CommonToolsParticleFlow_plugins
+Leaving library rule at PhysicsTools/PatExamples
+Leaving library rule at src/PhysicsTools/PatAlgos/test
+@@@@ Running edmWriteConfigs for RecoBTagPerformanceDBplugins
+--- Registered EDM Plugin: CommonToolsParticleFlow_plugins
+@@@@ ----> OK  EDM Class Version 
+--- Registered EDM Plugin: RecoBTagPerformanceDBplugins
+>> Building edm plugin tmp/slc5_amd64_gcc434/src/PhysicsTools/PatAlgos/plugins/PhysicsToolsPatAlgos_plugins/libPhysicsToolsPatAlgos_plugins.so
+>> Building binary PatMuonEDMAnalyzer
+@@@@ Running edmWriteConfigs for PhysicsToolsPatAlgos_testAnalyzers
+>> Building binary PatCleaningExercise
+Leaving library rule at src/PhysicsTools/UtilAlgos/plugins
+>> Building binary PatBasicFWLiteJetAnalyzer
+Copying tmp/slc5_amd64_gcc434/src/PhysicsTools/PatExamples/bin/PatCleaningExercise/PatCleaningExercise to productstore area:
+Copying tmp/slc5_amd64_gcc434/src/PhysicsTools/PatExamples/bin/PatBasicFWLiteJetAnalyzer/PatBasicFWLiteJetAnalyzer to productstore area:
+Copying tmp/slc5_amd64_gcc434/src/PhysicsTools/PatExamples/bin/PatMuonEDMAnalyzer/PatMuonEDMAnalyzer to productstore area:
+>> Building binary PatBasicFWLiteAnalyzer
+>> Building binary PatAnalysisTasksExercise
+>> Building binary PatBasicFWLiteJetAnalyzer_Selector
+--- Registered EDM Plugin: PhysicsToolsPatAlgos_testAnalyzers
+>> Building binary PatBasicFWLiteJetUnitTest
+Copying tmp/slc5_amd64_gcc434/src/PhysicsTools/PatExamples/bin/PatBasicFWLiteJetAnalyzer_Selector/PatBasicFWLiteJetAnalyzer_Selector to productstore area:
+Copying tmp/slc5_amd64_gcc434/src/PhysicsTools/PatExamples/bin/PatAnalysisTasksExercise/PatAnalysisTasksExercise to productstore area:
+Copying tmp/slc5_amd64_gcc434/src/PhysicsTools/PatExamples/bin/PatBasicFWLiteAnalyzer/PatBasicFWLiteAnalyzer to productstore area:
+>> Building binary PatMuonFWLiteAnalyzer
+@@@@ ----> OK  EDM Class Version 
+>> Building edm plugin tmp/slc5_amd64_gcc434/src/PhysicsTools/PatExamples/plugins/PhysicsToolsPatExamples_plugins/libPhysicsToolsPatExamples_plugins.so
+@@@@ Running edmWriteConfigs for PhysicsToolsSelectorUtilsCapabilities
+@@@@ Running edmWriteConfigs for PhysicsToolsUtilAlgos_plugins
+Copying tmp/slc5_amd64_gcc434/src/PhysicsTools/PatExamples/bin/PatBasicFWLiteJetUnitTest/PatBasicFWLiteJetUnitTest to productstore area:
+@@@@ ----> OK  EDM Class Version 
+>> Leaving Package CommonTools/ParticleFlow
+>> Package CommonTools/ParticleFlow built
+>> Leaving Package RecoBTag/PerformanceDB
+>> Package RecoBTag/PerformanceDB built
+@@@@ Running edmWriteConfigs for DataFormatsPatCandidatesCapabilities
+@@@@ Running edmWriteConfigs for PhysicsToolsPatUtilsCapabilities
+Copying tmp/slc5_amd64_gcc434/src/PhysicsTools/PatExamples/bin/PatMuonFWLiteAnalyzer/PatMuonFWLiteAnalyzer to productstore area:
+Leaving library rule at TopQuarkAnalysis/SingleTop
+>> Subsystem CommonTools built
+>> Subsystem RecoBTag built
+@@@@ Running edmWriteConfigs for TopQuarkAnalysisSingleTop
+--- Registered EDM Plugin: PhysicsToolsSelectorUtilsCapabilities
+--- Registered EDM Plugin: PhysicsToolsUtilAlgos_plugins
+>> Leaving Package PhysicsTools/UtilAlgos
+>> Leaving Package PhysicsTools/SelectorUtils
+>> Package PhysicsTools/UtilAlgos built
+>> Package PhysicsTools/SelectorUtils built
+--- Registered EDM Plugin: DataFormatsPatCandidatesCapabilities
+>> Leaving Package DataFormats/PatCandidates
+>> Package DataFormats/PatCandidates built
+--- Registered EDM Plugin: PhysicsToolsPatUtilsCapabilities
+>> Subsystem DataFormats built
+>> Leaving Package PhysicsTools/PatUtils
+>> Package PhysicsTools/PatUtils built
+Leaving library rule at src/PhysicsTools/PatExamples/plugins
+@@@@ Running edmWriteConfigs for PhysicsToolsPatExamples_plugins
+Leaving library rule at src/PhysicsTools/PatAlgos/plugins
+@@@@ Running edmWriteConfigs for PhysicsToolsPatAlgos_plugins
+--- Registered EDM Plugin: TopQuarkAnalysisSingleTop
+--- Registered EDM Plugin: PhysicsToolsPatExamples_plugins
+>> Leaving Package PhysicsTools/PatExamples
+>> Package PhysicsTools/PatExamples built
+PATPhotonProducer
+PATJetProducer
+PATElectronProducer
+JetCorrFactorsProducer
+--- Registered EDM Plugin: PhysicsToolsPatAlgos_plugins
+>> Leaving Package PhysicsTools/PatAlgos
+>> Package PhysicsTools/PatAlgos built
+>> Subsystem PhysicsTools built
+>> Building binary fitsPlots1D_twocomp_signal
+Copying tmp/slc5_amd64_gcc434/src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_signal/fitsPlots1D_twocomp_signal to productstore area:
+>> Leaving Package TopQuarkAnalysis/SingleTop
+>> Package TopQuarkAnalysis/SingleTop built
+>> Subsystem TopQuarkAnalysis built
+gmake[1]: Entering directory `/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5'
+tmp/slc5_amd64_gcc434/MakeData/DirCache.mk:634: No such file exists: src/TopQuarkAnalysis/SingleTop/bin/fitsPlotsTestMC.cpp. Please fix src/TopQuarkAnalysis/SingleTop/bin/BuildFile.
+tmp/slc5_amd64_gcc434/MakeData/DirCache.mk:645: No such file exists: src/TopQuarkAnalysis/SingleTop/bin/fitsPlots2D.cpp. Please fix src/TopQuarkAnalysis/SingleTop/bin/BuildFile.
+tmp/slc5_amd64_gcc434/MakeData/DirCache.mk:656: No such file exists: src/TopQuarkAnalysis/SingleTop/bin/TopReconstructionEta.cpp. Please fix src/TopQuarkAnalysis/SingleTop/bin/BuildFile.
+tmp/slc5_amd64_gcc434/MakeData/DirCache.mk:667: No such file exists: src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_threecomp.cpp. Please fix src/TopQuarkAnalysis/SingleTop/bin/BuildFile.
+tmp/slc5_amd64_gcc434/MakeData/DirCache.mk:678: No such file exists: src/TopQuarkAnalysis/SingleTop/bin/TopReconstructionEtaTETR_one.cpp. Please fix src/TopQuarkAnalysis/SingleTop/bin/BuildFile.
+tmp/slc5_amd64_gcc434/MakeData/DirCache.mk:689: No such file exists: src/TopQuarkAnalysis/SingleTop/bin/fitsPlots2D_twocomp.cpp. Please fix src/TopQuarkAnalysis/SingleTop/bin/BuildFile.
+tmp/slc5_amd64_gcc434/MakeData/DirCache.mk:700: No such file exists: src/TopQuarkAnalysis/SingleTop/bin/Plotter.cpp. Please fix src/TopQuarkAnalysis/SingleTop/bin/BuildFile.
+tmp/slc5_amd64_gcc434/MakeData/DirCache.mk:711: No such file exists: src/TopQuarkAnalysis/SingleTop/bin/2DLikelihoodTreeMaker.cpp. Please fix src/TopQuarkAnalysis/SingleTop/bin/BuildFile.
+tmp/slc5_amd64_gcc434/MakeData/DirCache.mk:722: No such file exists: src/TopQuarkAnalysis/SingleTop/bin/Subtractor.cpp. Please fix src/TopQuarkAnalysis/SingleTop/bin/BuildFile.
+tmp/slc5_amd64_gcc434/MakeData/DirCache.mk:744: No such file exists: src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1DKarlsruhe.cpp. Please fix src/TopQuarkAnalysis/SingleTop/bin/BuildFile.
+tmp/slc5_amd64_gcc434/MakeData/DirCache.mk:755: No such file exists: src/TopQuarkAnalysis/SingleTop/bin/TopReconstructionEtaTETR.cpp. Please fix src/TopQuarkAnalysis/SingleTop/bin/BuildFile.
+tmp/slc5_amd64_gcc434/MakeData/DirCache.mk:766: No such file exists: src/TopQuarkAnalysis/SingleTop/bin/plots1DValidation.cpp. Please fix src/TopQuarkAnalysis/SingleTop/bin/BuildFile.
+tmp/slc5_amd64_gcc434/MakeData/DirCache.mk:788: No such file exists: src/TopQuarkAnalysis/SingleTop/bin/TopReconstructionCos.cpp. Please fix src/TopQuarkAnalysis/SingleTop/bin/BuildFile.
+tmp/slc5_amd64_gcc434/MakeData/DirCache.mk:799: No such file exists: src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D.cpp. Please fix src/TopQuarkAnalysis/SingleTop/bin/BuildFile.
+tmp/slc5_amd64_gcc434/MakeData/DirCache.mk:810: No such file exists: src/TopQuarkAnalysis/SingleTop/bin/fitsPlotsPDFs1D.cpp. Please fix src/TopQuarkAnalysis/SingleTop/bin/BuildFile.
+tmp/slc5_amd64_gcc434/MakeData/DirCache.mk:821: No such file exists: src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp.cpp. Please fix src/TopQuarkAnalysis/SingleTop/bin/BuildFile.
+tmp/slc5_amd64_gcc434/MakeData/DirCache.mk:832: No such file exists: src/TopQuarkAnalysis/SingleTop/bin/TopReconstructionEtaTETR_one_topmass.cpp. Please fix src/TopQuarkAnalysis/SingleTop/bin/BuildFile.
+tmp/slc5_amd64_gcc434/MakeData/DirCache.mk:843: No such file exists: src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_2j1t.cpp. Please fix src/TopQuarkAnalysis/SingleTop/bin/BuildFile.
+tmp/slc5_amd64_gcc434/MakeData/DirCache.mk:854: No such file exists: src/TopQuarkAnalysis/SingleTop/bin/fitsPlots1D_twocomp_ttbar.cpp. Please fix src/TopQuarkAnalysis/SingleTop/bin/BuildFile.
+tmp/slc5_amd64_gcc434/MakeData/DirCache.mk:865: No such file exists: src/TopQuarkAnalysis/SingleTop/bin/TopReconstructionEtaTETR_SEED.cpp. Please fix src/TopQuarkAnalysis/SingleTop/bin/BuildFile.
+tmp/slc5_amd64_gcc434/MakeData/DirCache.mk:876: No such file exists: src/TopQuarkAnalysis/SingleTop/bin/fitsPlots2DSFLikelihoodSummerDataDriven.cpp. Please fix src/TopQuarkAnalysis/SingleTop/bin/BuildFile.
+>> Local Products Rules ..... started
+>> Local Products Rules ..... done
+****WARNING: Invalid tool EGamma/EGammaAnalysisTools. Please fix src/PhysicsTools/PatAlgos/plugins/BuildFile.xml file.
+****WARNING: Invalid tool EgammaAnalysis/ElectronTools. Please fix src/PhysicsTools/PatAlgos/plugins/BuildFile.xml file.
+@@@@ Refreshing Plugins:EdmPluginRefresh
+>>Creating project symlinks
+>> Compiling cfi/cff python modules: src/CommonTools/ParticleFlow/python
+>> Compiling cfi/cff python modules: src/PhysicsTools/PatAlgos/python
+>> Compiling cfi/cff python modules: src/PhysicsTools/PatExamples/python
+>> Compiling cfi/cff python modules: src/PhysicsTools/PatUtils/python
+>> Compiling cfi/cff python modules: src/PhysicsTools/SelectorUtils/python
+>> Compiling cfi/cff python modules: src/RecoBTag/PerformanceDB/python
+>> Compiling cfi/cff python modules: src/PhysicsTools/UtilAlgos/python
+>> Compiling cfi/cff python modules: src/RecoEgamma/ElectronIdentification/python
+>> Compiling cfi/cff python modules: src/RecoParticleFlow/PFProducer/python
+>> Pluging of all type refreshed.
+>> All python modules compiled
+gmake[1]: Leaving directory `/afs/cern.ch/work/f/fabozzi/stop/44an/CMSSW_4_4_5'
