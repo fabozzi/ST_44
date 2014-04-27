@@ -3,8 +3,8 @@ import FWCore.ParameterSet.Config as cms
 import os,sys,re,shutil,commands
 
 
-inputDir = "/tmp/mmerola/"
-outputDir = "/tmp/mmerola/"
+inputDir = "/data3/scratch/users/fabozzi/SingleTop/ntp14apr14/"
+outputDir = "/data3/scratch/users/fabozzi/SingleTop/ntp14apr14_Merged/"
 
 #Original config file
 template = "copyFlavorSeparationTemplateSummer"
@@ -13,10 +13,10 @@ template = "copyFlavorSeparationTemplateSummer"
 
 
 option = "None"
-option = "cmsRun"
-#option = "bsub"
+#option = "cmsRun"
+option = "qsub"
 
-nparts = 1
+nparts = 4
 channels = [
 #"Mu_2011A_08Nov",
 #"Mu_2011B_19Nov",
@@ -33,11 +33,6 @@ channels = [
 #"TbarChannel_Q2Up",
 #"TChannel_Q2Down",
 #"TbarChannel_Q2Down",
-#"QCDMu",
-#"QCD_Pt_30to80_EMEnriched",
-#"QCD_Pt_30to80_BCtoE",
-#"QCD_Pt_80to170_EMEnriched",
-#"QCD_Pt_80to170_EMEnriched",
 #"WJets",
 #"W1Jet",
 #"W2Jets"
@@ -55,13 +50,40 @@ channels = [
 #"Mu_v1_A",
 #"Mu_v1_B2",
 #"Mu_v1_B1",
-"WW",
+#"WW",
 #"WZ",
 #"ZZ",
-    ]
+#---------------------------------------------
+#"QCDMu",
+#"QCD_Pt_20to30_EMEnriched",
+#"QCD_Pt_20to30_BCtoE",
+#"QCD_Pt_30to80_EMEnriched",
+#"QCD_Pt_30to80_BCtoE",
+#"QCD_Pt_80to170_EMEnriched",
+#"QCD_Pt_80to170_BCtoE",
+#"QCD_HT_100_200_GJets",
+#"QCD_HT_200_inf_GJets",
+#"QCD_HT_40_100_GJets",
+#"SChannel",
+#"SbarChannel",
+#"TChannel",
+#"TWChannel",
+#"TbarChannel",
+#"TbarWChannel",
+#"WW",
+#"ZJets",
+#"TTBar",
+#"W1Jet",
+#"W2Jets",
+#"W3Jets",
+"Ele_2011A_08Nov",
+"Ele_2011B_19Nov",
+"Mu_2011A_08Nov",
+]
 
 for channel in channels: 
-    command_ls = "ls " + inputDir + " | grep _"+channel+"_"
+#    command_ls = "ls " + inputDir + " | grep _"+channel+"_"
+    command_ls = "ls " + inputDir + "/"+ channel+ " | grep _"+channel+"_"
     print command_ls
     files = commands.getoutput(command_ls).split('\n')
     print "channel "+ channel +" n files " + str(len(files))
@@ -113,19 +135,19 @@ for channel in channels:
             nr = nr +1
             if part == nparts:
                 if nr > nraws * (part -1):
-                    templateFileCopy.process.source.fileNames.append("file:"+inputDir+str(file))
+                    templateFileCopy.process.source.fileNames.append("file:"+inputDir+"/"+channel+"/"+str(file))
             elif  nr > nraws * (part -1) and  nr <= nraws *part:
     #            print "nr "+str( nr )+" part "+str( part) + " nraws "+str( nraws ) + " filename " + str(file)
-                templateFileCopy.process.source.fileNames.append("file:"+inputDir+str(file))
+                templateFileCopy.process.source.fileNames.append("file:"+inputDir+"/"+channel+"/"+str(file))
                
         configFile.write(templateFileCopy.process.dumpPython())
         configFile.close()
         if option == "cmsRun":
-            launchCommand = 'nohup cmsRun ./' + channel + "_part_" +str(part)+"_cfg.py" +' >  /tmp/mmerola/'+channel+"_part_"+str(part)+'_merge.log &'
+            launchCommand = 'nohup cmsRun ./' + channel + "_part_" +str(part)+"_cfg.py" +' >  '+outputDir+channel+"_part_"+str(part)+'_merge.log &'
             print launchCommand
             os.system(launchCommand)
-        if option == "bsub":
-            launchCommand = 'bsub -q1nd ./' + channel + "_part_" +str(part)+"_cfg.py" +' >  /tmp/mmerola/'+channel+"_part_"+str(part)+'_merge.log &'
+        if option == "qsub":
+            launchCommand = 'qsub -q local jobtest_ntp.csh -v var1=' + channel + "_part_" +str(part)+"_cfg.py -o "+channel + "_part_" +str(part)+".log -j oe"  
             print launchCommand
             os.system(launchCommand)
                                         
