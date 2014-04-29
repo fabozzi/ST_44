@@ -16,7 +16,7 @@ option = "None"
 #option = "cmsRun"
 option = "qsub"
 
-nparts = 4
+nparts = 1
 channels = [
 #"Mu_2011A_08Nov",
 #"Mu_2011B_19Nov",
@@ -54,67 +54,75 @@ channels = [
 #"WZ",
 #"ZZ",
 #---------------------------------------------
-#"QCDMu",
-#"QCD_Pt_20to30_EMEnriched",
-#"QCD_Pt_20to30_BCtoE",
-#"QCD_Pt_30to80_EMEnriched",
-#"QCD_Pt_30to80_BCtoE",
-#"QCD_Pt_80to170_EMEnriched",
-#"QCD_Pt_80to170_BCtoE",
-#"QCD_HT_100_200_GJets",
-#"QCD_HT_200_inf_GJets",
-#"QCD_HT_40_100_GJets",
-#"SChannel",
-#"SbarChannel",
-#"TChannel",
-#"TWChannel",
-#"TbarChannel",
-#"TbarWChannel",
-#"WW",
+"QCDMu",
+"QCD_Pt_20to30_EMEnriched",
+"QCD_Pt_20to30_BCtoE",
+"QCD_Pt_30to80_EMEnriched",
+"QCD_Pt_30to80_BCtoE",
+"QCD_Pt_80to170_EMEnriched",
+"QCD_Pt_80to170_BCtoE",
+"QCD_HT_100_200_GJets",
+"QCD_HT_200_inf_GJets",
+"QCD_HT_40_100_GJets",
+"SChannel",
+"SbarChannel",
+"TChannel",
+"TWChannel",
+"TbarChannel",
+"TbarWChannel",
+"WW",
 #"ZJets",
 #"TTBar",
 #"W1Jet",
 #"W2Jets",
 #"W3Jets",
-"Ele_2011A_08Nov",
-"Ele_2011B_19Nov",
-"Mu_2011A_08Nov",
+#"Ele_2011A_08Nov",
+#"Ele_2011B_19Nov",
+#"Mu_2011A_08Nov",
 ]
 
 for channel in channels: 
 #    command_ls = "ls " + inputDir + " | grep _"+channel+"_"
-    command_ls = "ls " + inputDir + "/"+ channel+ " | grep _"+channel+"_"
+    command_ls = "ls -1 " + inputDir + "/"+ channel+ " | grep edmntuple"
     print command_ls
     files = commands.getoutput(command_ls).split('\n')
     print "channel "+ channel +" n files " + str(len(files))
+
+    print files
 
     templateFile= __import__(template)     
 
 #    for file in files:
 #        print file
     print "Removing doubles from list"
-    for file in files :
-        print file
-        fileNameParts = file.split("_")
-        print 'filenameparts: ', fileNameParts
-        jobNumber = fileNameParts[len(fileNameParts)-3] 
-  #      print jobNumber
-        for checkFile in files:
-            if checkFile == file: continue
-            checkFileNameParts = checkFile.split("_")
-#            print checkFileNameParts
+# looping over copies of list, otherwise unexpected results!
+    files1 = list(files)
+    files2 = list(files)
+    nn1 = len(files1)
+    nn2 = len(files2)
+    nremoved = 0
+    for ii in range(0, nn1) :
+        for jj in range(ii+1, nn2) :
+            file1 = files1[ii]
+            file2 = files2[jj]
+            fileNameParts = file1.split("_")
+            jobNumber = fileNameParts[len(fileNameParts)-3] 
+            checkFileNameParts = file2.split("_")
             checkJobNumber = checkFileNameParts[len(checkFileNameParts)-3] 
             if jobNumber == checkJobNumber:
-                print " double: " + str(file) +" vs " + str(checkFile) 
-                files.remove(checkFile)
+                print " double: " + file1 +" vs " + file2 
+                print "REMOVING " + file2 
+                files.remove(file2)
+                nremoved = nremoved + 1
 #            Break 
     nfiles = len(files)    
     nraws = nfiles/(nparts)
     
     part = 0
-
+    print "files removed = ", nremoved
     print channel + " after removal: n files " + str(len(files))
-    for file in files: print file
+    for file in files:
+        print file
     
     while int(part) < int(nparts):
         templateFileCopy = templateFile 
