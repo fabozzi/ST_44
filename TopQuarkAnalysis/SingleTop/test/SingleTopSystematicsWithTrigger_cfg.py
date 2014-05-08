@@ -34,17 +34,13 @@ process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(-1) )
 
 process.source = cms.Source ("PoolSource",
                              fileNames = cms.untracked.vstring (
-
-'file:/tmp/mmerola/TChannelMerged.root',
+    'file:/data3/scratch/users/fabozzi/SingleTop/ntp14apr14_Merged/TChannelMerged.root',
+#    'file:/tmp/mmerola/TChannelMerged.root',
 #'rfio:/castor/cern.ch/user/m/mmerola/SingleTop_2012/MergedJune/TChannelMerged.root',
-
-),
+    ),
 duplicateCheckMode = cms.untracked.string('noDuplicateCheck'),
 #eventsToProcess = cms.untracked.VEventRange('1:19517967-1:19517969'),
 )
-
-
-
 
 #from TChannel import *
 #process.source.fileNames = TChannel_ntuple
@@ -54,7 +50,7 @@ duplicateCheckMode = cms.untracked.string('noDuplicateCheck'),
 
 #Output
 #process.TFileService = cms.Service("TFileService", fileName = cms.string("/castor/cern.ch/user/m/mmerola/SingleTop_2012/TreesJune/TChannel.root"))
-process.TFileService = cms.Service("TFileService", fileName = cms.string("/tmp/mmerola/TChannel.root"))
+process.TFileService = cms.Service("TFileService", fileName = cms.string("/data3/scratch/users/fabozzi/SingleTop/ntp14apr14_Merged/TChannel.root"))
 #process.TFileService = cms.Service("TFileService", fileName = cms.string("testNoPU.root"))
 
 #process.load("SingleTopAnalyzers_cfi")
@@ -130,8 +126,10 @@ if channel_instruction == "all":
     )
 
 if channel_instruction == "mu":
+    process.TreesMu.doTurnOn = cms.untracked.bool(False) 
     process.TreesMu.doPU = cms.untracked.bool(False) 
     process.TreesMu.doResol = cms.untracked.bool(False) 
+    process.TreesMu.doPDF = cms.untracked.bool(False) 
     process.PathSysMu = cms.Path(
     #    process.PlotsMu +
     #    process.PlotsEle +
@@ -144,6 +142,7 @@ if channel_instruction == "ele":
     process.TreesEle.doTurnOn = cms.untracked.bool(False) 
     process.TreesEle.doPU = cms.untracked.bool(False) 
     process.TreesEle.doResol = cms.untracked.bool(False) 
+    process.TreesEle.doPDF = cms.untracked.bool(False)
     process.PathSysMu = cms.Path(
     #    process.PlotsMu +
     #    process.PlotsEle +
@@ -152,6 +151,7 @@ if channel_instruction == "ele":
     )
 
 if channel_instruction == "muqcd":
+    process.TreesMu.doTurnOn = cms.untracked.bool(False) 
     process.TreesMu.doPU = cms.untracked.bool(False) 
     process.TreesMu.doResol = cms.untracked.bool(False) 
     process.PathSysMu = cms.Path(

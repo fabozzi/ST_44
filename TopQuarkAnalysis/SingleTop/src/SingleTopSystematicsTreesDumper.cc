@@ -145,7 +145,9 @@ SingleTopSystematicsTreesDumper::SingleTopSystematicsTreesDumper(const edm::Para
   scalePDF_ = iConfig.getParameter<edm::InputTag>("scalePDF") ;
 
   // Pt cut, asymmetric in the third jet (30 GeV)
-  doAsymmetricPtCut_ = true;
+  //  doAsymmetricPtCut_ = true;
+  doAsymmetricPtCut_ = false;
+  doTopBestMass_ = true;
 
   //Pile Up Part
   np1_ = iConfig.getParameter< edm::InputTag >("nVerticesPlus");//,"PileUpSync"); 
@@ -298,11 +300,16 @@ SingleTopSystematicsTreesDumper::SingleTopSystematicsTreesDumper(const edm::Para
     treesNJets[syst]->Branch("bJetBeta", &bJetBeta);
     treesNJets[syst]->Branch("bJetDZ", &bJetDZ);
     treesNJets[syst]->Branch("bJetRMS", &bJetRMS);
-    treesNJets[syst]->Branch("nJetsLoose", &nJetsLoose);
-    treesNJets[syst]->Branch("nJetsLooseCentral", &nJetsLooseCentral);
-    treesNJets[syst]->Branch("nJetsLooseForward", &nJetsLooseForward);
-    treesNJets[syst]->Branch("nJetsLooseMBTag", &nJetsLooseMBTag);
 
+    treesNJets[syst]->Branch("nJLoose", &nJLoose);
+    treesNJets[syst]->Branch("nJLooseCentral", &nJLooseCentral);
+    treesNJets[syst]->Branch("nJLooseForward", &nJLooseForward);
+    treesNJets[syst]->Branch("nJLooseMBTag", &nJLooseMBTag);
+
+    //    treesNJets[syst]->Branch("nJetsLoose", &nJetsLoose);
+    //    treesNJets[syst]->Branch("nJetsLooseCentral", &nJetsLooseCentral);
+    //    treesNJets[syst]->Branch("nJetsLooseForward", &nJetsLooseForward);
+    //    treesNJets[syst]->Branch("nJetsLooseMBTag", &nJetsLooseMBTag);
 
    
     for(int bj = 0; bj<=5;++bj){
@@ -335,7 +342,18 @@ SingleTopSystematicsTreesDumper::SingleTopSystematicsTreesDumper(const edm::Para
       trees2J[bj][syst]->Branch("eta",&etaTree);
       trees2J[bj][syst]->Branch("costhetalj",&cosTree);
       trees2J[bj][syst]->Branch("costhetalbl", &cosBLTree);
+
+      trees2J[bj][syst]->Branch("costhetalj1", &cos1Tree);
+      trees2J[bj][syst]->Branch("costhetalbl1", &cos1BLTree);
+      
+      trees2J[bj][syst]->Branch("costhetalj2", &cos2Tree);
+      trees2J[bj][syst]->Branch("costhetalbl2", &cos2BLTree);
+      
       trees2J[bj][syst]->Branch("topMass",&topMassTree);
+      trees2J[bj][syst]->Branch("top1Mass", &top1MassTree);
+      trees2J[bj][syst]->Branch("top2Mass", &top2MassTree);
+      trees2J[bj][syst]->Branch("topMtw", &topMtwTree);
+
       trees2J[bj][syst]->Branch("mtwMass",&mtwMassTree);
 
       trees2J[bj][syst]->Branch("Mlb1",&Mlb1Tree);
@@ -449,11 +467,12 @@ SingleTopSystematicsTreesDumper::SingleTopSystematicsTreesDumper(const edm::Para
       trees2J[bj][syst]->Branch("bJet2Btag", &bJet2BTag);
       trees2J[bj][syst]->Branch("bJet2Flavour",&bJet2Flavour);
 
-      trees2J[bj][syst]->Branch("nJ",&nJ);
-      trees2J[bj][syst]->Branch("nJCentral",&nJCentral);
-      trees2J[bj][syst]->Branch("nJForward",&nJForward);
-      trees2J[bj][syst]->Branch("nJMBTag",&nJMBTag);
-
+      trees2J[bj][syst]->Branch("nJLoose",&nJLoose);
+      //	    trees2J[bj][syst]->Branch("nJ",&nJ);
+      trees2J[bj][syst]->Branch("nJLooseCentral",&nJLooseCentral);
+      trees2J[bj][syst]->Branch("nJLooseForward",&nJLooseForward);
+      trees2J[bj][syst]->Branch("nJLooseMBTag",&nJLooseMBTag);
+      
       trees2J[bj][syst]->Branch("HT", &HT);
       trees2J[bj][syst]->Branch("H", &H);
 
@@ -464,6 +483,16 @@ SingleTopSystematicsTreesDumper::SingleTopSystematicsTreesDumper(const edm::Para
       trees2J[bj][syst]->Branch("topPhi",&topPhi);
       trees2J[bj][syst]->Branch("topEta",&topEta);
       trees2J[bj][syst]->Branch("topE",&topE);
+      
+      trees2J[bj][syst]->Branch("top1Pt"  , &top1Pt);
+      trees2J[bj][syst]->Branch("top1Phi" , &top1Phi);
+      trees2J[bj][syst]->Branch("top1Eta" , &top1Eta);
+      trees2J[bj][syst]->Branch("top1E"   , &top1E);
+      
+      trees2J[bj][syst]->Branch("top2Pt"  , &top2Pt);
+      trees2J[bj][syst]->Branch("top2Phi" , &top2Phi);
+      trees2J[bj][syst]->Branch("top2Eta" , &top2Eta);
+      trees2J[bj][syst]->Branch("top2E"   , &top2E);
       
       trees2J[bj][syst]->Branch("ID",&electronID);
       trees2J[bj][syst]->Branch("nVertices",&nVertices);
@@ -483,6 +512,15 @@ SingleTopSystematicsTreesDumper::SingleTopSystematicsTreesDumper(const edm::Para
       }
       trees2J[bj][syst]->Branch("PDFWeight_Alternate_Set_1",&pdf_weights_alternate_set_1);
       trees2J[bj][syst]->Branch("PDFWeight_Alternate_Set_2",&pdf_weights_alternate_set_2);
+            trees2J[bj][syst]->Branch("top1Pt"  , &top1Pt);
+            trees2J[bj][syst]->Branch("top1Phi" , &top1Phi);
+            trees2J[bj][syst]->Branch("top1Eta" , &top1Eta);
+            trees2J[bj][syst]->Branch("top1E"   , &top1E);
+
+            trees2J[bj][syst]->Branch("top2Pt"  , &top2Pt);
+            trees2J[bj][syst]->Branch("top2Phi" , &top2Phi);
+            trees2J[bj][syst]->Branch("top2Eta" , &top2Eta);
+            trees2J[bj][syst]->Branch("top2E"   , &top2E);
 
       treename = (channel+"_3J_"+tags.str()+"_"+syst);
       
@@ -496,7 +534,17 @@ SingleTopSystematicsTreesDumper::SingleTopSystematicsTreesDumper(const edm::Para
       trees3J[bj][syst]->Branch("eta",&etaTree);
       trees3J[bj][syst]->Branch("costhetalj",&cosTree);
       trees3J[bj][syst]->Branch("costhetalbl", &cosBLTree);
+
+      trees3J[bj][syst]->Branch("costhetalj1", &cos1Tree);
+      trees3J[bj][syst]->Branch("costhetalbl1", &cos1BLTree);
+      
+      trees3J[bj][syst]->Branch("costhetalj2", &cos2Tree);
+      trees3J[bj][syst]->Branch("costhetalbl2", &cos2BLTree);
+
       trees3J[bj][syst]->Branch("topMass",&topMassTree);
+      trees3J[bj][syst]->Branch("top1Mass", &top1MassTree);
+      trees3J[bj][syst]->Branch("top2Mass", &top2MassTree);
+      trees3J[bj][syst]->Branch("topMtw", &topMtwTree);
       trees3J[bj][syst]->Branch("mtwMass",&mtwMassTree);
       
       trees3J[bj][syst]->Branch("Mlb1",&Mlb1Tree);
@@ -531,7 +579,7 @@ SingleTopSystematicsTreesDumper::SingleTopSystematicsTreesDumper(const edm::Para
       trees3J[bj][syst]->Branch("bJetE",&bJetE);
       trees3J[bj][syst]->Branch("bJetEta",&bJetEta);
       trees3J[bj][syst]->Branch("bJetPhi",&bJetPhi);
-      trees3J[bj][syst]->Branch("fJetBtag",&bJetBTag);
+      trees3J[bj][syst]->Branch("bJetBtag",&bJetBTag);
       trees3J[bj][syst]->Branch("bJetFlavour",&bJetFlavourTree);
       
       trees3J[bj][syst]->Branch("bJet1Pt",&bJet1Pt);
@@ -559,6 +607,16 @@ SingleTopSystematicsTreesDumper::SingleTopSystematicsTreesDumper(const edm::Para
       trees3J[bj][syst]->Branch("topEta",&topEta);
       trees3J[bj][syst]->Branch("topE",&topE);
       
+      trees3J[bj][syst]->Branch("top1Pt", &top1Pt);
+      trees3J[bj][syst]->Branch("top1Phi", &top1Phi);
+      trees3J[bj][syst]->Branch("top1Eta", &top1Eta);
+      trees3J[bj][syst]->Branch("top1E", &top1E);
+      
+      trees3J[bj][syst]->Branch("top2Pt", &top2Pt);
+      trees3J[bj][syst]->Branch("top2Phi", &top2Phi);
+      trees3J[bj][syst]->Branch("top2Eta", &top2Eta);
+      trees3J[bj][syst]->Branch("top2E", &top2E);
+
       trees3J[bj][syst]->Branch("ID",&electronID);
       trees3J[bj][syst]->Branch("nVertices",&nVertices);
       
@@ -597,12 +655,11 @@ SingleTopSystematicsTreesDumper::SingleTopSystematicsTreesDumper(const edm::Para
       trees3J[bj][syst]->Branch("looseJetFlavour", &looseJetFlavourTree);
 
 
-      trees3J[bj][syst]->Branch("nJ",&nJ);
-      trees3J[bj][syst]->Branch("nJCentral",&nJCentral);
-      trees3J[bj][syst]->Branch("nJForward",&nJForward);
-      trees3J[bj][syst]->Branch("nJMBTag",&nJMBTag);
-
-
+      trees3J[bj][syst]->Branch("nJLoose",&nJLoose);
+      //	    trees3J[bj][syst]->Branch("nJ",&nJ);
+      trees3J[bj][syst]->Branch("nJLooseCentral",&nJLooseCentral);
+      trees3J[bj][syst]->Branch("nJLooseForward",&nJLooseForward);
+      trees3J[bj][syst]->Branch("nJLooseMBTag",&nJLooseMBTag);
 
 
       //Systematics b weights
@@ -644,12 +701,205 @@ SingleTopSystematicsTreesDumper::SingleTopSystematicsTreesDumper(const edm::Para
       trees3J[bj][syst]->Branch("turnOnWeightBTagTrig3Up",&turnOnWeightTreeBTagTrig3Up);
       trees3J[bj][syst]->Branch("turnOnWeightBTagTrig3Down",&turnOnWeightTreeBTagTrig3Down);
 
-      for(int p =1;p<=52;++p){
+      for(int p =1; p<=52; ++p){
 	stringstream w_n;
 	w_n<<p;
 	trees3J[bj][syst]->Branch(("PDFWeight"+w_n.str()).c_str(),&pdf_weights[p-1]);
       }
 				
+
+
+      // 4 jets tree
+
+      treename = (channel + "_4J_" + tags.str() + "_" + syst);
+
+      trees4J[bj][syst] = new TTree(treename.c_str(),treename.c_str()); 
+      
+      //basic quantities
+      
+      trees4J[bj][syst]->Branch("eta",&etaTree);
+      trees4J[bj][syst]->Branch("costhetalj",&cosTree);
+      trees4J[bj][syst]->Branch("costhetalbl", &cosBLTree);
+
+      trees4J[bj][syst]->Branch("costhetalj1", &cos1Tree);
+      trees4J[bj][syst]->Branch("costhetalbl1", &cos1BLTree);
+
+      trees4J[bj][syst]->Branch("costhetalj2", &cos2Tree);
+      trees4J[bj][syst]->Branch("costhetalbl2", &cos2BLTree);
+
+      trees4J[bj][syst]->Branch("topMass",&topMassTree);
+      trees4J[bj][syst]->Branch("top1Mass", &top1MassTree);
+      trees4J[bj][syst]->Branch("top2Mass", &top2MassTree);
+      trees4J[bj][syst]->Branch("topMtw", &topMtwTree);
+      trees4J[bj][syst]->Branch("mtwMass",&mtwMassTree);
+      
+      trees4J[bj][syst]->Branch("Mlb1",&Mlb1Tree);
+      trees4J[bj][syst]->Branch("Mlb2",&Mlb2Tree);
+      trees4J[bj][syst]->Branch("b1b2Mass",&Mb1b2Tree);
+      trees4J[bj][syst]->Branch("b1b2Pt",&pTb1b2Tree);
+
+      trees4J[bj][syst]->Branch("charge",&chargeTree);
+      trees4J[bj][syst]->Branch("runid",&runTree);
+      trees4J[bj][syst]->Branch("lumiid",&lumiTree);
+      trees4J[bj][syst]->Branch("eventid",&eventTree);
+      trees4J[bj][syst]->Branch("weight",&weightTree);
+      //trees2J[bj][syst]->Branch("weightTmp",&weightTree);
+      
+      trees4J[bj][syst]->Branch("totalWeight",&totalWeightTree);
+
+      
+      //Extra info
+      
+      trees4J[bj][syst]->Branch("leptonPt",&lepPt);
+      trees4J[bj][syst]->Branch("leptonEta",&lepEta);
+      trees4J[bj][syst]->Branch("leptonPhi",&lepPhi);
+      trees4J[bj][syst]->Branch("leptonRelIso",&lepRelIso);
+      
+      trees4J[bj][syst]->Branch("fJetPt",&fJetPt);
+      trees4J[bj][syst]->Branch("fJetE",&fJetE);
+      trees4J[bj][syst]->Branch("fJetEta",&fJetEta);
+      trees4J[bj][syst]->Branch("fJetPhi",&fJetPhi);
+      trees4J[bj][syst]->Branch("fJetBtag",&fJetBTag);
+      
+      trees4J[bj][syst]->Branch("bJetPt",&bJetPt);
+      trees4J[bj][syst]->Branch("bJetE",&bJetE);
+      trees4J[bj][syst]->Branch("bJetEta",&bJetEta);
+      trees4J[bj][syst]->Branch("bJetPhi",&bJetPhi);
+      trees4J[bj][syst]->Branch("bJetBtag",&bJetBTag);
+      trees4J[bj][syst]->Branch("bJetFlavour",&bJetFlavourTree);
+      
+      trees4J[bj][syst]->Branch("bJet1Pt",&bJet1Pt);
+      trees4J[bj][syst]->Branch("bJet1E",&bJet1E);
+      trees4J[bj][syst]->Branch("bJet1Eta",&bJet1Eta);
+      trees4J[bj][syst]->Branch("bJet1Phi",&bJet1Phi);
+      trees4J[bj][syst]->Branch("bJet1Btag", &bJet1BTag);
+      trees4J[bj][syst]->Branch("bJet1Flavour",&bJet1Flavour);
+
+      trees4J[bj][syst]->Branch("bJet2Pt",&bJet2Pt);
+      trees4J[bj][syst]->Branch("bJet2E",&bJet2E);
+      trees4J[bj][syst]->Branch("bJet2Eta",&bJet2Eta);
+      trees4J[bj][syst]->Branch("bJet2Phi",&bJet2Phi);
+      trees4J[bj][syst]->Branch("bJet2Btag", &bJet2BTag);
+      trees4J[bj][syst]->Branch("bJet2Flavour",&bJet2Flavour);
+
+      trees4J[bj][syst]->Branch("HT", &HT);
+      trees4J[bj][syst]->Branch("H", &H);
+
+      trees4J[bj][syst]->Branch("metPt",&metPt);
+      trees4J[bj][syst]->Branch("metPhi",&metPhi);
+      
+      trees4J[bj][syst]->Branch("topPt",&topPt);
+      trees4J[bj][syst]->Branch("topPhi",&topPhi);
+      trees4J[bj][syst]->Branch("topEta",&topEta);
+      trees4J[bj][syst]->Branch("topE",&topE);
+      
+      trees4J[bj][syst]->Branch("top1Pt", &top1Pt);
+      trees4J[bj][syst]->Branch("top1Phi", &top1Phi);
+      trees4J[bj][syst]->Branch("top1Eta", &top1Eta);
+      trees4J[bj][syst]->Branch("top1E", &top1E);
+      
+      trees4J[bj][syst]->Branch("top2Pt", &top2Pt);
+      trees4J[bj][syst]->Branch("top2Phi", &top2Phi);
+      trees4J[bj][syst]->Branch("top2Eta", &top2Eta);
+      trees4J[bj][syst]->Branch("top2E", &top2E);
+      
+      trees4J[bj][syst]->Branch("ID",&electronID);
+      trees4J[bj][syst]->Branch("nVertices",&nVertices);
+      
+      trees4J[bj][syst]->Branch("totalEnergy",&totalEnergy);
+      trees4J[bj][syst]->Branch("totalMomentum",&totalMomentum);
+      
+      trees4J[bj][syst]->Branch("lowBTag",&lowBTagTree);
+      trees4J[bj][syst]->Branch("highBTag",&highBTagTree);
+      trees4J[bj][syst]->Branch("mediumBTag", &mediumBTagTree);
+
+      trees4J[bj][syst]->Branch("firstJetPt", &firstJetPt);
+      trees4J[bj][syst]->Branch("firstJetEta", &firstJetEta);
+      trees4J[bj][syst]->Branch("firstJetPhi", &firstJetPhi);
+      trees4J[bj][syst]->Branch("firstJetE", &firstJetE);
+      trees4J[bj][syst]->Branch("firstJetBtag", &firstJetBTag);
+      trees4J[bj][syst]->Branch("firstJetFlavour", &firstJetFlavourTree);
+
+      trees4J[bj][syst]->Branch("secondJetPt", &secondJetPt);
+      trees4J[bj][syst]->Branch("secondJetEta", &secondJetEta);
+      trees4J[bj][syst]->Branch("secondJetPhi", &secondJetPhi);
+      trees4J[bj][syst]->Branch("secondJetE", &secondJetE);
+      trees4J[bj][syst]->Branch("secondJetBtag", &secondJetBTag);
+      trees4J[bj][syst]->Branch("secondJetFlavour", &secondJetFlavourTree);
+
+      trees4J[bj][syst]->Branch("thirdJetPt", &thirdJetPt);
+      trees4J[bj][syst]->Branch("thirdJetEta", &thirdJetEta);
+      trees4J[bj][syst]->Branch("thirdJetPhi", &thirdJetPhi);
+      trees4J[bj][syst]->Branch("thirdJetE", &thirdJetE);
+      trees4J[bj][syst]->Branch("thirdJetBtag", &thirdJetBTag);
+      trees4J[bj][syst]->Branch("thirdJetFlavour", &thirdJetFlavourTree);
+
+      trees4J[bj][syst]->Branch("fourthJetPt", &fourthJetPt);
+      trees4J[bj][syst]->Branch("fourthJetEta", &fourthJetEta);
+      trees4J[bj][syst]->Branch("fourthJetPhi", &fourthJetPhi);
+      trees4J[bj][syst]->Branch("fourthJetE", &fourthJetE);
+      trees4J[bj][syst]->Branch("fourthJetBtag", &fourthJetBTag);
+      trees4J[bj][syst]->Branch("fourthJetFlavour", &fourthJetFlavourTree);
+
+      trees4J[bj][syst]->Branch("looseJetPt", &looseJetPt);
+      trees4J[bj][syst]->Branch("looseJetEta", &looseJetEta);
+      trees4J[bj][syst]->Branch("looseJetPhi", &looseJetPhi);
+      trees4J[bj][syst]->Branch("looseJetE", &looseJetE);
+      trees4J[bj][syst]->Branch("looseJetBtag", &looseJetBTag);
+      trees4J[bj][syst]->Branch("looseJetFlavour", &looseJetFlavourTree);
+
+      trees4J[bj][syst]->Branch("nJLoose",&nJLoose);
+      //	    trees4J[bj][syst]->Branch("nJ",&nJ);
+      trees4J[bj][syst]->Branch("nJLooseCentral",&nJLooseCentral);
+      trees4J[bj][syst]->Branch("nJLooseForward",&nJLooseForward);
+      trees4J[bj][syst]->Branch("nJLooseMBTag",&nJLooseMBTag);
+
+      //Systematics b weights
+
+      trees4J[bj][syst]->Branch("bWeight",&bWeightTree);
+
+      trees4J[bj][syst]->Branch("bWeightBTagUp",&bWeightTreeBTagUp);
+      trees4J[bj][syst]->Branch("bWeightBTagDown",&bWeightTreeBTagDown);
+
+      trees4J[bj][syst]->Branch("bWeightMisTagUp",&bWeightTreeMisTagUp);
+      trees4J[bj][syst]->Branch("bWeightMisTagDown",&bWeightTreeMisTagDown);
+ 
+      //Systematics pile up weights
+      trees4J[bj][syst]->Branch("PUWeight",&PUWeightTree);
+      
+      trees4J[bj][syst]->Branch("PUWeightPUUp",&PUWeightTreePUUp);
+      trees4J[bj][syst]->Branch("PUWeightPUDown",&PUWeightTreePUDown);
+
+      //Systematics turn on weights
+      trees4J[bj][syst]->Branch("turnOnWeight",&turnOnWeightTree);
+      trees4J[bj][syst]->Branch("turnOnReWeight",&turnOnReWeightTree);
+      
+      trees4J[bj][syst]->Branch("turnOnWeightJetTrig1Up",&turnOnWeightTreeJetTrig1Up);
+      trees4J[bj][syst]->Branch("turnOnWeightJetTrig1Down",&turnOnWeightTreeJetTrig1Down);
+
+      trees4J[bj][syst]->Branch("turnOnWeightJetTrig2Up",&turnOnWeightTreeJetTrig2Up);
+      trees4J[bj][syst]->Branch("turnOnWeightJetTrig2Down",&turnOnWeightTreeJetTrig2Down);
+
+      trees4J[bj][syst]->Branch("turnOnWeightJetTrig3Up",&turnOnWeightTreeJetTrig3Up);
+      trees4J[bj][syst]->Branch("turnOnWeightJetTrig3Down",&turnOnWeightTreeJetTrig3Down);
+
+
+      trees4J[bj][syst]->Branch("turnOnWeightBTagTrig1Up",&turnOnWeightTreeBTagTrig1Up);
+      trees4J[bj][syst]->Branch("turnOnWeightBTagTrig1Down",&turnOnWeightTreeBTagTrig1Down);
+
+      trees4J[bj][syst]->Branch("turnOnWeightBTagTrig2Up",&turnOnWeightTreeBTagTrig2Up);
+      trees4J[bj][syst]->Branch("turnOnWeightBTagTrig2Down",&turnOnWeightTreeBTagTrig2Down);
+
+      trees4J[bj][syst]->Branch("turnOnWeightBTagTrig3Up",&turnOnWeightTreeBTagTrig3Up);
+      trees4J[bj][syst]->Branch("turnOnWeightBTagTrig3Down",&turnOnWeightTreeBTagTrig3Down);
+
+      for(int p =1;p<=52;++p){
+	stringstream w_n;
+	w_n<<p;
+	trees4J[bj][syst]->Branch(("PDFWeight"+w_n.str()).c_str(),&pdf_weights[p-1]);
+      }
+				
+
       trees2J[bj][syst]->Branch("PDFWeight_Alternate_Set_1",&pdf_weights_alternate_set_1);
       trees2J[bj][syst]->Branch("PDFWeight_Alternate_Set_2",&pdf_weights_alternate_set_2);
 
@@ -835,11 +1085,11 @@ void SingleTopSystematicsTreesDumper::analyze(const Event& iEvent, const EventSe
   size_t nJetsForward = 0;
   size_t nJetsNoSyst = 0;
   size_t nJetsTightNoSyst = 0;
-  size_t nJetsLoose = 0; 
-    
-  size_t nJetsLooseCentral = 0;
-  size_t nJetsLooseForward = 0;
-  size_t nJetsLooseMBTag= 0;
+
+  int nJetsLoose = 0;     
+  int nJetsLooseCentral = 0;
+  int nJetsLooseForward = 0;
+  int nJetsLooseMBTag= 0;
 
 
   size_t nBJets = 0;
@@ -872,9 +1122,11 @@ void SingleTopSystematicsTreesDumper::analyze(const Event& iEvent, const EventSe
 
   int secondPtPosition = -1;
   int thirdPtPosition = -1;
+  int fourthPtPosition = -1;
 
   double secondPt = -1;
   double thirdPt = -1;
+  double fourthPt = -1;
 
   int lowBTagTreePositionNoSyst=-1;
   int highBTagTreePositionNoSyst=-1;
@@ -953,6 +1205,8 @@ void SingleTopSystematicsTreesDumper::analyze(const Event& iEvent, const EventSe
     highBTagTree = -9999;
     int mediumBTagTreePosition = -1;
     mediumBTagTree = -9999;
+    int mediumlowBTagTreePosition = -1;
+    mediumlowBTagTree = -9999;
     int maxPtTreePosition = -1;
     maxPtTree = -99999;
     int minPtTreePosition = -1;
@@ -962,8 +1216,10 @@ void SingleTopSystematicsTreesDumper::analyze(const Event& iEvent, const EventSe
 
     secondPt = -1;
     thirdPt = -1;
+    fourthPt = -1;
     secondPtPosition = -1;
     thirdPtPosition = -1;
+    fourthPtPosition = -1;
 
     //Taking the unclustered met previously evaluated 
     //and already present in the n-tuples
@@ -1320,9 +1576,9 @@ void SingleTopSystematicsTreesDumper::analyze(const Event& iEvent, const EventSe
       bool passesTCHPT = valueTCHPT > 3.41; //TCHPT Working point
       bool passesCSVT = valueCSV > 0.898; //TCHPT Working point
       bool passesCSVM = valueCSV >0.679;//CSVM Working point
+
+      // REMINDER: switching to CSV in the future
       double valueChosenAlgo = valueTCHPT;
-
-
 
       //Pt cut
 
@@ -1606,8 +1862,16 @@ void SingleTopSystematicsTreesDumper::analyze(const Event& iEvent, const EventSe
       //Condition to find the highest/lowest b-tag 
       //according to algo 1 (tchp) 
       //cout << " i "<< i <<" jets size "<< nJets << " btag  "<< valueAlgo1<<endl;
-      if(valueChosenAlgo > highBTagTree){
+
+      //CHANGED from 8 TEV
+      if(valueChosenAlgo >= highBTagTree){
 	if (nJets==3){
+	  mediumBTagTree = highBTagTree;
+	  mediumBTagTreePosition = highBTagTreePosition;
+	}
+	if (nJets==4){
+	  mediumlowBTagTree = mediumBTagTree;
+	  mediumlowBTagTreePosition = mediumBTagTreePosition;
 	  mediumBTagTree = highBTagTree;
 	  mediumBTagTreePosition = highBTagTreePosition;
 	}
@@ -1615,27 +1879,63 @@ void SingleTopSystematicsTreesDumper::analyze(const Event& iEvent, const EventSe
 	highBTagTreePosition=nJets-1;
 	bJetFlavourTree = jetsFlavour->at(i);
       } 
-      if (valueChosenAlgo < lowBTagTree)
-	{  if (nJets==3){
+      if (valueChosenAlgo <= lowBTagTree)
+	{
+	  mediumlowBTagTree = mediumBTagTree;
+	  mediumlowBTagTreePosition = mediumBTagTreePosition;
+	  if (nJets == 3){
 	    mediumBTagTree = lowBTagTree;
 	    mediumBTagTreePosition = lowBTagTreePosition;
+	  }
+	  if (nJets==4){
+	    mediumBTagTree = mediumlowBTagTree;
+	    mediumBTagTreePosition = mediumlowBTagTreePosition;
+	    mediumlowBTagTree = lowBTagTree;
+	    mediumlowBTagTreePosition = lowBTagTreePosition;
 	  }
 	  lowBTagTree = valueChosenAlgo;
 	  lowBTagTreePosition = nJets - 1;
 	  fJetFlavourTree = jetsFlavour->at(i);
 	}
-      if  ( (valueChosenAlgo < highBTagTree) && (valueChosenAlgo > lowBTagTree) )   
+      if ( (valueChosenAlgo == lowBTagTree) && (valueChosenAlgo == highBTagTree) && (nJets == 2 ) )
 	{
-	  mediumBTagTreePosition = nJets - 1;
-	  mediumBTagTree = valueChosenAlgo;
+	  highBTagTreePosition = nJets - 2;
 	}
-      else if ((nJets == 3) && (mediumBTagTree == -1)){
-	mediumBTagTreePosition = nJets - 1;
-	mediumBTagTree = valueChosenAlgo;
-      }
-      
-      
+      if ( (valueChosenAlgo == lowBTagTree) && (valueChosenAlgo == highBTagTree) && (valueChosenAlgo == mediumBTagTree) && (nJets == 3 ) )
+	{
+	  highBTagTreePosition = nJets - 3;
+	}
+
+      if  ( (valueChosenAlgo < highBTagTree) && (valueChosenAlgo > lowBTagTree)) // || ( (valueChosenAlgo == highBTagTree) || (valueChosenAlgo == lowBTagTree) ))
+	{
+	  if (nJets == 3){
+	    mediumBTagTreePosition = nJets - 1;
+	    mediumBTagTree = valueChosenAlgo; }
+	  if  (nJets==4){
+	    if(valueChosenAlgo < mediumBTagTree) {
+	      mediumlowBTagTreePosition = nJets - 1;
+	      mediumlowBTagTree = valueChosenAlgo;
+	    }
+	    else{  //> or ==
+	      mediumlowBTagTreePosition =mediumBTagTreePosition;
+	      mediumlowBTagTree =mediumBTagTree;
+	      mediumBTagTreePosition = nJets - 1;
+	      mediumBTagTree = valueChosenAlgo;
+	    }
+	  }
+	}
+    /*
+                    cout << "i: "<< i  << "  nJets: " << nJets << "  nBJets csvt: " << ncsvt_tags << "  value: " << valueChosenAlgo
+                         << "  high: "      << highBTagTree      << "  pos: " << highBTagTreePosition
+                         << "  medium: "    << mediumBTagTree    << "  pos: " << mediumBTagTreePosition
+                         << "  mediumlow: " << mediumlowBTagTree << "  pos: " << mediumlowBTagTreePosition
+                         << "  low: "       << lowBTagTree       << "  pos: " << lowBTagTreePosition  <<endl;
+    */
+
+//END CHANGED from 8 TEV
+
       if(nJets>=10 )break; 
+
       }
     }
     
@@ -1709,7 +2009,17 @@ void SingleTopSystematicsTreesDumper::analyze(const Event& iEvent, const EventSe
 	    thirdJetFlavourTree = flavours[J_];
 	  }
       }
-    
+    for (size_t J_ = 0; J_ < nJets; ++J_ )
+      {
+	double ptCorr = jets[J_].pt();
+	if (ptCorr > fourthPt &&  ptCorr < thirdPt)
+	  {
+	    fourthPt = ptCorr;
+	    fourthPtPosition = J_;
+	    fourthJetFlavourTree = flavours[J_];
+	  }
+      }
+
     if(secondPt < ptCutTight)  nJets = nJetsTight;  //this works for assymetric cut, make njets=1 or 0 which are not saved at the end
     
     if(nJetsLoose > 0){
@@ -1721,7 +2031,7 @@ void SingleTopSystematicsTreesDumper::analyze(const Event& iEvent, const EventSe
     }
     //if (thirdPt > secondPt ) cout << "  sanity check: Pt3 > Pt2 at event" << eventTree << " njets "<< nJets <<endl;
     //if (secondPt > maxPtTree ) cout << "  sanity check: Pt2 > Pt1 at event" << eventTree <<" njets "<< nJets <<endl;
-    //if (thirdPt > maxPtTree ) cout << "  sanity check: Pt3 > Pt1 at event" << eventTree << " njets "<< nJets <<endl;
+    //if (thirdPt > maxPtTree ) cout << "  sanity check: Pt3 > Pt1 at event" << eventTree << " njets "<< nJets <<endl; 
     if (nJetsTight > 0)
       {
 	firstJetPt = jets[maxPtTreePosition].pt();
@@ -1745,6 +2055,14 @@ void SingleTopSystematicsTreesDumper::analyze(const Event& iEvent, const EventSe
 		thirdJetPhi = jets[thirdPtPosition].phi();
 		thirdJetBTag = jetsBTag[thirdPtPosition];
 	      }
+	    if (nJets > 3)
+	      {
+		fourthJetPt = jets[fourthPtPosition].pt();
+		fourthJetE = jets[fourthPtPosition].energy();
+		fourthJetEta = jets[fourthPtPosition].eta();
+		fourthJetPhi = jets[fourthPtPosition].phi();
+		fourthJetBTag = jetsBTag[fourthPtPosition];
+	      }
 	  }
       }
     else
@@ -1752,21 +2070,21 @@ void SingleTopSystematicsTreesDumper::analyze(const Event& iEvent, const EventSe
 	firstJetPt = 0;  firstJetE = 0;  firstJetEta = -99;  firstJetPhi = -99;firstJetBTag = -99;
 	secondJetPt = 0;  secondJetE = 0;   secondJetEta = -9;    secondJetPhi = -99;secondJetBTag= -99;
 	thirdJetPt = 0;  thirdJetE = 0;  thirdJetEta = -99;  thirdJetPhi = -99;thirdJetBTag = -99;
+	fourthJetPt = 0;  fourthJetE = 0;  fourthJetEta = -99;  fourthJetPhi = -99;fourthJetBTag = -99;
       }
-    
-    
     
     //    cout << "nJets: " << nJets << "  nJetsTight: " << nJetsTight << "  nJetsLoose: " << nJetsLoose <<  endl;
 
-    nJ = nJetsLoose;
-    nJCentral = nJetsLooseCentral;
-    nJForward = nJetsLooseForward;
-    nJMBTag = nJetsLooseMBTag;
+    nJLoose = nJetsLoose;
+    nJLooseCentral = nJetsLooseCentral;
+    nJLooseForward = nJetsLooseForward;
+    nJLooseMBTag = nJetsLooseMBTag;
 
 
     if ( nJetsTight < 2 )continue;
-    if (nJets > 3)continue;
+    //    if (nJets > 3)continue;
     //    if (nJetsLoose > 0 ) continue;
+    if (nJets > 4)continue; // I add it to have 4j...trees
 
       int B;
       if(ntchpt_tags == 0) B = 0 ;
@@ -1787,7 +2105,7 @@ void SingleTopSystematicsTreesDumper::analyze(const Event& iEvent, const EventSe
     //    1T_QCD=4;
     //    2T_QCD=5;
  
-    if(nJets == 2 || nJets == 3){
+    if(nJets == 2 || nJets == 3 || nJets == 4){
 
       if(isQCD) {
 	B +=3;
@@ -2004,28 +2322,112 @@ void SingleTopSystematicsTreesDumper::analyze(const Event& iEvent, const EventSe
 	  ++passingBJets;
       }
       
+      //Top and costhetastar reconstruction
+      //	    cout << "test before top reco"<<endl;
       math::PtEtaPhiELorentzVector top;
-            
+      math::PtEtaPhiELorentzVector top1;
+      math::PtEtaPhiELorentzVector top2;
       float fCosThetaLJ= 99999;
+      float fCosThetaLJ1 = 99999;
+      float fCosThetaLJ2 = 99999;
+
+      float topmass_h,topmass_m ;
       if(!doTopBestMass_) {
 	top = top4Momentum(leptonPFour, jets[highBTagTreePosition], metPx, metPy);
+	top1 = top;
+	top2 = top;
 	fCosThetaLJ =  cosThetaLJ(leptonPFour, jets[lowBTagTreePosition], top);
 	cosBLTree =  cosTheta_eta_bl(leptonPFour, jets[lowBTagTreePosition], top);
       }
       
       if(doTopBestMass_) {
 	if(B == 1 || B==4){
-	  top = top4Momentum(leptonPFour, jets[highBTagTreePosition], metPx, metPy);
+	  if (nJets== 2 ){
+	    math::PtEtaPhiELorentzVector top_h = top4Momentum(leptonPFour, jets[highBTagTreePosition], metPx, metPy);
+	    math::PtEtaPhiELorentzVector top_l = top4Momentum(leptonPFour, jets[lowBTagTreePosition], metPx, metPy);		
+	    top1 = top_h;
+	    top2 = top_l;
+	  }
+	  if (nJets== 3 ){
+	    math::PtEtaPhiELorentzVector top_h = top4Momentum(leptonPFour, jets[highBTagTreePosition], metPx, metPy);
+	    math::PtEtaPhiELorentzVector top_m = top4Momentum(leptonPFour, jets[mediumBTagTreePosition], metPx, metPy);		
+	    top1 = top_h;
+	    top2 = top_m;
+	  }
+	  top = top1;
+	  
 	  fCosThetaLJ =  cosThetaLJ(leptonPFour, jets[lowBTagTreePosition], top);
 	  cosBLTree =  cosTheta_eta_bl(leptonPFour, jets[lowBTagTreePosition], top);
+	  
+	  fCosThetaLJ1 = cosThetaLJ(leptonPFour, jets[lowBTagTreePosition], top1);
+	  cos1BLTree =   cosTheta_eta_bl(leptonPFour, jets[lowBTagTreePosition], top1);
+	  
+	  fCosThetaLJ2 = cosThetaLJ(leptonPFour, jets[lowBTagTreePosition], top2);
+	  cos2BLTree =   cosTheta_eta_bl(leptonPFour, jets[lowBTagTreePosition], top2);
+	  
+	  //		cout<<"fCosThetaLJ" <<fCosThetaLJ<<"topmass" << top.mass()<<endl;
+	  //   cout<<"jets[lowBTagTreePosition].Pt()"<< jets[lowBTagTreePosition].Pt()<<endl;
 	}
+
+	//	  top = top4Momentum(leptonPFour, jets[highBTagTreePosition], metPx, metPy);
+	//	  top1 = top;
+	//	  top2 = top;
+	//	  fCosThetaLJ =  cosThetaLJ(leptonPFour, jets[lowBTagTreePosition], top);
+	//	  cosBLTree =  cosTheta_eta_bl(leptonPFour, jets[lowBTagTreePosition], top);
+	//	}
 	else if(B==2 || B ==5) {
 	  math::PtEtaPhiELorentzVector top_h, top_m ;
-	  float topmass_h,topmass_m ;
+	  //	  float topmass_h,topmass_m ;
 	  if(nJets==2){
 	    math::PtEtaPhiELorentzVector top_h = top4Momentum(leptonPFour, jets[highBTagTreePosition], metPx, metPy);
 	    math::PtEtaPhiELorentzVector top_m = top4Momentum(leptonPFour, jets[lowBTagTreePosition], metPx, metPy);
+	    topmass_h = top_h.mass(); 
+	    topmass_m = top_m.mass();
 	    top = (fabs(topmass_h -172.5) < fabs(topmass_m-172.5))? top_h: top_m;
+	    top1 = top_h;
+	    top2 = top_m;
+
+	    if(fabs(topmass_h -172.5) < fabs(topmass_m-172.5)){
+	      fCosThetaLJ =  cosThetaLJ(leptonPFour, jets[lowBTagTreePosition], top);
+	      cosBLTree =  cosTheta_eta_bl(leptonPFour, jets[lowBTagTreePosition], top);}
+	    else {
+	      fCosThetaLJ =  cosThetaLJ(leptonPFour, jets[highBTagTreePosition], top);
+	      cosBLTree =  cosTheta_eta_bl(leptonPFour, jets[highBTagTreePosition], top);}
+	    fCosThetaLJ1 =  cosThetaLJ(leptonPFour, jets[lowBTagTreePosition], top1);
+	    cos1BLTree =  cosTheta_eta_bl(leptonPFour, jets[lowBTagTreePosition], top1);
+	    
+	    fCosThetaLJ2 =  cosThetaLJ(leptonPFour, jets[lowBTagTreePosition], top2);
+	    cos2BLTree =  cosTheta_eta_bl(leptonPFour, jets[lowBTagTreePosition], top2);
+	  }
+	  else if( (nJets==3 || nJets==4)  ){ //cout<<"nJets==4 ,3"<<endl;
+	    math::PtEtaPhiELorentzVector top_h = top4Momentum(leptonPFour, jets[highBTagTreePosition], metPx, metPy);
+	    math::PtEtaPhiELorentzVector top_m = top4Momentum(leptonPFour, jets[mediumBTagTreePosition], metPx, metPy);
+	    topmass_h = top_h.mass();
+	    topmass_m = top_m.mass();
+	    top = (fabs(topmass_h -172.5) < fabs(topmass_m-172.5))? top_h: top_m;
+	    top1 = top_h;
+	    top2 = top_m;
+	    fCosThetaLJ =  cosThetaLJ(leptonPFour, jets[lowBTagTreePosition], top);
+	    cosBLTree =  cosTheta_eta_bl(leptonPFour, jets[lowBTagTreePosition], top);
+
+	    fCosThetaLJ1 =  cosThetaLJ(leptonPFour, jets[lowBTagTreePosition], top1);
+	    cos1BLTree =  cosTheta_eta_bl(leptonPFour, jets[lowBTagTreePosition], top1);
+	    
+	    fCosThetaLJ2 =  cosThetaLJ(leptonPFour, jets[lowBTagTreePosition], top2);
+	    cos2BLTree =  cosTheta_eta_bl(leptonPFour, jets[lowBTagTreePosition], top2);
+	  }
+	}
+
+	else if( B == 0 || B == 3 ){
+	  if (nJets == 2){
+	    math::PtEtaPhiELorentzVector top_h = top4Momentum(leptonPFour, jets[highBTagTreePosition], metPx, metPy);
+	    math::PtEtaPhiELorentzVector top_m = top4Momentum(leptonPFour, jets[lowBTagTreePosition], metPx, metPy);
+	    topmass_h = top_h.mass();
+	    topmass_m = top_m.mass();
+	    top = (fabs(topmass_h -172.5) < fabs(topmass_m-172.5))? top_h: top_m;
+	    top1 = top_h;
+	    top2 = top_m;
+	    
 	    if(fabs(topmass_h -172.5) < fabs(topmass_m-172.5)){
 	      fCosThetaLJ =  cosThetaLJ(leptonPFour, jets[lowBTagTreePosition], top);
 	      cosBLTree =  cosTheta_eta_bl(leptonPFour, jets[lowBTagTreePosition], top);}
@@ -2033,28 +2435,35 @@ void SingleTopSystematicsTreesDumper::analyze(const Event& iEvent, const EventSe
 	      fCosThetaLJ =  cosThetaLJ(leptonPFour, jets[highBTagTreePosition], top);
 	      cosBLTree =  cosTheta_eta_bl(leptonPFour, jets[highBTagTreePosition], top);}
 	  }
-	  else if(nJets==3){
+	  else if (nJets==3 || nJets==4){  //cout<<"nJets==4 ,3"<<endl;
 	    math::PtEtaPhiELorentzVector top_h = top4Momentum(leptonPFour, jets[highBTagTreePosition], metPx, metPy);
 	    math::PtEtaPhiELorentzVector top_m = top4Momentum(leptonPFour, jets[mediumBTagTreePosition], metPx, metPy);
 	    topmass_h = top_h.mass();
 	    topmass_m = top_m.mass();
-	    math::PtEtaPhiELorentzVector top = (fabs(topmass_h -172.5) < fabs(topmass_m-172.5))? top_h: top_m;
+	    top = (fabs(topmass_h -172.5) < fabs(topmass_m-172.5))? top_h: top_m;
+	    top1 = top_h;
+	    top2 = top_m;
+	    
 	    fCosThetaLJ =  cosThetaLJ(leptonPFour, jets[lowBTagTreePosition], top);
 	    cosBLTree =  cosTheta_eta_bl(leptonPFour, jets[lowBTagTreePosition], top);
+		  //  cout<<"fCosThetaLJ" <<fCosThetaLJ <<"topmass_h" <<topmass_h <<endl;
+		  //  cout<<"jets[lowBTagTreePosition].Pt()"<< jets[lowBTagTreePosition].Pt()<<endl;
 	  }
 	}
       }
       
-      if (B==0 || B==1 || B==3 || B==4){
-	if (nJets == 2){
-	  bjets[0] = jets[highBTagTreePosition];
-	  bjets[1] = jets[lowBTagTreePosition];
-	}
-	else if (nJets == 3){
-	  bjets[0] = jets[highBTagTreePosition];
-	  bjets[1] = jets[mediumBTagTreePosition];
-	}
+      //      if (B==0 || B==1 || B==3 || B==4){
+      bjets[0] = jets[highBTagTreePosition];
+      bjets_flavours[0] = flavours[highBTagTreePosition];
+      if(nJets== 2){
+	bjets[1] = jets[lowBTagTreePosition];
+	bjets_flavours[1] = flavours[lowBTagTreePosition];
       }
+      else if (nJets== 3 ||nJets== 4 ){
+	bjets[1] = jets[mediumBTagTreePosition];
+	bjets_flavours[1] = flavours[mediumBTagTreePosition];
+      }
+	//      }
       
       double Mlb1, Mlb2, Mb1b2, pTb1b2;
       if(bjets[0].pt() > bjets[1].pt()){
@@ -2095,8 +2504,6 @@ void SingleTopSystematicsTreesDumper::analyze(const Event& iEvent, const EventSe
       pTb1b2Tree = pTb1b2;
       Mlb1Tree = Mlb1;
       Mlb2Tree = Mlb2;
-
-
       
       runTree = iEvent.eventAuxiliary().run();
       lumiTree = iEvent.eventAuxiliary().luminosityBlock();
@@ -2104,12 +2511,24 @@ void SingleTopSystematicsTreesDumper::analyze(const Event& iEvent, const EventSe
       
       etaTree = fabs(jets[lowBTagTreePosition].eta());
       cosTree = fCosThetaLJ;
+      cos1Tree = fCosThetaLJ1;
+      cos2Tree = fCosThetaLJ2;
+
       topMassTree = top.mass();
+      top1MassTree = top1.mass();        
+      top2MassTree = top2.mass();
+
+      topMtwTree = topMtw(leptonPFour, jets[highBTagTreePosition], metPx, metPy);
+
       mtwMassTree = MTWValue;
 
       lepPt = leptonPFour.pt();
       lepEta = leptonPFour.eta();
       lepPhi = leptonPFour.phi();
+
+      // REMINDER CONTROLLARE HLT SF
+      //      if (leptonsFlavour_ == "muon" )muonHLTSF(leptons[0].eta(),leptons[0].pt());
+      //      if (leptonsFlavour_ == "electron" )electronHLTSF(leptons[0].eta(),leptons[0].pt());
 
       bJetPt = jets[highBTagTreePosition].pt();
       bJetE = jets[highBTagTreePosition].energy();
@@ -2129,6 +2548,24 @@ void SingleTopSystematicsTreesDumper::analyze(const Event& iEvent, const EventSe
       etaTree = fabs(jets[lowBTagTreePosition].eta());
       etaTree2 = fabs(jets[highBTagTreePosition].eta());
       cosTree = fCosThetaLJ;
+      cos1Tree = fCosThetaLJ1;
+      cos2Tree = fCosThetaLJ2;
+
+      topEta = top.eta();
+      topPhi = top.phi();
+      topPt = top.pt();
+      topE = top.E();
+      
+      top1Eta = top1.eta();
+      top1Phi = top1.phi();
+      top1Pt = top1.pt();
+      top1E = top1.E();
+
+      top2Eta = top2.eta();
+      top2Phi = top2.phi();
+      top2Pt = top2.pt();
+      top2E = top2.E();
+
       topMassTree = top.mass();
       mtwMassTree = MTWValue;
       
@@ -2143,6 +2580,7 @@ void SingleTopSystematicsTreesDumper::analyze(const Event& iEvent, const EventSe
 	//	cout << " tree name "<< trees3J[B][syst_name]->GetName() <<endl;
 	trees3J[B][syst_name]->Fill();            
       }
+      if (nJets == 4)  trees4J[B][syst_name]->Fill();
     }
   }
 }
@@ -2179,7 +2617,15 @@ float SingleTopSystematicsTreesDumper::cosTheta_eta_bl(math::PtEtaPhiELorentzVec
 
 }
 
+double SingleTopSystematicsTreesDumper::topMtw(math::PtEtaPhiELorentzVector lepton, math::PtEtaPhiELorentzVector jet, float metPx, float metPy)
+{
+    math::PtEtaPhiELorentzVector lb = lepton + jet;
+    double mlb2 = lb.mass() * lb.mass();
+    double etlb = sqrt(mlb2 + lb.pt() * lb.pt());
+    double metPT = sqrt(metPx * metPx + metPy * metPy);
 
+    return sqrt( mlb2 + 2 * ( etlb * metPT - lb.px() * metPx - lb.py() * metPy ) );
+}
 
 
 //top quark 4-momentum given lepton, met and b-jet

@@ -111,6 +111,8 @@ class SingleTopSystematicsTreesDumper : public edm::EDAnalyzer {
   float cosThetaLJ(math::PtEtaPhiELorentzVector lepton, math::PtEtaPhiELorentzVector jet, math::PtEtaPhiELorentzVector top);
   float cosTheta_eta_bl(math::PtEtaPhiELorentzVector lepton, math::PtEtaPhiELorentzVector jet, math::PtEtaPhiELorentzVector top);
 
+  double topMtw(math::PtEtaPhiELorentzVector lepton, math::PtEtaPhiELorentzVector jet, float metPx, float metPy);
+
   //B-weight generating functions
   double BScaleFactor(string algo,string syst_name); 
   double MisTagScaleFactor(string algo,string syst_name,double sf, double eff, double sferr);
@@ -321,6 +323,7 @@ class SingleTopSystematicsTreesDumper : public edm::EDAnalyzer {
   
   map<string, TTree*> trees2J[6];
   map<string, TTree*> trees3J[6];
+  map<string, TTree*> trees4J[6];
   map<string, TTree *> treesNJets;
 
   enum Bin {
@@ -352,7 +355,7 @@ class SingleTopSystematicsTreesDumper : public edm::EDAnalyzer {
   //Variables to use as trees references
 
   //Variables to use as trees references
-  double etaTree, etaTree2, cosTree, cosBLTree, topMassTree, totalWeightTree, weightTree, mtwMassTree, lowBTagTree, highBTagTree, mediumBTagTree,mediumlowBTagTree ,maxPtTree, minPtTree,maxLoosePtTree, topMassLowBTagTree, topMassBestTopTree, topMassMeas, bWeightTree, PUWeightTree,HT,H;
+  double etaTree, etaTree2, cosTree, cosBLTree, cos1Tree, cos1BLTree, cos2Tree, cos2BLTree, topMassTree, top1MassTree, top2MassTree, totalWeightTree, weightTree, mtwMassTree, lowBTagTree, highBTagTree, mediumBTagTree,mediumlowBTagTree ,maxPtTree, minPtTree,maxLoosePtTree, topMassLowBTagTree, topMassBestTopTree, topMassMeas, bWeightTree, PUWeightTree,topMtwTree,HT,H;
   //Weights for systematics
   double bWeightTreeBTagUp,
     bWeightTreeMisTagUp,
@@ -377,12 +380,12 @@ class SingleTopSystematicsTreesDumper : public edm::EDAnalyzer {
   
   int runTree, eventTree, lumiTree, chargeTree, electronID,bJet1Flavour,bJet2Flavour ,looseJetFlavourTree ,bJetFlavourTree, fJetFlavourTree, eventFlavourTree, puZero, firstJetFlavourTree, secondJetFlavourTree, thirdJetFlavourTree,fourthJetFlavourTree, isQCDTree;
 
-  double lepPt, lepEta, lepPhi, lepRelIso, lepDeltaCorrectedRelIso, lepRhoCorrectedRelIso, fJetPhi, fJetPt, fJetEta, fJetE,fJetBTag, bJetPt, bJetEta, bJetPhi, bJetE, bJetBTag, metPt, metPhi, topPt, topPhi, topEta, topE, totalEnergy, totalMomentum,  vtxZ, fJetPUID, fJetPUWP;
+  double lepPt, lepEta, lepPhi, lepRelIso, lepDeltaCorrectedRelIso, lepRhoCorrectedRelIso, fJetPhi, fJetPt, fJetEta, fJetE,fJetBTag, bJetPt, bJetEta, bJetPhi, bJetE, bJetBTag, metPt, metPhi, topPt, topPhi, topEta, topE, top1Pt, top1Phi, top1Eta, top1E, top2Pt, top2Phi, top2Eta, top2E, totalEnergy, totalMomentum,  vtxZ, fJetPUID, fJetPUWP;
   double bJetPUID, bJetPUWP, firstJetPt, firstJetEta, firstJetPhi, firstJetE,firstJetBTag, secondJetPt, secondJetEta, secondJetPhi, secondJetE, secondJetBTag, thirdJetPt, thirdJetEta, thirdJetPhi, thirdJetE,thirdJetBTag, fourthJetPt, fourthJetEta, fourthJetPhi, fourthJetE,fourthJetBTag,fJetBeta,fJetDZ,fJetRMS,bJetBeta,bJetDZ,bJetRMS;
   double leptonMVAID,leptonNHits ,looseJetPt, looseJetEta, looseJetPhi, looseJetE ,looseJetBTag ,Mlb1Tree,Mlb2Tree,Mb1b2Tree ,pTb1b2Tree , bJet1Pt, bJet1Eta, bJet1Phi, bJet1E, bJet1BTag,bJet2Pt, bJet2Eta, bJet2Phi, bJet2E, bJet2BTag;
   
   
-  int nJ, nJNoPU, nJCentral, nJCentralNoPU, nJForward, nJForwardNoPU, nJMBTag, nTCHPT, nCSVT, nCSVM, nJetsLoose,nJetsLooseCentral , nJetsLooseForward,nJetsLooseMBTag;
+  int nJ, nJNoPU, nJCentral, nJCentralNoPU, nJForward, nJForwardNoPU, nJMBTag, nTCHPT, nCSVT, nCSVM, nJLoose,nJLooseCentral , nJLooseForward, nJLooseMBTag; // nJetsLoose,nJetsLooseCentral , nJetsLooseForward,nJetsLooseMBTag;
   
   int nb, nc, nudsg, ntchpt_tags, ncsvm_tags, ncsvt_tags,ncsvl_tags,
     nbNoSyst, ncNoSyst, nudsgNoSyst,
