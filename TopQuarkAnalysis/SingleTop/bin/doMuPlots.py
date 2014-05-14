@@ -11,9 +11,9 @@ from macroFunctions import *
 
 
 #categories = ["2J_2T","3J_2T"]
-#categories = ["2J_2T"]
+categories = ["2J_2T"]
 #categories = ["3J_2T"]
-categories = ["NJets"] 
+#categories = ["NJets"] 
 cuts = ["noQCDCut"] ##,"noQCDCut_mtwCut"]
 #cuts = [""] ##,"noQCDCut_mtwCut"]
 
@@ -35,7 +35,7 @@ cuts = ["noQCDCut"] ##,"noQCDCut_mtwCut"]
 #variables = ["eta"]                                                                                                                             ## for 3J2T NEW
 
 #variables = ["mtwMass","metPt","fJetPt","bJetPt","leptonPt","leptonRelIso"]
-variables = ["nJ"]
+variables = ["nJLoose"]
 
 
 
@@ -84,6 +84,7 @@ variableOld = "eta"
 command_ls = "ls *.C | grep Plots | grep Template | grep "+lepton+" | grep " + categoryOld + " | grep " + variableOld 
 #command_ls = "ls *.C | grep Plots | grep Template | grep "+lepton+" | grep " + categoryOld + " | grep " + variableOld + " | grep errbands "
 fileNames = commands.getoutput(command_ls).split('\n')
+print fileNames
 
 for fileName in fileNames:
     if "inclusive" in fileNames: continue

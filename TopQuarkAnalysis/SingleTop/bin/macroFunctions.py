@@ -301,8 +301,8 @@ def listSamples( variable, sample):
     if variable == "Comb2":
         return "TString observable = \"0.557763*mtwMass-0.83*metPt\";   double observableMin = -100;   double observableMax = 100;  TString observableName = \"Mtw-met comb2\"; double nBins = 30; TString oTitle = \"Comb2\";"
 
-    if variable == "nJ":
-        return "TString observable = \"nJ\";   double observableMin = 0;   double observableMax = 8;  TString observableName = \"nJetsLoose\"; double nBins = 8; TString oTitle = \"nJetsLoose\";"
+    if variable == "nJLoose":
+        return "TString observable = \"nJLoose\";   double observableMin = 0;   double observableMax = 8;  TString observableName = \"nJetsLoose\"; double nBins = 8; TString oTitle = \"nJetsLoose\";"
     
     
     

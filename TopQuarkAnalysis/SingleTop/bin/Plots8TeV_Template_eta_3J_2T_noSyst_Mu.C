@@ -87,8 +87,8 @@
   double lumi = 5006.;
   lumi = 1.;
   
-  TString folder = "/tmp/mmerola/";
-  TString channel = "Data";
+  TString folder = "/data3/scratch/users/fabozzi/SingleTop/ntp14apr14_Merged/";
+  TString channel = "DataMu";
   TString lepton = "Mu";
 
   TString sample ="3J_2T";
@@ -101,7 +101,7 @@
   double TTBarScale = 1.0;
 
 
-  bool scaleToData = true; //  scaleToData = true;
+  bool scaleToData = false; //  scaleToData = true;
   bool nosig = false;
   bool dorescale = false;
   bool dolog = false;
@@ -215,7 +215,7 @@
   */
   
   channel = "Data";
-  TString filename = (folder + "/Data"+postfix_file+".root");
+  TString filename = (folder + "/DataMu"+postfix_file+".root");
   TFile * f = new TFile (filename,"OPEN");
   if( !f->IsOpen() ){
     cout<< " WARNING FILE " << filename << endl;
@@ -337,20 +337,20 @@
   delete tmp;
   f->Close("R");delete f;
 
-  channel = "WJets";
-  filename = (folder + "/"+channel+""+postfix_file+".root");
-  f = TFile::Open(filename);
-  if( !f->IsOpen() ){
-    cout<< " WARNING FILE " << filename << endl;
-    continue;
-  }  
-  TString mupath = "TreesMu/"+channel+"_"+sample+"";
-  TString elepath = "TreesMu/"+channel+"_"+sample+"";
-  TH1D * tmp  = new TH1D("t","t",nBins,observableMin,observableMax);
-  ((TTree*)f->Get(mupath))->Project("t",observable,cutW);
-  WJets->Add(tmp,WJetsScale);
-  delete tmp;
-  f->Close("R");delete f;
+  //  channel = "WJets";
+  //  filename = (folder + "/"+channel+""+postfix_file+".root");
+  //  f = TFile::Open(filename);
+  //  if( !f->IsOpen() ){
+  //   cout<< " WARNING FILE " << filename << endl;
+  //    continue;
+  //  }  
+  //  TString mupath = "TreesMu/"+channel+"_"+sample+"";
+  //  TString elepath = "TreesMu/"+channel+"_"+sample+"";
+  //  TH1D * tmp  = new TH1D("t","t",nBins,observableMin,observableMax);
+  //  ((TTree*)f->Get(mupath))->Project("t",observable,cutW);
+  //  WJets->Add(tmp,WJetsScale);
+  //  delete tmp;
+  //  f->Close("R");delete f;
 
   channel = "ZJets";
   filename = (folder + "/"+channel+""+postfix_file+".root");
@@ -418,30 +418,8 @@
 
 
   channel = "QCDMu";
-  //  TString filename = (folder + "/Data"+postfix_file+".root");
-  TString filename = (folder + "/"+channel+postfix_file+".root");
-  f = TFile::Open(filename);
-  if( !f->IsOpen() ){
-    cout<< " WARNING FILE " << filename << endl;
-    continue;
-  }  
-  TString mupath = "TreesMu/"+channel+"_"+sample+"";
-  TString elepath = "TreesMu/Data_"+sampleqcd;
-  TH1D * tmp  = new TH1D("t","t",nBins,observableMin,observableMax);
-  //  ((TTree*)f->Get(elepath))->Project("t",observable,cutDataQCD);
-  ((TTree*)f->Get(mupath))->Project("t",observable,cutDataQCD);
-  QCDMu->Add(tmp,1.);  
-  QCDMu->Scale(20);  
-  cout << "QCDdata integral: " << QCDMu->Integral() << endl;
-  cout << "filename: " <<  filename << "  treename: " << elepath << endl; 
-  
-  delete tmp;
-  f->Close("R");delete f;
-
-  /*    
-  channel = "QCDMu";
-  //  TString filename = (folder + "/Data"+postfix_file+".root");
-  TString filename = ("../../../../../TreesxCombination/event_trees_naples/Data"+postfix_file+".root");
+  //  TString filename = (folder + "/"+channel+postfix_file+".root");
+  TString filename = (folder + "/DataMu"+postfix_file+".root");
   f = TFile::Open(filename);
   if( !f->IsOpen() ){
     cout<< " WARNING FILE " << filename << endl;
@@ -453,15 +431,13 @@
   ((TTree*)f->Get(elepath))->Project("t",observable,cutDataQCD);
   //((TTree*)f->Get(mupath))->Project("t",observable,cutDataQCD);
   QCDMu->Add(tmp,1.);  
-  cout << "QCDdata integral: " << QCDMu->Integral() << endl;
-  cout << "filename: " <<  filename << "  treename: " << elepath << endl; 
-  
+  //  QCDMu->Scale(60000/QCDMu->Integral());
   delete tmp;
   f->Close("R");delete f;
 
 
   channel = "QCDMu";
-  filename = (folder + "/"+channel+""+postfix_file+".root");
+  filename = (folder + "/"+channel+postfix_file+".root");
   f = TFile::Open(filename);
   if( !f->IsOpen() ){
     cout<< " WARNING FILE " << filename << endl;
@@ -471,17 +447,13 @@
   TString mupath = "TreesMu/"+channel+"_"+sample+"";
   TString elepath = "TreesMu/Data_"+sampleqcd;
   TH1D * tmp  = new TH1D("t","t",nBins,observableMin,observableMax);
-  //((TTree*)f->Get(elepath))->Project("t",observable,cutData);
   ((TTree*)f->Get(mupath))->Project("t",observable,cut);
   if (QCDIntegral > 0 ) QCDMu->Scale(QCDIntegral/QCDMu->Integral());
   else QCDMu->Scale(tmp->Integral()/QCDMu->Integral());
-  cout << "QCDdata scaled integral: " << QCDMu->Integral() << endl;
-  //QCDMu->Scale(10000/QCDMu->Integral());
   delete tmp;
   f->Close("R");delete f;
 
   //  QCDMu->Add(tmp,1.);
-  */
 
   THStack hs1("hs1","topmass distribution");
   QCDMu->SetFillColor(kGray); 
