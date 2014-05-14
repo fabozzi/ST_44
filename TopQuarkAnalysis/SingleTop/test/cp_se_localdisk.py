@@ -12,16 +12,17 @@ dpm_path = "/dpm/na.infn.it/home/cms/store/user/fabozzi/SingleTop/Analysis/44XNE
 
 updirs = ['Fall11', 'ReReco']
 
-for dd in updirs:
-    mydirs = (commands.getoutput("rfdir " + dpm_path + dd)).split(os.linesep) 
-    for longdir in mydirs:
-        dir = (longdir.split())[-1]
-        print dd, dir
-        repo_dict[dir] = dd+"/"+dir
-print repo_dict
+# --> in one shot: read repo_dict from dpm
+#for dd in updirs:
+#    mydirs = (commands.getoutput("rfdir " + dpm_path + dd)).split(os.linesep) 
+#    for longdir in mydirs:
+#        dir = (longdir.split())[-1]
+#        print dd, dir
+#        repo_dict[dir] = dd+"/"+dir
+#print repo_dict
 
-#dirnames =  ['W3Jets']
-#indirnames =  ['Fall11/W3Jets']
+# --> just for few samples: define repo_dict by hand!!!
+repo_dict['Mu_2011B_19Nov'] = 'ReReco/Mu_2011B_19Nov'
 
 dirnames = repo_dict.keys()
 print dirnames
