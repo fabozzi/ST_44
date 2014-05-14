@@ -16,53 +16,74 @@ nSimultaneous = 4
 #Channels to include
 channels = [
 
-#  "Ele_2011A_08Nov_part_1",
-#  "Ele_2011A_08Nov_part_2",
-#  "Ele_2011A_08Nov_part_3",
-#  "Ele_2011A_08Nov_part_4",
-#  "Ele_2011A_08Nov_part_5",
-#  "Ele_2011A_08Nov_part_6",
-#  "Ele_2011A_08Nov_part_7",
-#  "Ele_2011A_08Nov_part_8",
-#  "Ele_2011A_08Nov_part_9",
-#  "Ele_2011A_08Nov_part_10",
-#  "Ele_2011A_08Nov_part_11",
-#  "Ele_2011A_08Nov_part_12",
-#  "Ele_2011A_08Nov_part_13",
-#  "Ele_2011A_08Nov_part_14",
-#  "Ele_2011A_08Nov_part_15",
+#"Ele_2011A_08Nov_part_1",
+#"Ele_2011A_08Nov_part_2",
+#"Ele_2011A_08Nov_part_3",
+#"Ele_2011A_08Nov_part_4",
+#"Ele_2011A_08Nov_part_5",
+#"Ele_2011A_08Nov_part_6",
+#"Ele_2011A_08Nov_part_7",
+#"Ele_2011A_08Nov_part_8",
+#"Ele_2011A_08Nov_part_9",
+#"Ele_2011A_08Nov_part_10",
+#"Ele_2011A_08Nov_part_11",
+#"Ele_2011A_08Nov_part_12",
+#"Ele_2011A_08Nov_part_13",
+#"Ele_2011A_08Nov_part_14",
+#"Ele_2011A_08Nov_part_15",
 
-#  "Ele_2011B_19Nov_part_1",
-#  "Ele_2011B_19Nov_part_2",
-#  "Ele_2011B_19Nov_part_3",
-#  "Ele_2011B_19Nov_part_4",
-#  "Ele_2011B_19Nov_part_5",
-#  "Ele_2011B_19Nov_part_6",
-#  "Ele_2011B_19Nov_part_7",
-#  "Ele_2011B_19Nov_part_8",
-#  "Ele_2011B_19Nov_part_9",
-#  "Ele_2011B_19Nov_part_10",
-#  "Ele_2011B_19Nov_part_11",
-#  "Ele_2011B_19Nov_part_12",
-#  "Ele_2011B_19Nov_part_13",
-#  "Ele_2011B_19Nov_part_14",
-#  "Ele_2011B_19Nov_part_15",
+#"Ele_2011B_19Nov_part_1",
+#"Ele_2011B_19Nov_part_2",
+#"Ele_2011B_19Nov_part_3",
+#"Ele_2011B_19Nov_part_4",
+#"Ele_2011B_19Nov_part_5",
+#"Ele_2011B_19Nov_part_6",
+#"Ele_2011B_19Nov_part_7",
+#"Ele_2011B_19Nov_part_8",
+#"Ele_2011B_19Nov_part_9",
+#"Ele_2011B_19Nov_part_10",
+#"Ele_2011B_19Nov_part_11",
+#"Ele_2011B_19Nov_part_12",
+#"Ele_2011B_19Nov_part_13",
+#"Ele_2011B_19Nov_part_14",
+#"Ele_2011B_19Nov_part_15",
 
-#  "Mu_2011A_08Nov_part_1",
-#  "Mu_2011A_08Nov_part_2",
-#  "Mu_2011A_08Nov_part_3",
-#  "Mu_2011A_08Nov_part_4",
-#  "Mu_2011A_08Nov_part_5",
-#  "Mu_2011A_08Nov_part_6",
-#  "Mu_2011A_08Nov_part_7",
-#  "Mu_2011A_08Nov_part_8",
-#  "Mu_2011A_08Nov_part_9",
-#  "Mu_2011A_08Nov_part_10",
-#  "Mu_2011A_08Nov_part_11",
-#  "Mu_2011A_08Nov_part_12",
-#  "Mu_2011A_08Nov_part_13",
-#  "Mu_2011A_08Nov_part_14",
-#  "Mu_2011A_08Nov_part_15",
+#"Mu_2011A_08Nov_part_1",
+#"Mu_2011A_08Nov_part_2",
+#"Mu_2011A_08Nov_part_3",
+#"Mu_2011A_08Nov_part_4",
+#"Mu_2011A_08Nov_part_5",
+#"Mu_2011A_08Nov_part_6",
+#"Mu_2011A_08Nov_part_7",
+#"Mu_2011A_08Nov_part_8",
+#"Mu_2011A_08Nov_part_9",
+#"Mu_2011A_08Nov_part_10",
+#"Mu_2011A_08Nov_part_11",
+#"Mu_2011A_08Nov_part_12",
+#"Mu_2011A_08Nov_part_13",
+#"Mu_2011A_08Nov_part_14",
+#"Mu_2011A_08Nov_part_15",
+
+#"Mu_2011B_19Nov_part_1",
+#"Mu_2011B_19Nov_part_2",
+#"Mu_2011B_19Nov_part_3",
+#"Mu_2011B_19Nov_part_4",
+#"Mu_2011B_19Nov_part_5",
+#"Mu_2011B_19Nov_part_6",
+#"Mu_2011B_19Nov_part_7",
+#"Mu_2011B_19Nov_part_8",
+#"Mu_2011B_19Nov_part_9",
+#"Mu_2011B_19Nov_part_10",
+#"Mu_2011B_19Nov_part_11",
+#"Mu_2011B_19Nov_part_12",
+#"Mu_2011B_19Nov_part_13",
+#"Mu_2011B_19Nov_part_14",
+#"Mu_2011B_19Nov_part_15",
+#"Mu_2011B_19Nov_part_16",
+#"Mu_2011B_19Nov_part_17",
+#"Mu_2011B_19Nov_part_18",
+#"Mu_2011B_19Nov_part_19",
+#"Mu_2011B_19Nov_part_20",
 
 #"TChannel",
 #"TbarChannel",
@@ -76,7 +97,7 @@ channels = [
 #"QCD_Pt_20to30_EMEnriched",
 #"QCD_Pt_30to80_EMEnriched",
 #"QCD_Pt_80to170_EMEnriched",
-#"QCDMu",
+"QCDMu",
 #"QCD_HT_40_100_GJets",
 #"QCD_HT_100_200_GJets",
 #"QCD_HT_200_inf_GJets",
@@ -98,87 +119,88 @@ channels = [
 #"TTBar_part_14",
 #"TTBar_part_15",
 
-"ZJets_part_1",
-"ZJets_part_2",
-"ZJets_part_3",
-"ZJets_part_4",
-"ZJets_part_5",
-"ZJets_part_6",
-"ZJets_part_7",
-"ZJets_part_8",
-"ZJets_part_9",
-"ZJets_part_10",
-"ZJets_part_11",
-"ZJets_part_12",
-"ZJets_part_13",
-"ZJets_part_14",
-"ZJets_part_15",
+#"ZJets_part_1",
+#"ZJets_part_2",
+#"ZJets_part_3",
+#"ZJets_part_4",
+#"ZJets_part_5",
+#"ZJets_part_6",
+#"ZJets_part_7",
+#"ZJets_part_8",
+#"ZJets_part_9",
+#"ZJets_part_10",
+#"ZJets_part_11",
+#"ZJets_part_12",
+#"ZJets_part_13",
+#"ZJets_part_14",
+#"ZJets_part_15",
     
-"W1Jet_part_1",
-"W1Jet_part_2",
-"W1Jet_part_3",
-"W1Jet_part_4",
-"W1Jet_part_5",
-"W1Jet_part_6",
-"W1Jet_part_7",
-"W1Jet_part_8",
-"W1Jet_part_9",
-"W1Jet_part_10",
-"W1Jet_part_11",
-"W1Jet_part_12",
-"W1Jet_part_13",
-"W1Jet_part_14",
-"W1Jet_part_15",
+#"W1Jet_part_1",
+#"W1Jet_part_2",
+#"W1Jet_part_3",
+#"W1Jet_part_4",
+#"W1Jet_part_5",
+#"W1Jet_part_6",
+#"W1Jet_part_7",
+#"W1Jet_part_8",
+#"W1Jet_part_9",
+#"W1Jet_part_10",
+#"W1Jet_part_11",
+#"W1Jet_part_12",
+#"W1Jet_part_13",
+#"W1Jet_part_14",
+#"W1Jet_part_15",
 
-#  "W2Jets_part_1",
-#  "W2Jets_part_2",
-#  "W2Jets_part_3",
-#  "W2Jets_part_4",
-#  "W2Jets_part_5",
-#  "W2Jets_part_6",
-#  "W2Jets_part_7",
-#  "W2Jets_part_8",
-#  "W2Jets_part_9",
-#  "W2Jets_part_10",
-#  "W2Jets_part_11",
-#  "W2Jets_part_12",
-#  "W2Jets_part_13",
-#  "W2Jets_part_14",
-#  "W2Jets_part_15",
+#"W2Jets_part_1",
+#"W2Jets_part_2",
+#"W2Jets_part_3",
+#"W2Jets_part_4",
+#"W2Jets_part_5",
+#"W2Jets_part_6",
+#"W2Jets_part_7",
+#"W2Jets_part_8",
+#"W2Jets_part_9",
+#"W2Jets_part_10",
+#"W2Jets_part_11",
+#"W2Jets_part_12",
+#"W2Jets_part_13",
+#"W2Jets_part_14",
+#"W2Jets_part_15",
 
-#  "W3Jets_part_1",
-#  "W3Jets_part_2",
-#  "W3Jets_part_3",
-#  "W3Jets_part_4",
-#  "W3Jets_part_5",
-#  "W3Jets_part_6",
-#  "W3Jets_part_7",
-#  "W3Jets_part_8",
-#  "W3Jets_part_9",
-#  "W3Jets_part_10",
-#  "W3Jets_part_11",
-#  "W3Jets_part_12",
-#  "W3Jets_part_13",
-#  "W3Jets_part_14",
-#  "W3Jets_part_15",
-
-#  "W4Jets_part_1",
-#  "W4Jets_part_2",
-#  "W4Jets_part_3",
-#  "W4Jets_part_4",
-#  "W4Jets_part_5",
-#  "W4Jets_part_6",
-#  "W4Jets_part_7",
-#  "W4Jets_part_8",
-#  "W4Jets_part_9",
-#  "W4Jets_part_10",
-#  "W4Jets_part_11",
-#  "W4Jets_part_12",
-#  "W4Jets_part_13",
-#  "W4Jets_part_14",
-#  "W4Jets_part_15",
+#"W3Jets_part_1",
+#"W3Jets_part_2",
+#"W3Jets_part_3",
+#"W3Jets_part_4",
+#"W3Jets_part_5",
+#"W3Jets_part_6",
+#"W3Jets_part_7",
+#"W3Jets_part_8",
+#"W3Jets_part_9",
+#"W3Jets_part_10",
+#"W3Jets_part_11",
+#"W3Jets_part_12",
+#"W3Jets_part_13",
+#"W3Jets_part_14",
+#"W3Jets_part_15",
 
 ### not yet available
+
+#"W4Jets_part_1",
+#"W4Jets_part_2",
+#"W4Jets_part_3",
+#"W4Jets_part_4",
+#"W4Jets_part_5",
+#"W4Jets_part_6",
+#"W4Jets_part_7",
+#"W4Jets_part_8",
+#"W4Jets_part_9",
+#"W4Jets_part_10",
+#"W4Jets_part_11",
+#"W4Jets_part_12",
+#"W4Jets_part_13",
+#"W4Jets_part_14",
+#"W4Jets_part_15",
+
 # "TTBarQ2up",
 # "TTBarQ2down",
 # "TTBarMatchingup_part_1",
@@ -214,8 +236,8 @@ dataPath = "file:/data3/scratch/users/fabozzi/SingleTop/ntp14apr14_Merged/"
 
 #Choose if you want to run or just prepare the configuration files
 #mode = ""
-#mode = "cmsRun"
-mode = "qsub"
+mode = "cmsRun"
+#mode = "qsub"
 
 
 #Use mu , ele or both
@@ -283,15 +305,16 @@ def changeChannel(fileName,channelOld,channelNew,switch,isMC):
     lines = file.readlines()
     o = open(channelNew+"_cfg.py","w") 
     for line in lines:
+        print "THIS IS THE LINE: ", line
         if '"channel_instruction"' in line:
 #            print "BEFORE ", line
             line = line.replace('"channel_instruction"','"'+switch+'"')
-#            print "AFTER ", line
+            print "AFTER REPLACE ", line
         if "MC_instruction" in line and "False" in line:
        #     if "False" in line:
 #            print line
             line = line.replace("False",isMC)
-#            print line
+            print "AFTER REPLACE: ", line
         words = line.split()
         for word in words:
             if channelOld in word:  
@@ -301,6 +324,7 @@ def changeChannel(fileName,channelOld,channelNew,switch,isMC):
                     print "process.TFileService in line,switch " + switch +" line: \n" +line
                 else:
                     line = line.replace(word,word.replace(channelOld,channelToReplace))
+        print "WRITING LINE = ", line
         o.write(line)   
     #if channel == "Data":#Temporary inelegant solution due to the separation of mu/e: will fix it at some point
         #        line = "process.source.fileNames = cms.untracked.vstring('"+dataPath+"DataMuMerged.root','"+dataPath+"DataEleMerged.root',)"
@@ -317,6 +341,7 @@ def changeChannel(fileName,channelOld,channelNew,switch,isMC):
         inputs = inputs +"'"+dataPath+channelNew+"Merged.root',"
         #        inputs = inputs.replace(channelToReplace,"QCDMu")
         inputs = inputs +")"
+        print "inputs = ", inputs
         o.write(inputs)        
     if "WJetsQ2up" in channelNew:# == "DataMu" or channelNew == "DataMuQCD":
         inputs = "process.source.fileNames = cms.untracked.vstring("
@@ -360,7 +385,7 @@ def changeChannel(fileName,channelOld,channelNew,switch,isMC):
         inputs = inputs.replace(channelToReplace,"ZJets")
         inputs = inputs +")"
         o.write(inputs)
-    if "Mu" in channelNew or "Ele" in channelNew and not "QCD" in channelNew :# == "DataMu" or channelNew == "DataMuQCD":
+    if (("Mu" in channelNew) or ("Ele" in channelNew)) and (not("QCD" in channelNew)) :# == "DataMu" or channelNew == "DataMuQCD":
         inputs = "process.source.fileNames = cms.untracked.vstring("
         inputs = inputs +"'"+dataPath+channelNew+"Merged.root',"
 #        inputs = inputs +"'"+dataPath+"Mu_v4p1Merged.root',"
@@ -369,6 +394,7 @@ def changeChannel(fileName,channelOld,channelNew,switch,isMC):
 #        inputs = inputs +"'"+dataPath+"Mu_v4Merged.root',"
 #        inputs = inputs +"'"+dataPath+"Mu_v2Merged.root',"
         inputs = inputs +")"
+        print "inputs = ", inputs
         o.write(inputs)
     if "TTBar" in channelNew and not "Q2" in channelNew and not "Matching" in channelNew: # == "DataMu" or channelNew == "DataMuQCD":
         inputs = "process.source.fileNames = cms.untracked.vstring("
