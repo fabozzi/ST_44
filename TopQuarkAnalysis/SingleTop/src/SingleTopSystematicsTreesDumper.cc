@@ -329,11 +329,11 @@ SingleTopSystematicsTreesDumper::SingleTopSystematicsTreesDumper(const edm::Para
       
       string treename = (channel+"_2J_"+tags.str()+"_"+syst);
       
-      if(bj==0 )treename = (channel+"_"+syst+"WSample");
-      if(bj==3 )treename = (channel+"_"+syst+"WSampleQCD");
+      //      if(bj==0 )treename = (channel+"_"+syst+"WSample");
+      //      if(bj==3 )treename = (channel+"_"+syst+"WSampleQCD");
 
-      if(bj==1 )treename = (channel+"_"+syst);
-      if(bj==4 )treename = (channel+"_"+syst+"QCD");
+      //      if(bj==1 )treename = (channel+"_"+syst);
+      //      if(bj==4 )treename = (channel+"_"+syst+"QCD");
 
       trees2J[bj][syst] = new TTree(treename.c_str(),treename.c_str()); 
       
@@ -524,8 +524,8 @@ SingleTopSystematicsTreesDumper::SingleTopSystematicsTreesDumper(const edm::Para
 
       treename = (channel+"_3J_"+tags.str()+"_"+syst);
       
-      if(bj==2 )treename = (channel+"_"+syst+"3J2T");
-      if(bj==5 )treename = (channel+"_"+syst+"ESBQCD");
+      //      if(bj==2 )treename = (channel+"_"+syst+"3J2T");
+      //      if(bj==5 )treename = (channel+"_"+syst+"ESBQCD");
       
       trees3J[bj][syst] = new TTree(treename.c_str(),treename.c_str()); 
       
