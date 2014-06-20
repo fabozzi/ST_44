@@ -1,4 +1,3 @@
-
 def listCuts( cut,sample,lepton):
     
     KinCut = "  TString KinCut = "
@@ -11,7 +10,9 @@ def listCuts( cut,sample,lepton):
     #   KinCut = KinCut + "TString(\"*(secondJetPt > 0. && bJetRMS < 10.025 && fJetRMS < 10.025 && bJetPt > 60 && fJetPt > 60 && leptonDeltaCorrectedRelIso<0.06)\")"
 
     #    KinCut = KinCut + "TString(\"*(leptonRelIso<10.06)\")"
-    KinCut = KinCut + "TString(\"\")"
+#    KinCut = KinCut + "TString(\"\")"
+    KinCut = KinCut+"+TString(\"*((mtwMass > 50) && (nJLoose>0)) \")"
+#    KinCut = KinCut+"+TString(\"*(mtwMass > 50)\")"
 
 
     #   KinCut = KinCut + "TString(\"*(secondJetPt > 0. && bJetDecRMS < 10.025 && bJetFinRMS < 10.025 )\")"
@@ -19,8 +20,8 @@ def listCuts( cut,sample,lepton):
 #    if lepton == "Mu":
 #        KinCut = KinCut + "+TString(\"*0.995*0.995\")"
 
-    if "2J_0T" in sample:
-        KinCut = KinCut + "+TString(\"*(bJetRMS < 10.025  && fJetRMS < 10.025)\")"
+#    if "2J_0T" in sample:
+#        KinCut = KinCut + "+TString(\"*(bJetRMS < 10.025  && fJetRMS < 10.025)\")"
         
     if "SR" in cut:
         KinCut = KinCut + "+TString(\"*(topMassLR > 130 && topMassLR <220)\")"
@@ -81,8 +82,11 @@ def listNormalizations( cut,sample,lepton):
         #        return " WJetsScale = 1.;TTBarScale =1.; QCDIntegral =76806.7; \n"
         #        return " WJetsScale = 1.; TTBarScale =1.; QCDIntegral =105769; \n"
         #        return " WJetsScale = 1.; TTBarScale =1.; QCDIntegral =109753; \n"
-        return " WJetsScale = 1.2; TTBarScale =1.; QCDIntegral =93550.6; \n"
 
+#        return " WJetsScale = 1.2; TTBarScale =1.; QCDIntegral =93550.6; \n"
+
+# taking qcd norm from MC (QCDIntegral = 0 or no specified)
+        return " WJetsScale = 1.2; TTBarScale =1.04; QCDIntegral = 0; \n"
         
     if sample == "3J_1T":
         return " WJetsScale = 1.3;TTBarScale =1.04; \n"
@@ -91,9 +95,10 @@ def listNormalizations( cut,sample,lepton):
         #        return " QCDIntegral =495.981; TTBarScale =1.036; \n"
         #        return " QCDIntegral = 378.4; \n"
         #        return " QCDIntegral = 378.; \n"
-        return " QCDIntegral = 447.76; WJetsScale = 1.2; \n"  
         #        return " QCDIntegral = 200.*0.54; \n"
         #        return " QCDIntegral =413.321; \n"
+#        return " QCDIntegral = 447.76; WJetsScale = 1.2; \n"  
+        return " QCDIntegral = 0; WJetsScale = 1.; TTBarScale =1.04;  \n"
 
     if sample == "2J_2T":
         #        return " WJetsScale = 1.3 ;TTBarScale =1.04; \n"
@@ -101,7 +106,9 @@ def listNormalizations( cut,sample,lepton):
         #        return " QCDIntegral = 623.942*0.5788; \n"
         #        return " QCDIntegral = 470*0.5788; WJetsScale = 1.129; \n"
         #        return " QCDIntegral = 361.252; \n"
-        return " QCDIntegral = 25.; WJetsScale = 1.; TTBarScale =1.;  \n"
+#        return " QCDIntegral = 25.; WJetsScale = 1.; TTBarScale =1.04;  \n"
+# taking qcd norm from MC
+        return " QCDIntegral = 0; WJetsScale = 1.; TTBarScale =1.04;  \n"
         #        return " QCDIntegral = 284.;  WJetsScale = 1.; TTBarScale =1.; \n"
         #        return " QCDIntegral = 154.295;  WJetsScale = 1.; TTBarScale =1.; \n"
         #        return " QCDIntegral = 226.095*1.8;  WJetsScale = 1.; TTBarScale =1.; \n"
@@ -109,8 +116,8 @@ def listNormalizations( cut,sample,lepton):
         #        return " QCDIntegral =203.545;  WJetsScale = 1.1389; TTBarScale =1.036; \n"
         #        return " QCDIntegral = 497.134*0.5788;  WJetsScale = 1.1436; \n"
 
-    if sample == "2J_2T":
-        return " WJetsScale = 1.; TTBarScale =1.;  \n"
+#    if sample == "2J_2T":
+#        return " WJetsScale = 1.; TTBarScale =1.;  \n"
             
         
     if sample == "2J_1T" and cut == "noQCDCut":
@@ -118,7 +125,9 @@ def listNormalizations( cut,sample,lepton):
             if "Plus" in cut or "Minus" in cut:
                 return " WJetsScale = 1.;TTBarScale =1.; QCDIntegral =741.109/2.; \n"
             #        return " WJetsScale = 1.;TTBarScale =1.; QCDIntegral =21239.4; \n"
-            return " WJetsScale = 1.;TTBarScale =1.; QCDIntegral =1089.09; \n"
+#            return " WJetsScale = 1.;TTBarScale =1.04.; QCDIntegral =1089.09; \n"
+# taking qcd norm from MC
+            return " WJetsScale = 1.;TTBarScale =1.04.; QCDIntegral =0.; \n"
 
 #        if "Plus" in cut or "Minus" in cut:
 #            return " WJetsScale = 1.;TTBarScale =1.0; QCDIntegral =1316.5/2.; \n"
@@ -303,7 +312,9 @@ def listSamples( variable, sample):
 
     if variable == "nJLoose":
         return "TString observable = \"nJLoose\";   double observableMin = 0;   double observableMax = 8;  TString observableName = \"nJetsLoose\"; double nBins = 8; TString oTitle = \"nJetsLoose\";"
-    
-    
+
+    if variable == "looseJetPt":
+        return "TString observable = \"looseJetPt\";   double observableMin = 20;   double observableMax = 40;  TString observableName = \"looseJetPt\"; double nBins = 20; TString oTitle = \"looseJetPt\";"
+
     
     

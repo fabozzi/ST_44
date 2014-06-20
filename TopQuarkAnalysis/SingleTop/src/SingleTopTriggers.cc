@@ -70,6 +70,9 @@ bool SingleTopTriggers::filter( edm::Event& iEvent,const  edm::EventSetup& c)
   bool eleNonIso = false;
   bool muonNonIso = false;
 
+  //  std::cout << " TriggerFilter module running" <<std::endl;
+
+
   if(HLTR.isValid() == false) {
     std::cout<< " HLTInspect Error - Could not access Results with name "<<hlTriggerResults_<<std::endl;
   }
@@ -128,6 +131,9 @@ bool SingleTopTriggers::filter( edm::Event& iEvent,const  edm::EventSetup& c)
 	      }*/
 	    string trigger = triggersList.at(r);
 	    
+	    //	    cout << "tmptrig = " << tmptrig << endl;
+	    //	    cout << "tmptrig2 = " << tmptrig2 << endl;
+	    //	    cout << "trigger = " << trigger << endl;
 	    //+ triggerVersion;	  //	    if (i ==0) cout <<" trigger "<< trigger<< " " <<endl;
 	    if((tmptrig == trigger) && (tmppass)) { 
 	      if (verbose)cout << " run " << irun << " passes trigger "<< trigger << endl; 
@@ -142,6 +148,10 @@ bool SingleTopTriggers::filter( edm::Event& iEvent,const  edm::EventSetup& c)
 	else{
 	  for(size_t r = 0; r< triggersList.size();++r){
 	    string trigger =triggersList.at(r); 	
+
+	    //	    cout << "tmptrig = " << tmptrig << endl;
+	    //	    cout << "tmptrig2 = " << tmptrig2 << endl;
+	    //	    cout << "trigger = " << trigger << endl;
 	    if((tmptrig == trigger) && (tmppass)) return true;// muonNonIso =true;
 	    if((tmptrig2 == trigger) && (tmppass)) return true;// muonNonIso =true;
 	  }

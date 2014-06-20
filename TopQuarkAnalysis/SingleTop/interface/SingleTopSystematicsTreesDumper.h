@@ -113,6 +113,9 @@ class SingleTopSystematicsTreesDumper : public edm::EDAnalyzer {
 
   double topMtw(math::PtEtaPhiELorentzVector lepton, math::PtEtaPhiELorentzVector jet, float metPx, float metPy);
 
+  //  void muonHLTSF(float etaMu, float ptMu);
+  //  void electronHLTSF(float etaEle, float ptEle);
+
   //B-weight generating functions
   double BScaleFactor(string algo,string syst_name); 
   double MisTagScaleFactor(string algo,string syst_name,double sf, double eff, double sferr);
@@ -326,6 +329,9 @@ class SingleTopSystematicsTreesDumper : public edm::EDAnalyzer {
   map<string, TTree*> trees4J[6];
   map<string, TTree *> treesNJets;
 
+  bool doJetTrees_;
+
+
   enum Bin {
    ZeroT = 0,
     OneT = 1,
@@ -355,7 +361,42 @@ class SingleTopSystematicsTreesDumper : public edm::EDAnalyzer {
   //Variables to use as trees references
 
   //Variables to use as trees references
-  double etaTree, etaTree2, cosTree, cosBLTree, cos1Tree, cos1BLTree, cos2Tree, cos2BLTree, topMassTree, top1MassTree, top2MassTree, totalWeightTree, weightTree, mtwMassTree, lowBTagTree, highBTagTree, mediumBTagTree,mediumlowBTagTree ,maxPtTree, minPtTree,maxLoosePtTree, topMassLowBTagTree, topMassBestTopTree, topMassMeas, bWeightTree, PUWeightTree,topMtwTree,HT,H;
+  double etaTree, etaTree2, cosTree, cosBLTree, cos1Tree, cos1BLTree, cos2Tree, cos2BLTree, topMassTree, top1MassTree, top2MassTree, totalWeightTree, weightTree, mtwMassTree, lowBTagTree, highBTagTree, mediumBTagTree,mediumlowBTagTree ,maxPtTree, minPtTree,maxLoosePtTree, topMassLowBTagTree, topMassBestTopTree, topMassMeas, bWeightTree, PUWeightTree,
+    topMtwTree,HT,H;
+  /*
+    lepSF,lepSFB,lepSFC , lepSFD,
+    lepSFIDUp,
+    lepSFIDDown,
+    lepSFIsoUp,
+    lepSFIsoDown,
+    lepSFTrigUp,
+    lepSFTrigDown,
+
+    lepSFIDUpB,
+    lepSFIDDownB,
+    lepSFIsoUpB,
+    lepSFIsoDownB,
+    lepSFTrigUpB,
+    lepSFTrigDownB,
+    lepSFIDUpC,
+    lepSFIDDownC,
+    lepSFIsoUpC,
+    lepSFIsoDownC,
+    lepSFTrigUpC,
+    lepSFTrigDownC,
+
+    lepSFIDUpD,
+    lepSFIDDownD,
+    lepSFIsoUpD,
+    lepSFIsoDownD,
+    lepSFTrigUpD,
+    lepSFTrigDownD,
+    
+    sfID,sfIDup,sfIDdown,  
+    sfIso,sfIsoup,sfIsodown,  
+    sfTrig,sfTrigup,sfTrigdown;
+  */
+
   //Weights for systematics
   double bWeightTreeBTagUp,
     bWeightTreeMisTagUp,
@@ -386,7 +427,10 @@ class SingleTopSystematicsTreesDumper : public edm::EDAnalyzer {
   
   
   int nJ, nJNoPU, nJCentral, nJCentralNoPU, nJForward, nJForwardNoPU, nJMBTag, nTCHPT, nCSVT, nCSVM, nJLoose,nJLooseCentral , nJLooseForward, nJLooseMBTag; // nJetsLoose,nJetsLooseCentral , nJetsLooseForward,nJetsLooseMBTag;
-  
+
+  double w1TCHPT, w2TCHPT;
+  // double w1CSVT, w2CSVT, w1CSVM, w2CSVM;
+
   int nb, nc, nudsg, ntchpt_tags, ncsvm_tags, ncsvt_tags,ncsvl_tags,
     nbNoSyst, ncNoSyst, nudsgNoSyst,
     ntchpt_antitags, ntchpm_tags, ntchel_tags, ntche_antitags, ntight_tags;
@@ -470,6 +514,8 @@ class SingleTopSystematicsTreesDumper : public edm::EDAnalyzer {
     b_weight_tchpt_2_tags, 
     b_weight_tchel_0_tags; 
   
+  bool doBTagSF_;
+
   float x1,x2,Q2,scalePDF;
   int id1,id2;
 

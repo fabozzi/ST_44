@@ -10,8 +10,10 @@ from macroFunctions import *
 #        ]
 
 
-#categories = ["2J_2T","3J_2T"]
-categories = ["2J_2T"]
+#categories = ["2J_0T","2J_1T","2J_2T","3J_1T","3J_2T","4J_2T"]
+#categories = ["4J_2T"]
+categories = ["2J_0T"]
+#categories = ["2J_2T"]
 #categories = ["3J_2T"]
 #categories = ["NJets"] 
 cuts = ["noQCDCut"] ##,"noQCDCut_mtwCut"]
@@ -35,7 +37,13 @@ cuts = ["noQCDCut"] ##,"noQCDCut_mtwCut"]
 #variables = ["eta"]                                                                                                                             ## for 3J2T NEW
 
 #variables = ["mtwMass","metPt","fJetPt","bJetPt","leptonPt","leptonRelIso"]
-variables = ["nJLoose"]
+#variables = ["topMass","costhetalj","mtwMass","leptonPt"]
+#variables = ["bJetPt","metPt","topPt","DeltaR_lep_leadingjet"]
+#variables = ["firstJetPt","secondJetPt","thirdJetPt","nJLoose"]
+#variables = ["topMass","costhetalj","mtwMass","leptonPt","bJetPt","metPt","topPt","DeltaR_lep_leadingjet","firstJetPt","secondJetPt","thirdJetPt","nJLoose"]
+
+#variables = ["topMass"]
+variables = ["looseJetPt"]
 
 
 
@@ -54,16 +62,19 @@ variables = ["nJLoose"]
 #variables = ["DeltaPhi_topbJetFin"]  ##,"b1b2Mass","b1b2Pt"]
 #variables = ["DeltaEta_b1b2","DeltaPhi_b1b2","b1b2Pt","b1b2Mass"]  ##,"b1b2Mass","b1b2Pt"]
 #variables = ["b1b2Pt"]  ##,"b1b2Mass","b1b2Pt"]
+#variables = ["firstJetPt","secondJetPt","thirdJetPt","nJLoose"]
+#variables = ["bJetPt","metPt","topPt"]
+#variables = ["DeltaR_lep_leadingjet"]
 
 
 addDDNormalization =0 
 #addDDNormalization = 1
 addNormalization = 1
 
-lepton = "Ele"
+#lepton = "Ele"
 lepton = "Mu"
 
-Leptons = ["Mu"] ##,"Ele"]
+#Leptons = ["Mu"] ##,"Ele"]
 
 
 #variables = ["topMass","eta","costhetalj","leptonPt","mtwMass","metPt"]
@@ -77,7 +88,7 @@ import re
 import sys
 import commands
 
-categoryOld = "3J_2T"
+categoryOld = "mysample"
 variableOld = "eta"
 
 
@@ -89,6 +100,7 @@ print fileNames
 for fileName in fileNames:
     if "inclusive" in fileNames: continue
     for categoryNew in categories:
+        os.system("mkdir "+categoryNew)
         for variableNew in variables:
             for cut in cuts:
                 fileNameNew = fileName.replace("Template_","")  

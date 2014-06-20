@@ -2,13 +2,16 @@ def listCuts( cut,sample,lepton):
 
     KinCut = "  TString KinCut = \"\""
     
+#    KinCut = KinCut+"+TString(\"*((mtwMass > 50) && (nJLoose>0)) \")"
+    KinCut = KinCut+"+TString(\"*(mtwMass > 50)\")"
+
     #KinCut = KinCut + "TString(\"*(secondJetPt > 0. && fJetRMS < 0.025 && bJetRMS<10.025)\")"
    # KinCut = KinCut + "TString(\"*(secondJetPt > 0. && bJetRMS<10.025)\")"
 #    if lepton == "Mu":
 #        KinCut = KinCut + "+TString(\"*0.995*0.995\")"
 
-    if "2J_0T" in sample:
-        KinCut = KinCut #+ "+TString(\"*(bJetRMS < 0.025)\")"
+#    if "2J_0T" in sample:
+#        KinCut = KinCut #+ "+TString(\"*(bJetRMS < 0.025)\")"
         
     if "SR" in cut:
         KinCut = KinCut + "+TString(\"*(topMass > 130 && topMass <220)\")"
@@ -27,44 +30,39 @@ def listCuts( cut,sample,lepton):
             KinCut = KinCut#+"+TString(\"*(metPt > 45)\")"            
     return KinCut+";\n"
 
+def listCutsQCD( cut,sample,lepton):
+    
+    KinCutQCDDD = "  TString KinCutQCDDD = "
+
+#    KinCutQCDDD = KinCutQCDDD + "TString(\"*(sqrt((leptonPhi-bJetFinPhi)**2+(leptonEta-bJetFinEta)**2)>0.3 && sqrt((leptonPhi-bJetDecPhi)**2+(leptonEta-bJetDecEta)**2)>0.3)\")"
+#    KinCutQCDDD = KinCutQCDDD + "TString(\"(sqrt((leptonPhi-fJetPhi)**2+(leptonEta-fJetEta)**2)>-0.3 && sqrt((leptonPhi-bJetPhi)**2+(leptonEta-bJetEta)**2)>-0.3)\")"
+#    if "costhetaljCut" in cut:
+#        KinCutQCDDD = "  TString KinCutQCDDD = "
+#    KinCutQCDDD = KinCutQCDDD + "+TString(\"*(costhetalj_bJet<0.99 && costhetalj<0.99)\")"
+    
+    return KinCutQCDDD+";\n"
+
 def listNormalizations( cut,sample,lepton):
-    if sample == "2J_0T" and cut == "":
-        if lepton == "Mu":
-            if "Plus" in cut or "Minus" in cut:
-                return " WJetsScale = 1.2;TTBarScale =1.; QCDIntegral =9249.96/2.; \n"
-            #        return " WJetsScale = 1.;TTBarScale =1.; QCDIntegral =21239.4; \n"
-            return " WJetsScale = 1.2;TTBarScale =1.; QCDIntegral =92767; \n"
-
-        if "Plus" in cut or "Minus" in cut:
-            #return " WJetsScale = 1.2;TTBarScale =1.; QCDIntegral =16604.1/2.; \n"
-            return " WJetsScale = 1.2;TTBarScale =1.;  \n"
-        #        return " WJetsScale = 1.;TTBarScale =1.; QCDIntegral =21239.4; \n"
-        #return " WJetsScale = 1.;TTBarScale =1.; QCDIntegral =16604.1; \n"
-       # return " WJetsScale = 1.2;TTBarScale =1.; QCDIntegral =92767; \n"   
-        return " WJetsScale = 1.2;TTBarScale =1.; QCDIntegral =572550; \n"   
-    if sample == "3J_1T" and cut == "":
+    if sample == "2J_0T":
+# taking qcd norm from MC (QCDIntegral = 0 or no specified)
+        return " WJetsScale = 1.; TTBarScale =1.04; QCDIntegral = -1; \n"
+    if sample == "3J_1T":
+        return " WJetsScale = 1.3;TTBarScale =1.04; QCDIntegral = -1; \n"
+    if sample == "3J_2T":
         #return " WJetsScale = 1.3;TTBarScale =1.04; \n"
-        return " WJetsScale = 1.2;TTBarScale =1; QCDIntegral = 5119 ; \n"
-    if sample == "3J_2T" and cut == "":
-        #return " WJetsScale = 1.3;TTBarScale =1.04; \n"
-        return " WJetsScale = 1.2;TTBarScale =1; QCDIntegral = 200; \n"
+#        return " WJetsScale = 1.2;TTBarScale =1.04; QCDIntegral = -1; \n"
+        return " WJetsScale = 1.;TTBarScale =1.04; QCDIntegral = -1; \n"
         #return " WJetsScale = 1.2;TTBarScale =1; QCDIntegral = 300; \n"
-    if sample == "2J_2T" and cut == "":
-        return " WJetsScale = 1.2;TTBarScale =1; QCDIntegral = 291; \n"
+    if sample == "2J_2T":
+        return " WJetsScale = 1.;TTBarScale =1.04; QCDIntegral = -1; \n"
        # return " WJetsScale = 1.2;TTBarScale =1; QCDIntegral = 712.5; \n"
-    if sample == "3J_0T" and cut == "":
-        return " WJetsScale = 1.2;TTBarScale =1; QCDIntegral = 39692; \n"
-    if sample == "2J_1T" and cut == "":
-        if lepton == "Mu":
-            if "Plus" in cut or "Minus" in cut:
-                return " WJetsScale = 1.2;TTBarScale =1.; QCDIntegral =741.109/2.; \n"
-            #        return " WJetsScale = 1.;TTBarScale =1.; QCDIntegral =21239.4; \n"
-            return " WJetsScale = 1.2;TTBarScale =1.; QCDIntegral =741.109; \n"
-
-        if "Plus" in cut or "Minus" in cut:
-            return " WJetsScale = 1.2;TTBarScale =1.0; QCDIntegral =1316.5/2.; \n"
-        #return " WJetsScale = 1.;TTBarScale =1.0; QCDIntegral =1316.5; \n"
-        return " WJetsScale = 1.2;TTBarScale =1.0; QCDIntegral = 7676 ; \n"
+    if sample == "3J_0T":
+        return " WJetsScale = 1.2;TTBarScale =1.04; QCDIntegral = -1; \n"
+    if sample == "2J_1T":
+        return " WJetsScale = 1.2;TTBarScale =1.04; QCDIntegral = -1 ; \n"
+#        return " WJetsScale = 1.;TTBarScale =1.04; QCDIntegral = -1 ; \n"
+    if sample == "4J_2T":
+        return " WJetsScale = 1.;TTBarScale =1.04; QCDIntegral = -1 ; \n"
 
     if sample == "2J_1T" and "SR" in cut:
         if lepton == "Mu":
@@ -88,16 +86,17 @@ def listNormalizations( cut,sample,lepton):
 
     return "\n"
 
-def stringCharge( cut):
-    if "Plus" in cut:
-        return "TString stringCharge=TString(\" +\");\n"
-    if "Minus" in cut:
-        return "TString stringCharge=TString(\" -\");\n"
-    return "TString stringCharge=TString(\"\");\n"
-def listSamples( variable, sample):
+#def stringCharge( cut):
+#    if "Plus" in cut:
+#        return "TString stringCharge=TString(\" +\");\n"
+#    if "Minus" in cut:
+#        return "TString stringCharge=TString(\" -\");\n"
+#    return "TString stringCharge=TString(\"\");\n"
 
+def listSamples( variable, sample):
     if variable == "topPt":
         return "TString observable = \"topPt\";   double observableMin = 0;   double observableMax = 210;  TString observableName = \"P_{T,lb\#nu}(GeV)\"; double nBins =21; TString oTitle = \"topPt\";"
+
     if variable == "topPt_best":
         return "TString observable = \"topPt_best\";   double observableMin = 0;   double observableMax = 210;  TString observableName = \"bestP_{T,lb\#nu}(GeV)\"; double nBins =21; TString oTitle = \"topPt_best\";"
 
@@ -157,6 +156,9 @@ def listSamples( variable, sample):
     if variable == "leptonRhoCorrectedRelIso":
         return "TString observable = \"leptonRhoCorrectedRelIso\";   double observableMin = 0.0;   double observableMax = 0.1;  TString observableName = \"Iso_{rel}^{rho}\"; double nBins = 24;TString oTitle = observable;"
 
+    if variable == "leptonRelIso":
+        return "TString observable = \"leptonRelIso\";   double observableMin = 0.0;   double observableMax = 0.4;  TString observableName = \"Iso_{rel}\"; double nBins = 30; TString oTitle = observable;"
+
     if variable == "leptonPt":
         return "TString observable = \"leptonPt\";   double observableMin = 20;   double observableMax = 140;  TString observableName = \"p_{T,\l}(GeV)\"; double nBins = 12;TString oTitle = observable;"
 
@@ -199,18 +201,30 @@ def listSamples( variable, sample):
     
     if variable == "DeltaR_lepton_secondJet" :
         return "TString observable = \"sqrt((leptonPhi-secondJetPhi)**2+(leptonEta-secondJetEta)**2)\"; double observableMin = 0 ; double observableMax =8 ;  TString observableName = \" DeltaR_{lepton_secondJet}\"; double nBins =8 ;TString oTitle = \"DeltaR_lepton_secondJet\";"
+
     if variable == "BJetsDeltaR" :
         return "TString observable = \"sqrt((mediumBJetPhi-highBJetPhi)**2+(highBJetEta-mediumBJetEta)**2)\"; double observableMin = 0 ; double observableMax =8 ;  TString observableName = \"#DeltaR_{Bjets}\"; double nBins =8 ;TString oTitle = \"BJetsDeltaR\";"
         
     if variable == "first_secondJetsDeltaR" :
         return "TString observable = \"sqrt((secondJetPhi-firstJetPhi)**2+(secondJetEta-firstJetEta)**2)\"; double observableMin = 0 ; double observableMax =8 ;  TString observableName = \"#DeltaR_{leadingJet_secondJet}\"; double nBins =8 ;TString oTitle = \"first_secondJetsDeltaR\";"
+
     if variable == "recoiledb_leptonDeltaR" :
         return "TString observable = \"sqrt((leptonPhi-(bJetPhi*(!bJetIsbest)+fJetPhi*bJetIsbest))**2+(leptonEta-(bJetEta*(!bJetIsbest)+fJetEta*bJetIsbest))**2)\"; double observableMin = 0 ; double observableMax =8 ;  TString observableName = \"#DeltaR_{b',\l}\"; double nBins =8 ;TString oTitle = \"recoiledb_leptonDeltaR\";"
     if variable == "top_recoiledb_deltaPhi" :
         return "TString observable = \"(topPhi_best)-(bJetPhi*(!bJetIsbest)+fJetPhi*bJetIsbest)\"; double observableMin = 0 ; double observableMax =8 ;  TString observableName = \"#Delta#phi_{top,b'}\"; double nBins =8 ;TString oTitle = \"top_recoiledb_deltaPhi\";"
+
     if variable == "BDT" :
         if sample == "2J_2T":
             return "TString observable = \"BDT2J2T\"; double observableMin = -1. ; double observableMax =0.4 ;  TString observableName = \"BDT Discriminant\"; double nBins =28 ;TString oTitle = \"BDT\";"
-    return "TString observable = \"BDT3J2T\"; double observableMin = -0.4. ; double observableMax =1.;  TString observableName = \"BDT Discriminant\"; double nBins =28;TString oTitle = \"BDT\";"
+        return "TString observable = \"BDT3J2T\"; double observableMin = -0.4. ; double observableMax =1.;  TString observableName = \"BDT Discriminant\"; double nBins =28;TString oTitle = \"BDT\";"
+
+    if variable == "nJLoose":
+        return "TString observable = \"nJLoose\";   double observableMin = 0;   double observableMax = 8;  TString observableName = \"nJetsLoose\"; double nBins = 8; TString oTitle = \"nJetsLoose\";"
+
+    if variable == "looseJetPt":
+        return "TString observable = \"looseJetPt\";   double observableMin = 20;   double observableMax = 40;  TString observableName = \"looseJetPt\"; double nBins = 20; TString oTitle = \"looseJetPt\";"
+
+    if variable == "DeltaR_lep_leadingjet":
+        return "TString observable = \"sqrt((leptonEta-firstJetEta)^2 + (leptonPhi-firstJetPhi)^2)\";   double observableMin = 0;   double observableMax = 8;  TString observableName = \"#Delta R_{lep - leading jet}\"; double nBins = 8; TString oTitle = \"DeltaR_lep_leadingjet\";"
     
 
