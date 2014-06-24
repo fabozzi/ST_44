@@ -165,6 +165,7 @@ gStyle->SetCanvasBorderMode(0);
   cut = cut + KinCut + MCCut;
   cutData = cutData + KinCut;
   TString  cutDataQCD = KinCutQCDDD;
+  cout << "CUT DATA QCD " << cutDataQCD << endl;
 
 
 /*
@@ -215,6 +216,10 @@ gStyle->SetCanvasBorderMode(0);
   channel = "QCDEle";
   TString histoname = observable+TString("_")+channel+sample+TString("")+lepton;
   TH1D * QCDEle =  new TH1D( histoname, histoname,nBins,observableMin,observableMax);
+
+  channel = "QCDEleMC";
+  TString histoname = observable+TString("_")+channel+sample+TString("")+lepton;
+  TH1D * QCDEleMC =  new TH1D( histoname, histoname,nBins,observableMin,observableMax);
   
   channel = "WW";
   TString histoname = observable+TString("_")+channel+sample+TString("")+lepton;
@@ -245,7 +250,7 @@ gStyle->SetCanvasBorderMode(0);
   
   channel = "TTBar";
   filename = (folder + "/"+channel+postfix_file+".root");
-  cout << filename<<endl;
+  //  cout << filename<<endl;
   TFile *f = new TFile (filename,"Open");
   if( !f->IsOpen() ){
     cout<< " WARNING FILE " << filename << endl;
@@ -259,7 +264,7 @@ gStyle->SetCanvasBorderMode(0);
   delete tmp;
   f->Close("R");  
   delete f;
-  cout <<"test1"<<endl;
+  //  cout <<"test1"<<endl;
   channel = "TChannel";
   filename = (folder + "/"+channel+postfix_file+".root");
   f = TFile::Open(filename);
@@ -289,7 +294,7 @@ gStyle->SetCanvasBorderMode(0);
   TbarChannel->Add(tmp,1.);
   delete tmp;
   f->Close("R");delete f;
-  cout <<"test2"<<endl;
+  //  cout <<"test2"<<endl;
   channel = "SChannel";
   filename = (folder + "/"+channel+postfix_file+".root");
   f = TFile::Open(filename);
@@ -305,7 +310,7 @@ gStyle->SetCanvasBorderMode(0);
   delete tmp;
   f->Close("R");delete f;
 
-    channel = "SbarChannel";
+  channel = "SbarChannel";
   filename = (folder + "/"+channel+postfix_file+".root");
   f = TFile::Open(filename);
   if( !f->IsOpen() ){
@@ -319,7 +324,7 @@ gStyle->SetCanvasBorderMode(0);
   SbarChannel->Add(tmp,1.);
   delete tmp;
   f->Close("R");delete f;
-    cout <<"test3"<<endl;
+  //    cout <<"test3"<<endl;
   channel = "TWChannel";
   filename = (folder + "/"+channel+postfix_file+".root");
   f = TFile::Open(filename);
@@ -430,12 +435,14 @@ gStyle->SetCanvasBorderMode(0);
   //filename = (folder + "/"+channel+postfix_file+".root");
  // TString filename = (folder + "/Data_Ele"+postfix_file+".root");
   TString filename = (folder + "/DataEle"+postfix_file_data+".root");
+  cout << "FILENAME QCD = " << filename<<endl;
+
   f = TFile::Open(filename);
   if( !f->IsOpen() ){
     cout<< " WARNING FILE " << filename << endl;
     continue;
   } // cout <<"test11"<<endl;
-  TString elepath = "TreesEle/"+channel+"_"+sample+"";
+  TString mupath = "TreesEle/"+channel+"_"+sample+"";
   TString elepath = "TreesEle/Data_"+sampleqcd;
   TH1D * tmp  = new TH1D("t","t",nBins,observableMin,observableMax);
   ((TTree*)f->Get(elepath))->Project("t",observable,cutDataQCD); //don't normalyzed to lumi ,just for shape 
@@ -443,10 +450,50 @@ gStyle->SetCanvasBorderMode(0);
   QCDEle->Add(tmp,1.);
   //  QCDEle->Scale(60000/QCDEle->Integral());
   delete tmp;
+  cout << "QCDEle Integral = " << QCDEle->Integral() << endl;
   f->Close("R");delete f;
 
-/*  
-  channel = "QCDEle";                                      /////comment it for using data ,qcd Ele dont have highBJetPhi....
+  channel = "QCD_Pt_20to30_BCtoE"; 
+  filename = (folder + "/"+channel+postfix_file+".root");
+  //  cout << "FILENAME QCD = " << filename<<endl;
+  f = TFile::Open(filename);
+  if( !f->IsOpen() ){
+    cout<< " WARNING FILE " << filename << endl;
+    continue;
+  }  //cout <<"test12"<<endl;
+  TString elepath = "TreesEle/"+channel+"_"+sample+"";
+  //  TString elepath = "TreesEle/Data_"+sampleqcd;
+  TH1D * tmp  = new TH1D("t","t",nBins,observableMin,observableMax);
+  //  cout << "treeEle path = " << elepath <<endl;
+  //  cout << "observable = " << observable <<endl;
+  //  cout << "cut = " << cut <<endl;
+
+  ((TTree*)f->Get(elepath))->Project("t",observable,cut);   
+
+  QCDEleMC->Add(tmp,1.);
+  delete tmp;
+  cout << "INTEGRAL QCD MC 1 = " << QCDEleMC->Integral() << endl; 
+  f->Close("R");delete f;
+
+  channel = "QCD_Pt_30to80_BCtoE"; 
+  filename = (folder + "/"+channel+postfix_file+".root");
+  f = TFile::Open(filename);
+  if( !f->IsOpen() ){
+    cout<< " WARNING FILE " << filename << endl;
+    continue;
+
+  }  //cout <<"test12"<<endl;
+  TString elepath = "TreesEle/"+channel+"_"+sample+"";
+  TH1D * tmp  = new TH1D("t","t",nBins,observableMin,observableMax);
+  //  TString elepath = "TreesEle/Data_"+sampleqcd;
+  ((TTree*)f->Get(elepath))->Project("t",observable,cut);   
+
+  QCDEleMC->Add(tmp,1.);
+  delete tmp;
+  cout << "INTEGRAL QCD MC 2 = " << QCDEleMC->Integral() << endl; 
+  f->Close("R");delete f;
+
+  channel = "QCD_Pt_80to170_BCtoE"; 
   filename = (folder + "/"+channel+postfix_file+".root");
   f = TFile::Open(filename);
   if( !f->IsOpen() ){
@@ -457,23 +504,140 @@ gStyle->SetCanvasBorderMode(0);
   TString elepath = "TreesEle/"+channel+"_"+sample+"";
   //  TString elepath = "TreesEle/Data_"+sampleqcd;
   TH1D * tmp  = new TH1D("t","t",nBins,observableMin,observableMax);
-  //((TTree*)f->Get(elepath))->Project("t",observable,cutData);
-  ((TTree*)f->Get(elepath))->Project("t",observable,cut);             //normalyzed to lumi
-  if (QCDIntegral > 0 ) QCDEle->Scale(QCDIntegral/QCDEle->Integral());// without normalyzation to lumi
-  else QCDEle->Scale(tmp->Integral()/QCDEle->Integral());
-  //QCDEle->Scale(10000/QCDEle->Integral());
+  ((TTree*)f->Get(elepath))->Project("t",observable,cut);   
+
+  QCDEleMC->Add(tmp,1.);
   delete tmp;
+  cout << "INTEGRAL QCD MC 3 = " << QCDEleMC->Integral() << endl; 
   f->Close("R");delete f;
 
-*/
 
-  //  QCDEle->Add(tmp,1.);
+  channel = "QCD_Pt_20to30_EMEnriched"; 
+  filename = (folder + "/"+channel+postfix_file+".root");
+  f = TFile::Open(filename);
+  if( !f->IsOpen() ){
+    cout<< " WARNING FILE " << filename << endl;
+    continue;
 
-  if (QCDIntegral > 0 ) QCDEle->Scale(QCDIntegral/(QCDEle->Integral()));
+  }  //cout <<"test12"<<endl;
+  TString elepath = "TreesEle/"+channel+"_"+sample+"";
+  //  TString elepath = "TreesEle/Data_"+sampleqcd;
+  TH1D * tmp  = new TH1D("t","t",nBins,observableMin,observableMax);
+  ((TTree*)f->Get(elepath))->Project("t",observable,cut);   
+
+  QCDEleMC->Add(tmp,1.);
+  delete tmp;
+  cout << "INTEGRAL QCD MC 4 = " << QCDEleMC->Integral() << endl; 
+  f->Close("R");delete f;
+
+  channel = "QCD_Pt_30to80_EMEnriched"; 
+  filename = (folder + "/"+channel+postfix_file+".root");
+  f = TFile::Open(filename);
+  if( !f->IsOpen() ){
+    cout<< " WARNING FILE " << filename << endl;
+    continue;
+
+  }  //cout <<"test12"<<endl;
+  TString elepath = "TreesEle/"+channel+"_"+sample+"";
+  //  TString elepath = "TreesEle/Data_"+sampleqcd;
+  TH1D * tmp  = new TH1D("t","t",nBins,observableMin,observableMax);
+  ((TTree*)f->Get(elepath))->Project("t",observable,cut);   
+
+  QCDEleMC->Add(tmp,1.);
+  delete tmp;
+  cout << "INTEGRAL QCD MC 5 = " << QCDEleMC->Integral() << endl; 
+  f->Close("R");delete f;
+
+
+  channel = "QCD_Pt_80to170_EMEnriched"; 
+  filename = (folder + "/"+channel+postfix_file+".root");
+  cout << "FILENAME QCD 6 = " << filename<<endl;
+  f = TFile::Open(filename);
+  if( !f->IsOpen() ){
+    cout<< " WARNING FILE " << filename << endl;
+    continue;
+
+  }  //cout <<"test12"<<endl;
+  TString elepath = "TreesEle/"+channel+"_"+sample+"";
+  //  TString elepath = "TreesEle/Data_"+sampleqcd;
+  TH1D * tmp  = new TH1D("t","t",nBins,observableMin,observableMax);
+  cout << "treeEle path = " << elepath <<endl;
+  cout << "observable = " << observable <<endl;
+  cout << "cut = " << cut <<endl;
+
+  ((TTree*)f->Get(elepath))->Project("t",observable,cut);   
+
+  QCDEleMC->Add(tmp,1.);
+  delete tmp;
+  cout << "INTEGRAL QCD MC 6 = " << QCDEleMC->Integral() << endl; 
+  f->Close("R");delete f;
+
+  channel = "QCD_HT_40_100_GJets"; 
+  filename = (folder + "/"+channel+postfix_file+".root");
+  f = TFile::Open(filename);
+  if( !f->IsOpen() ){
+    cout<< " WARNING FILE " << filename << endl;
+    continue;
+
+  }  //cout <<"test12"<<endl;
+  TString elepath = "TreesEle/"+channel+"_"+sample+"";
+  //  TString elepath = "TreesEle/Data_"+sampleqcd;
+  TH1D * tmp  = new TH1D("t","t",nBins,observableMin,observableMax);
+  ((TTree*)f->Get(elepath))->Project("t",observable,cut);   
+
+  QCDEleMC->Add(tmp,1.);
+  delete tmp;
+  cout << "INTEGRAL QCD MC 7 = " << QCDEleMC->Integral() << endl; 
+  f->Close("R");delete f;
+
+  channel = "QCD_HT_100_200_GJets"; 
+  filename = (folder + "/"+channel+postfix_file+".root");
+  f = TFile::Open(filename);
+  if( !f->IsOpen() ){
+    cout<< " WARNING FILE " << filename << endl;
+    continue;
+
+  }  //cout <<"test12"<<endl;
+  TString elepath = "TreesEle/"+channel+"_"+sample+"";
+  //  TString elepath = "TreesEle/Data_"+sampleqcd;
+  TH1D * tmp  = new TH1D("t","t",nBins,observableMin,observableMax);
+  ((TTree*)f->Get(elepath))->Project("t",observable,cut);   
+
+  QCDEleMC->Add(tmp,1.);
+  delete tmp;
+  cout << "INTEGRAL QCD MC 8 = " << QCDEleMC->Integral() << endl; 
+  f->Close("R");delete f;
+
+  channel = "QCD_HT_200_inf_GJets"; 
+  filename = (folder + "/"+channel+postfix_file+".root");
+  f = TFile::Open(filename);
+  if( !f->IsOpen() ){
+    cout<< " WARNING FILE " << filename << endl;
+    continue;
+
+  }  //cout <<"test12"<<endl;
+  TString elepath = "TreesEle/"+channel+"_"+sample+"";
+  //  TString elepath = "TreesEle/Data_"+sampleqcd;
+  TH1D * tmp  = new TH1D("t","t",nBins,observableMin,observableMax);
+  ((TTree*)f->Get(elepath))->Project("t",observable,cut);   
+
+  QCDEleMC->Add(tmp,1.);
+  delete tmp;
+  cout << "INTEGRAL QCD MC 9 = " << QCDEleMC->Integral() << endl; 
+  f->Close("R");delete f;
+
+  if (QCDIntegral > 0 ) QCDEle->Scale(QCDIntegral/QCDEle->Integral());
+  else QCDEle->Scale(QCDEleMC->Integral()/QCDEle->Integral());
+  //  else QCDEle->Scale(tmp->Integral()/QCDEle->Integral());
+
   //  delete tmp;
   //  f->Close("R");delete f;
 
-  THStack hs1("hs1","topmass distribution");
+  //  QCDEle->Add(tmp,1.);
+
+
+
+   THStack hs1("hs1","topmass distribution");
   QCDEle->SetFillColor(kGray); 
 //  QCDEle->Smooth(4);
   double sc = 0.88;
@@ -498,7 +662,7 @@ gStyle->SetCanvasBorderMode(0);
 
   if(scaleToData){
   double MCtot = 
-    //    QCDEle->Integral()+ 
+    QCDEle->Integral()+ 
     WJets->Integral()+ 
     ZJets->Integral()+ 
     WW->Integral()+ 
@@ -514,7 +678,7 @@ gStyle->SetCanvasBorderMode(0);
   
   double DataMC_ratio = (Data->Integral()/(MCtot));
    
-  //  QCDEle->Scale(DataMC_ratio); 
+  QCDEle->Scale(DataMC_ratio); 
   WJets->Scale(DataMC_ratio); 
   ZJets->Scale(DataMC_ratio); 
   WW->Scale(DataMC_ratio); 
@@ -534,13 +698,12 @@ gStyle->SetCanvasBorderMode(0);
   THStack hs1("hs1","hs1");
   Data->SetLineColor(kBlack);
   //QCD
-  /*
   QCDEle->SetFillColor(kGray);
   QCDEle->SetLineColor(kBlack);
   hs1.Add(QCDEle) ;
   ttott += QCDEle->Integral();
   cout<< " qcd " << QCDEle->Integral() << " tot + qcd " << ttott <<endl;
-  */
+
   //wjets
   WJets->SetFillColor(kGreen-2);
   WJets->SetLineColor(kBlack);
@@ -644,7 +807,7 @@ gStyle->SetCanvasBorderMode(0);
   Data->GetXaxis()->SetTitleSize(0.05);
 
 
-  cout << "test <<<" <<endl;
+  //  cout << "test <<<" <<endl;
   
   if(dolog)Data-> GetYaxis() -> SetRangeUser(0.8*Data->GetMinimum(),1.4* (Data->GetMaximum())); 
 #include<algorithm>
@@ -654,7 +817,7 @@ gStyle->SetCanvasBorderMode(0);
   Data->Draw("E1 same");
   Data->Draw("axissame");
 	    
-  cout << "test <<<<" <<endl;
+  //  cout << "test <<<<" <<endl;
 	    
  TLegend * leg = new TLegend(0.81,0.27,0.93,0.90);
  leg = new TLegend(0.81,0.2,0.94,0.88);
@@ -684,7 +847,7 @@ gStyle->SetCanvasBorderMode(0);
   leg->AddEntry(ZJets,"Z+jets","f");
   leg->AddEntry(WJets,"W+jets","f");
   leg->AddEntry(WW,"Diboson ","f");
-  //  leg->AddEntry(QCDEle,"QCD ","f");
+  leg->AddEntry(QCDEle,"QCD ","f");
 
   leg->Draw();
 
@@ -708,10 +871,10 @@ ALLMC->Add(TWChannel);
 ALLMC->Add(WJets);
 ALLMC->Add(ZJets);
 ALLMC->Add(WW);
-//ALLMC->Add(QCDEle);
+ALLMC->Add(QCDEle);
 cout<< "ks test "<< ALLMC->KolmogorovTest(Data)<<" chi2 "<< ALLMC->Chi2Test(Data) <<endl;
 
-  cout << "test <<<<<" <<endl;
+//  cout << "test <<<<<" <<endl;
   if(scaleToData) {
     C3.SaveAs(categorynew+"/"+sample+"_"+oTitle+"_EleStack_resize_SToD.root");   
     C3.SaveAs(categorynew+"/"+sample+"_"+oTitle+"_EleStack_resize_SToD.png");  
