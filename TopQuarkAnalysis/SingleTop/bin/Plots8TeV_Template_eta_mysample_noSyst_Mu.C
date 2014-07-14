@@ -118,7 +118,7 @@
   double TTBarScale = 1.0;
 
 
-  bool scaleToData = false; //  scaleToData = true;
+  bool scaleToData = true; //  scaleToData = true;
   bool nosig = false;
   bool dorescale = false;
   bool dolog = false;
@@ -157,9 +157,10 @@
   //  TString cut = "(weight*5099.074)"; //5099.074
 
   //used the first time
-  //  TString cut = "(PUWeight*bWeight*weight*5099.074)"; //5099.074
+  //    TString cut = "(PUWeight*bWeight*weight*5099.074)"; //5099.074
   // tried the 2nd time
   TString cut = "(PUWeight*bWeight*weight*(3901.813*turnOnWeight+1197.261))"; //5099.074
+
   // this is only for single lepton trigger era
   //  TString cut = "(PUWeight*bWeight*weight*1197.261)";
   
@@ -173,7 +174,7 @@
   cut = cut + KinCut + MCCut;
   cutData = cutData + KinCut; 
   TString  cutDataQCD = KinCutQCDDD;
-  cout << "CUTSTRING " << cutDataQCD << endl;
+  cout << "CUT DATA QCD " << cutDataQCD << endl;
   //  cutDataQCD = "(secondJetPt > 0. && bJetDecRMS < 10.025 && bJetFinRMS < 10.025 && thirdJetPt>40)*(0.995*0.995)"+ KinCutQCDDD;
   //  cutDataQCD = "(secondJetPt > 0. && bJetDecRMS < 10.025 && bJetFinRMS < 10.025 )*(0.995*0.995)"+ KinCutQCDDD;
   //  cutDataQCD = "(secondJetPt > 0. && bJetRMS < 10.025 && fJetRMS < 10.025 )*(0.995*0.995)"+ KinCutQCDDD;
@@ -468,7 +469,6 @@
   if( !f->IsOpen() ){
     cout<< " WARNING FILE " << filename << endl;
     continue;
-
   }  
   TString mupath = "TreesMu/"+channel+"_"+sample+"";
   TString elepath = "TreesMu/Data_"+sampleqcd;
@@ -478,8 +478,11 @@
   cout << cut <<endl;
   TH1D * tmp  = new TH1D("t","t",nBins,observableMin,observableMax);
   ((TTree*)f->Get(mupath))->Project("t",observable,cut);
-  if (QCDIntegral > 0 ) QCDMu->Scale(QCDIntegral/QCDMu->Integral());
-  else QCDMu->Scale(tmp->Integral()/QCDMu->Integral());
+  if( (QCDMu->Integral()) != 0 ) {
+    if (QCDIntegral > 0 ) QCDMu->Scale(QCDIntegral/QCDMu->Integral());
+    else QCDMu->Scale(tmp->Integral()/QCDMu->Integral());
+  }  
+
   delete tmp;
   f->Close("R");delete f;
 

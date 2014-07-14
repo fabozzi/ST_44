@@ -39,7 +39,8 @@ process.source = cms.Source ("PoolSource",
 #'rfio:/castor/cern.ch/user/m/mmerola/SingleTop_2012/MergedJune/TChannelMerged.root',
     ),
 duplicateCheckMode = cms.untracked.string('noDuplicateCheck'),
-#eventsToProcess = cms.untracked.VEventRange('1:19517967-1:19517969'),
+#eventsToProcess = cms.untracked.VEventRange('160431:218-167913:432'),
+eventsToProcess = cms.untracked.VEventRange('160431:19-167898:1762'),
 )
 
 #from TChannel import *
@@ -50,7 +51,7 @@ duplicateCheckMode = cms.untracked.string('noDuplicateCheck'),
 
 #Output
 #process.TFileService = cms.Service("TFileService", fileName = cms.string("/castor/cern.ch/user/m/mmerola/SingleTop_2012/TreesJune/TChannel.root"))
-process.TFileService = cms.Service("TFileService", fileName = cms.string("/data3/scratch/users/fabozzi/SingleTop/ntp14apr14_Merged/TChannel.root"))
+process.TFileService = cms.Service("TFileService", fileName = cms.string("/data3/scratch/users/fabozzi/SingleTop/ntp14apr14_Merged_trees_v2/TChannel.root"))
 #process.TFileService = cms.Service("TFileService", fileName = cms.string("testNoPU.root"))
 
 #process.load("SingleTopAnalyzers_cfi")
