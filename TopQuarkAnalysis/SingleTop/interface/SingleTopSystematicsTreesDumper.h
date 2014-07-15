@@ -113,8 +113,8 @@ class SingleTopSystematicsTreesDumper : public edm::EDAnalyzer {
 
   double topMtw(math::PtEtaPhiELorentzVector lepton, math::PtEtaPhiELorentzVector jet, float metPx, float metPy);
 
-  //  void muonHLTSF(float etaMu, float ptMu);
-  //  void electronHLTSF(float etaEle, float ptEle);
+  void muonSF(float etaMu, float ptMu);
+  void electronSF(float etaEle, float ptEle);
 
   //B-weight generating functions
   double BScaleFactor(string algo,string syst_name); 
@@ -362,36 +362,16 @@ class SingleTopSystematicsTreesDumper : public edm::EDAnalyzer {
 
   //Variables to use as trees references
   double etaTree, etaTree2, cosTree, cosBLTree, cos1Tree, cos1BLTree, cos2Tree, cos2BLTree, topMassTree, top1MassTree, top2MassTree, totalWeightTree, weightTree, mtwMassTree, lowBTagTree, highBTagTree, mediumBTagTree,mediumlowBTagTree ,maxPtTree, minPtTree,maxLoosePtTree, topMassLowBTagTree, topMassBestTopTree, topMassMeas, bWeightTree, PUWeightTree,
-    topMtwTree,HT,H;
-  /*
-    lepSF,lepSFB,lepSFC , lepSFD,
+    topMtwTree,HT,H,
+    lepSF,
     lepSFIDUp,
     lepSFIDDown,
     lepSFIsoUp,
     lepSFIsoDown,
     lepSFTrigUp,
-    lepSFTrigDown,
+    lepSFTrigDown;
 
-    lepSFIDUpB,
-    lepSFIDDownB,
-    lepSFIsoUpB,
-    lepSFIsoDownB,
-    lepSFTrigUpB,
-    lepSFTrigDownB,
-    lepSFIDUpC,
-    lepSFIDDownC,
-    lepSFIsoUpC,
-    lepSFIsoDownC,
-    lepSFTrigUpC,
-    lepSFTrigDownC,
-
-    lepSFIDUpD,
-    lepSFIDDownD,
-    lepSFIsoUpD,
-    lepSFIsoDownD,
-    lepSFTrigUpD,
-    lepSFTrigDownD,
-    
+  /*
     sfID,sfIDup,sfIDdown,  
     sfIso,sfIsoup,sfIsodown,  
     sfTrig,sfTrigup,sfTrigdown;
