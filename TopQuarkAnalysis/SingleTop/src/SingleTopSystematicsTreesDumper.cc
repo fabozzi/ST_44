@@ -1020,7 +1020,13 @@ void SingleTopSystematicsTreesDumper::analyze(const Event& iEvent, const EventSe
   nJCentral = 9999;
   nJForward = 9999;
   nJMBTag = 9999;
- 
+
+  looseJetPt = -1000.0;
+  looseJetEta = -1000.0;
+  looseJetPhi = -1000.0;
+  looseJetE = -1000.0;
+  looseJetBTag = -1000.0;
+
   //cout <<" test 1 "<<endl;
   iEvent.getByLabel(jetsEta_,jetsEta);
   iEvent.getByLabel(jetsPt_,jetsPt);
@@ -1122,8 +1128,9 @@ void SingleTopSystematicsTreesDumper::analyze(const Event& iEvent, const EventSe
   double MTWValue =0;
   double MTWValueQCD =0;
   double RelIsoQCDCut = 0.1;
-  
-  float ptCutLoose = 10;
+ 
+  // ptCutLoose moved from 10 to 20 
+  float ptCutLoose = 20;
   float ptCutTight = 40;
   float ptCut = 40; // if doAsymmetricPtCut,then it's 30
   if(doAsymmetricPtCut_) ptCut = 30;
@@ -1274,7 +1281,9 @@ void SingleTopSystematicsTreesDumper::analyze(const Event& iEvent, const EventSe
     if(!didLeptonLoop){
       for(size_t i = 0;i < leptonsRelIso->size();++i){
 	float leptonRelIso = leptonsRelIso->at(i);
-	lepRelIso = leptonRelIso;
+
+	// comment here: no effect anyway
+	//	lepRelIso = leptonRelIso;
 
 	/*	float leptonPt = 0.;
 	iEvent.getByLabel(leptonsPt_, leptonsPt);
