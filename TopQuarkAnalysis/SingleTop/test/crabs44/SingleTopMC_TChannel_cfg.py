@@ -11,7 +11,7 @@ process.options = cms.untracked.PSet(
     FailPath = cms.untracked.vstring('ProductNotFound','Type Mismatch')
     )
 
-process.MessageLogger.cerr.FwkReport.reportEvery = 1000
+process.MessageLogger.cerr.FwkReport.reportEvery = 1
 
 #from PhysicsTools.PatAlgos.tools.cmsswVersionTools import run36xOn35xInput
 
@@ -173,7 +173,9 @@ process.patseq = cms.Sequence(
 
 print "test 2 " 
 
-process.pfIsolatedMuonsZeroIso = process.pfIsolatedMuons.clone(combinedIsolationCut =  cms.double(float("inf")))
+
+process.pfIsolatedMuonsZeroIso = process.pfIsolatedMuons.clone(combinedIsolationCut =  cms.double(float("inf")),
+                                                               isolationCut = cms.double(float("inf")))
 process.patMuonsZeroIso = process.patMuons.clone(pfMuonSource = cms.InputTag("pfIsolatedMuonsZeroIso"), genParticleMatch = cms.InputTag("muonMatchZeroIso"))
 # use pf isolation, but do not change matching
 tmp = process.muonMatch.src
@@ -181,11 +183,24 @@ adaptPFMuons(process, process.patMuonsZeroIso, "")
 process.muonMatch.src = tmp
 process.muonMatchZeroIso = process.muonMatch.clone(src = cms.InputTag("pfIsolatedMuonsZeroIso"))
 
-process.pfIsolatedElectronsZeroIso = process.pfIsolatedElectrons.clone(combinedIsolationCut = cms.double(float("inf")))
+process.pfIsolatedElectronsZeroIso = process.pfIsolatedElectrons.clone(combinedIsolationCut = cms.double(float("inf")),
+                                                                       isolationCut = cms.double(float("inf")))
 process.patElectronsZeroIso = process.patElectrons.clone(pfElectronSource = cms.InputTag("pfIsolatedElectronsZeroIso"))
+adaptPFElectrons (process, process.patElectronsZeroIso, "")
+
+process.pfIsolatedElectronsZeroIso.isolationValueMapsCharged = cms.VInputTag(cms.InputTag("elPFIsoValueCharged03"))
+process.pfIsolatedElectronsZeroIso.deltaBetaIsolationValueMap = cms.InputTag("elPFIsoValuePU03")
+process.pfIsolatedElectronsZeroIso.isolationValueMapsNeutral = cms.VInputTag(cms.InputTag("elPFIsoValueNeutral03"), cms.InputTag("elPFIsoValueGamma03"))#
+process.patElectronsZeroIso.isolationValues = cms.PSet( pfChargedHadrons = cms.InputTag("elPFIsoValueCharged03"), pfChargedAll = cms.InputTag("elPFIsoValueChargedAll03"), pfPUChargedHadrons = cms.InputTag("elPFIsoValuePU03"), pfNeutralHadrons = cms.InputTag("elPFIsoValueNeutral03"), pfPhotons = cms.InputTag("elPFIsoValueGamma03") )
+
+
+process.pfIsolatedMuonsZeroIso.isolationValueMapsCharged = cms.VInputTag(cms.InputTag("muPFIsoValueCharged03"))
+process.pfIsolatedMuonsZeroIso.deltaBetaIsolationValueMap = cms.InputTag("muPFIsoValuePU03")
+process.pfIsolatedMuonsZeroIso.isolationValueMapsNeutral = cms.VInputTag(cms.InputTag("muPFIsoValueNeutral03"), cms.InputTag("muPFIsoValueGamma03"))#
+process.patMuonsZeroIso.isolationValues = cms.PSet( pfChargedHadrons = cms.InputTag("muPFIsoValueCharged03"), pfChargedAll = cms.InputTag("muPFIsoValueChargedAll03"), pfPUChargedHadrons = cms.InputTag("muPFIsoValuePU03"), pfNeutralHadrons = cms.InputTag("muPFIsoValueNeutral03"), pfPhotons = cms.InputTag("muPFIsoValueGamma03") )
+
 
 #####################
-adaptPFElectrons (process, process.patElectronsZeroIso, "")
 
 #Add the PF type 1 corrections to MET
 process.load("PhysicsTools.PatUtils.patPFMETCorrections_cff")
@@ -238,7 +253,8 @@ process.source = cms.Source ("PoolSource",
 #'file:/tmp/oiorio/TTJetsLocalFall11.root',
 #'file:/tmp/oiorio/',
 #'file:/tmp/oiorio/00012F91-72E5-DF11-A763-00261834B5F1.root',
-'/store/mc/Fall11/T_TuneZ2_t-channel_7TeV-powheg-tauola/AODSIM/PU_S6_START44_V9B-v1/0000/DE6B0050-3133-E111-B437-003048FFD736.root'
+#'/store/mc/Fall11/T_TuneZ2_t-channel_7TeV-powheg-tauola/AODSIM/PU_S6_START44_V9B-v1/0000/DE6B0050-3133-E111-B437-003048FFD736.root'
+'root://xrootd.unl.edu//store/mc/Fall11/T_TuneZ2_t-channel_7TeV-powheg-tauola/AODSIM/PU_S6_START44_V9B-v1/0000/DE6B0050-3133-E111-B437-003048FFD736.root'
     
 ),
 #eventsToProcess = cms.untracked.VEventRange('1:2807840-1:2807840'),

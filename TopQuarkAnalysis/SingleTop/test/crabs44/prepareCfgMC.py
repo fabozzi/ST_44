@@ -4,13 +4,10 @@ import os,sys,re,shutil
 
 
 #Original config file
-fileName = "TChannelFall11_crab.cfg"
+fileName = "TChannel_crab.cfg"
 #### -> cambiare nome a fileName2 usando il nuovo template
 fileName2 = "SingleTopMC_TChannel_cfg.py"
-#fileName2 = "SingleTopMC_TChannelFall11_cfg.py"
-#fileName = "SingleTopSystematics_cfg.py"
-#fileName = "SingleTopSystematics_split_cfg.py"
-#fileName = "SingleTopNEvents_cfg.py"
+
 
 #Channels to include
 channels = [

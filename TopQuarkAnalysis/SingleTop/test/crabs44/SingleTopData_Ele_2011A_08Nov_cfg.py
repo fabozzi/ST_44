@@ -11,7 +11,7 @@ process.options = cms.untracked.PSet(
     FailPath = cms.untracked.vstring('ProductNotFound','Type Mismatch')
     )
 
-process.MessageLogger.cerr.FwkReport.reportEvery = 1000
+process.MessageLogger.cerr.FwkReport.reportEvery = 100
 
 #from PhysicsTools.PatAlgos.tools.cmsswVersionTools import run36xOn35xInput
 
@@ -182,7 +182,8 @@ process.patseq = cms.Sequence(
 
 
 
-process.pfIsolatedMuonsZeroIso = process.pfIsolatedMuons.clone(combinedIsolationCut =  cms.double(float("inf")))
+process.pfIsolatedMuonsZeroIso = process.pfIsolatedMuons.clone(combinedIsolationCut =  cms.double(float("inf")),
+                                                               isolationCut = cms.double(float("inf")))
 process.patMuonsZeroIso = process.patMuons.clone(pfMuonSource = cms.InputTag("pfIsolatedMuonsZeroIso"), genParticleMatch = cms.InputTag("muonMatchZeroIso"))
 # use pf isolation, but do not change matching
 tmp = process.muonMatch.src
@@ -190,11 +191,23 @@ adaptPFMuons(process, process.patMuonsZeroIso, "")
 process.muonMatch.src = tmp
 process.muonMatchZeroIso = process.muonMatch.clone(src = cms.InputTag("pfIsolatedMuonsZeroIso"))
 
-process.pfIsolatedElectronsZeroIso = process.pfIsolatedElectrons.clone(combinedIsolationCut = cms.double(float("inf")))
+process.pfIsolatedElectronsZeroIso = process.pfIsolatedElectrons.clone(combinedIsolationCut = cms.double(float("inf")),
+                                                                       isolationCut = cms.double(float("inf")))
 process.patElectronsZeroIso = process.patElectrons.clone(pfElectronSource = cms.InputTag("pfIsolatedElectronsZeroIso"))
+adaptPFElectrons (process, process.patElectronsZeroIso, "")
+
+process.pfIsolatedElectronsZeroIso.isolationValueMapsCharged = cms.VInputTag(cms.InputTag("elPFIsoValueCharged03"))
+process.pfIsolatedElectronsZeroIso.deltaBetaIsolationValueMap = cms.InputTag("elPFIsoValuePU03")
+process.pfIsolatedElectronsZeroIso.isolationValueMapsNeutral = cms.VInputTag(cms.InputTag("elPFIsoValueNeutral03"), cms.InputTag("elPFIsoValueGamma03"))#
+process.patElectronsZeroIso.isolationValues = cms.PSet( pfChargedHadrons = cms.InputTag("elPFIsoValueCharged03"), pfChargedAll = cms.InputTag("elPFIsoValueChargedAll03"), pfPUChargedHadrons = cms.InputTag("elPFIsoValuePU03"), pfNeutralHadrons = cms.InputTag("elPFIsoValueNeutral03"), pfPhotons = cms.InputTag("elPFIsoValueGamma03") )
+
+
+process.pfIsolatedMuonsZeroIso.isolationValueMapsCharged = cms.VInputTag(cms.InputTag("muPFIsoValueCharged03"))
+process.pfIsolatedMuonsZeroIso.deltaBetaIsolationValueMap = cms.InputTag("muPFIsoValuePU03")
+process.pfIsolatedMuonsZeroIso.isolationValueMapsNeutral = cms.VInputTag(cms.InputTag("muPFIsoValueNeutral03"), cms.InputTag("muPFIsoValueGamma03"))#
+process.patMuonsZeroIso.isolationValues = cms.PSet( pfChargedHadrons = cms.InputTag("muPFIsoValueCharged03"), pfChargedAll = cms.InputTag("muPFIsoValueChargedAll03"), pfPUChargedHadrons = cms.InputTag("muPFIsoValuePU03"), pfNeutralHadrons = cms.InputTag("muPFIsoValueNeutral03"), pfPhotons = cms.InputTag("muPFIsoValueGamma03") )
 
 #####################
-adaptPFElectrons (process, process.patElectronsZeroIso, "")
 
 #Add the PF type 1 corrections to MET
 process.load("PhysicsTools.PatUtils.patPFMETCorrections_cff")
@@ -232,7 +245,7 @@ process.ZeroIsoLeptonSequence = cms.Path(
 process.pfNoTau.enable = False
 
 #process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(1000) )
-process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(-1) )
+process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(1000) )
 process.source = cms.Source ("PoolSource",
                              fileNames = cms.untracked.vstring (
 #'file:/tmp/oiorio/F81B1889-AF4B-DF11-85D3-001A64789DF4.root'
@@ -246,8 +259,8 @@ process.source = cms.Source ("PoolSource",
 #'file:/tmp/oiorio/',
 #'file:/afs/cern.ch/work/m/mmerola/54C6B1C6-F80E-E111-BC50-1CC1DE0570A0.root',
 #'/store/data/Run2011B/SingleMu/AOD/PromptReco-v1/000/179/547/F42DC5AE-7DFF-E011-8D76-003048D3C982.root',
- '/store/data/Run2011B/SingleMu/AOD/19Nov2011-v1/0003/0E85140A-E517-E111-8713-0017A4770808.root'   
-#'/store/data/Run2011A/SingleMu/AOD/08Nov2011-v1/0003/5A8A2088-BC0F-E111-95A8-1CC1DE1D1F80.root'
+# '/store/data/Run2011B/SingleMu/AOD/19Nov2011-v1/0003/0E85140A-E517-E111-8713-0017A4770808.root'   
+'root://xrootd.unl.edu//store/data/Run2011A/SingleElectron/AOD/08Nov2011-v1/0000/00057624-250D-E111-84C3-003048C6941E.root'
 ),
 #eventsToProcess = cms.untracked.VEventRange('1:2807840-1:2807840'),
 duplicateCheckMode = cms.untracked.string('noDuplicateCheck')
