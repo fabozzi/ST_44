@@ -66,6 +66,12 @@ SingleTopSystematicsTreesDumper::SingleTopSystematicsTreesDumper(const edm::Para
 
   maxPtCut = iConfig.getUntrackedParameter<double>("maxPtCut",30);
 
+
+  // trigger info
+  hltFlagMu1_ =  iConfig.getParameter< edm::InputTag >("hltFlagMu1");
+  hltFlagMu2_ =  iConfig.getParameter< edm::InputTag >("hltFlagMu2");
+  hltFlagMu3_ =  iConfig.getParameter< edm::InputTag >("hltFlagMu3");
+  
   //tight leptons 
   leptonsFlavour_ =  iConfig.getUntrackedParameter< std::string >("leptonsFlavour");
 
@@ -243,6 +249,9 @@ SingleTopSystematicsTreesDumper::SingleTopSystematicsTreesDumper(const edm::Para
     treesNJets[syst]->Branch("eventid", &eventTree);
     treesNJets[syst]->Branch("weight", &weightTree);
     treesNJets[syst]->Branch("eventFlavour", &eventFlavourTree);
+    treesNJets[syst]->Branch("passIsoMu17", &passIsoMu17);
+    treesNJets[syst]->Branch("passIsoMu24", &passIsoMu24);
+    treesNJets[syst]->Branch("passIsoMu24Eta2p1", &passIsoMu24Eta2p1);
     treesNJets[syst]->Branch("nJ", &nJ);
     treesNJets[syst]->Branch("nJNoPU", &nJNoPU);
     treesNJets[syst]->Branch("nJCentral", &nJCentral);
@@ -275,12 +284,12 @@ SingleTopSystematicsTreesDumper::SingleTopSystematicsTreesDumper(const edm::Para
     treesNJets[syst]->Branch("leptonPhi", &lepPhi);
     treesNJets[syst]->Branch("leptonRelIso",&lepRelIso);
     treesNJets[syst]->Branch("leptonSF", &lepSF);
-    treesNJets[bj][syst]->Branch("leptonSFIDUp", &lepSFIDUp);
-    treesNJets[bj][syst]->Branch("leptonSFIDDown", &lepSFIDDown);
-    treesNJets[bj][syst]->Branch("leptonSFIsoUp", &lepSFIsoUp);
-    treesNJets[bj][syst]->Branch("leptonSFIsoDown", &lepSFIsoDown);
-    treesNJets[bj][syst]->Branch("leptonSFTrigUp", &lepSFTrigUp);
-    treesNJets[bj][syst]->Branch("leptonSFTrigDown", &lepSFTrigDown);
+    treesNJets[syst]->Branch("leptonSFIDUp", &lepSFIDUp);
+    treesNJets[syst]->Branch("leptonSFIDDown", &lepSFIDDown);
+    treesNJets[syst]->Branch("leptonSFIsoUp", &lepSFIsoUp);
+    treesNJets[syst]->Branch("leptonSFIsoDown", &lepSFIsoDown);
+    treesNJets[syst]->Branch("leptonSFTrigUp", &lepSFTrigUp);
+    treesNJets[syst]->Branch("leptonSFTrigDown", &lepSFTrigDown);
     //    treesNJets[syst]->Branch("leptonSFB", &lepSFB);
     //    treesNJets[syst]->Branch("leptonSFC", &lepSFC);
     //    treesNJets[syst]->Branch("leptonSFD", &lepSFD);
@@ -387,6 +396,10 @@ SingleTopSystematicsTreesDumper::SingleTopSystematicsTreesDumper(const edm::Para
       trees2J[bj][syst]->Branch("b1b2Mass",&Mb1b2Tree);
       trees2J[bj][syst]->Branch("b1b2Pt",&pTb1b2Tree);
       
+      trees2J[bj][syst]->Branch("passIsoMu17", &passIsoMu17);
+      trees2J[bj][syst]->Branch("passIsoMu24", &passIsoMu24);
+      trees2J[bj][syst]->Branch("passIsoMu24Eta2p1", &passIsoMu24Eta2p1);
+
       trees2J[bj][syst]->Branch("charge",&chargeTree);
       trees2J[bj][syst]->Branch("runid",&runTree);
       trees2J[bj][syst]->Branch("lumiid",&lumiTree);
@@ -584,6 +597,10 @@ SingleTopSystematicsTreesDumper::SingleTopSystematicsTreesDumper(const edm::Para
       trees3J[bj][syst]->Branch("b1b2Mass",&Mb1b2Tree);
       trees3J[bj][syst]->Branch("b1b2Pt",&pTb1b2Tree);
 
+      trees3J[bj][syst]->Branch("passIsoMu17", &passIsoMu17);
+      trees3J[bj][syst]->Branch("passIsoMu24", &passIsoMu24);
+      trees3J[bj][syst]->Branch("passIsoMu24Eta2p1", &passIsoMu24Eta2p1);
+
       trees3J[bj][syst]->Branch("charge",&chargeTree);
       trees3J[bj][syst]->Branch("runid",&runTree);
       trees3J[bj][syst]->Branch("lumiid",&lumiTree);
@@ -777,6 +794,10 @@ SingleTopSystematicsTreesDumper::SingleTopSystematicsTreesDumper(const edm::Para
       trees4J[bj][syst]->Branch("Mlb2",&Mlb2Tree);
       trees4J[bj][syst]->Branch("b1b2Mass",&Mb1b2Tree);
       trees4J[bj][syst]->Branch("b1b2Pt",&pTb1b2Tree);
+
+      trees4J[bj][syst]->Branch("passIsoMu17", &passIsoMu17);
+      trees4J[bj][syst]->Branch("passIsoMu24", &passIsoMu24);
+      trees4J[bj][syst]->Branch("passIsoMu24Eta2p1", &passIsoMu24Eta2p1);
 
       trees4J[bj][syst]->Branch("charge",&chargeTree);
       trees4J[bj][syst]->Branch("runid",&runTree);
@@ -1043,6 +1064,19 @@ SingleTopSystematicsTreesDumper::SingleTopSystematicsTreesDumper(const edm::Para
 
 void SingleTopSystematicsTreesDumper::analyze(const Event& iEvent, const EventSetup& iSetup)
 {
+
+  iEvent.getByLabel(hltFlagMu1_,passIsoMu17_);
+  iEvent.getByLabel(hltFlagMu2_,passIsoMu24_);
+  iEvent.getByLabel(hltFlagMu3_,passIsoMu24Eta2p1_);
+
+  passIsoMu17 = *passIsoMu17_;
+  passIsoMu24 = *passIsoMu24_;
+  passIsoMu24Eta2p1 = *passIsoMu24Eta2p1_;
+
+  cout << "Passing IsoMu17 trigger? " << passIsoMu17 << endl;
+  cout << "Passing IsoMu24 trigger? " << passIsoMu24 << endl;
+  cout << "Passing IsoMu24Eta2p1 trigger? " << passIsoMu24Eta2p1 << endl;
+
 
   nJ = 9999;
   nJCentral = 9999;
@@ -4042,6 +4076,9 @@ double SingleTopSystematicsTreesDumper::topPtReweighting(string chanrew, double 
 }
 
 */
+
+
+
 
 void SingleTopSystematicsTreesDumper::resetWeightsDoubles(){
   /*  cout << "start doubles removal...";

@@ -201,6 +201,10 @@ class SingleTopSystematicsTreesDumper : public edm::EDAnalyzer {
     looseElectronsRelIso_,
     looseMuonsRelIso_,
 
+    hltFlagMu1_,
+    hltFlagMu2_,
+    hltFlagMu3_,
+
     genJetsPt_,
     genJetsEta_,
     jetsPt_,
@@ -260,6 +264,8 @@ class SingleTopSystematicsTreesDumper : public edm::EDAnalyzer {
    METPt;
  
   edm::Handle<int > npv,n0,nm1,np1;
+
+  edm::Handle<bool> passIsoMu17_, passIsoMu24_, passIsoMu24Eta2p1_;
 
   int passingPreselection, passingLepton, passingJets, passingBJets,passingMET;
   
@@ -407,6 +413,8 @@ class SingleTopSystematicsTreesDumper : public edm::EDAnalyzer {
   
   
   int nJ, nJNoPU, nJCentral, nJCentralNoPU, nJForward, nJForwardNoPU, nJMBTag, nTCHPT, nCSVT, nCSVM, nJLoose,nJLooseCentral , nJLooseForward, nJLooseMBTag; // nJetsLoose,nJetsLooseCentral , nJetsLooseForward,nJetsLooseMBTag;
+
+  int passIsoMu17, passIsoMu24, passIsoMu24Eta2p1;
 
   double w1TCHPT, w2TCHPT;
   // double w1CSVT, w2CSVT, w1CSVM, w2CSVM;

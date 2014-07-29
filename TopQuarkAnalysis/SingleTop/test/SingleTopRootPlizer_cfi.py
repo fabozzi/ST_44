@@ -1,5 +1,14 @@
 import FWCore.ParameterSet.Config as cms
 
+
+HLTPassInfo = cms.EDProducer(
+    'SingleTopPassTriggerInfoProducer',
+    HLTriggerResults = cms.InputTag("TriggerResults","","HLT"),
+    verbose = cms.untracked.bool(True)
+)                         
+
+
+
 TreesEle = cms.EDAnalyzer('SingleTopSystematicsTreesDumper',                              
 #General Info
 #systematics = cms.untracked.vstring("BTagUp","BTagDown","MisTagUp","MisTagDown","JESUp","JESDown","UnclusteredMETUp","UnclusteredMETDown","PUUp","PUDown"),
@@ -19,6 +28,10 @@ takeBTagSFFromDB = cms.untracked.bool(False),
 #puHistoName = cms.untracked.string("pileUpDumper/PileUpTChannel"),
 #mode = cms.untracked.string("pt"),
 #maxPtCut = cms.untracked.double("45"),
+
+hltFlagMu1 = cms.InputTag("HLTPassInfo","passIsoMu17"),
+hltFlagMu2 = cms.InputTag("HLTPassInfo","passIsoMu24"),
+hltFlagMu3 = cms.InputTag("HLTPassInfo","passIsoMu24Eta2p1"),
 
 #x1/x2
 x1 = cms.InputTag("PDFInfo","x1"),
@@ -79,7 +92,7 @@ jetsEta = cms.InputTag("nTupleTopJetsPF","topJetsPFEta"),
 jetsEnergy = cms.InputTag("nTupleTopJetsPF","topJetsPFE"),  
 
 jetsBTagAlgo = cms.InputTag("nTupleTopJetsPF","topJetsPFTrackCountingHighPur"),  
-jetsAntiBTagAlgo =  cms.InputTag("nTupleTopJetsPF","topJetsPFTrackCountingHighEff"),  
+jetsAntiBTagAlgo =  cms.InputTag("nTupleTopJetsPF","topJetsPFCombinedSecondaryVertexBJetTags"),  
 jetsFlavour = cms.InputTag("nTupleTopJetsPF","topJetsPFFlavour"),   
 
 jetsCorrTotal = cms.InputTag("nTupleTopJetsPF","topJetsPFJetCorrTotal"),   
