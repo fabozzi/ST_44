@@ -250,8 +250,8 @@ W3JetsMu = cms.PSet(
     crossSection = cms.untracked.double(304.2*1.638421835),
     channel = cms.untracked.string("WJets"),
     finalLumi = lumiMu,Season = cms.untracked.string(PileUpSeason),
-    #    originalEvents = cms.untracked.double(57709905),
-    originalEvents = cms.untracked.double(7141595), #Not all events: 7541595
+    originalEvents = cms.untracked.double(7541595),
+#    originalEvents = cms.untracked.double(7141595), #April 14 prod
     MTWCut = cms.untracked.double(40.0),#Default 50.0 GeV
     RelIsoCut = cms.untracked.double(relIsoCutMuons),
    
@@ -317,8 +317,8 @@ W3JetsEle = cms.PSet(
     crossSection = cms.untracked.double(304.2*1.638421),
     channel = cms.untracked.string("WJets"),
     finalLumi = lumiEle,Season = cms.untracked.string(PileUpSeason),
-    #    originalEvents = cms.untracked.double(57709905),
-    originalEvents = cms.untracked.double(7141595), #Not all events: 7541595
+    originalEvents = cms.untracked.double(7541595),
+#    originalEvents = cms.untracked.double(7141595), #April 14 prod
     MTWCut = cms.untracked.double(40.0),#Default 50.0 GeV
     RelIsoCut = cms.untracked.double(relIsoCutElectrons),
    
@@ -686,20 +686,24 @@ RelIsoCut = cms.untracked.double(relIsoCutElectrons),
 TTBarMu = cms.PSet(
     crossSection = cms.untracked.double(165.),
     channel = cms.untracked.string("TTBar"),
-    originalEvents = cms.untracked.double(59279955),#UPDATED
+    originalEvents = cms.untracked.double(59079955),#July 14 prod (298/300)
+#    originalEvents = cms.untracked.double(59279955),#April 14 prod
+#    originalEvents = cms.untracked.double(58279955),#CSV production (294/300)
     finalLumi = lumiMu,Season = cms.untracked.string(PileUpSeason),
     MTWCut = cms.untracked.double(40.0),#Default 50.0 GeV
-   RelIsoCut = cms.untracked.double(relIsoCutMuons),
+    RelIsoCut = cms.untracked.double(relIsoCutMuons),
     mcPUFile = cms.untracked.string("pileupdistr_TTBar.root"),
     puHistoName = cms.untracked.string("pileUpDumper/PileUpTTBar"),
     )
 
 TTBarEle = cms.PSet(
     crossSection = cms.untracked.double(165.),
-RelIsoCut = cms.untracked.double(relIsoCutElectrons),
     channel = cms.untracked.string("TTBar"),
     finalLumi = lumiEle,Season = cms.untracked.string(PileUpSeason),
-    originalEvents = cms.untracked.double(59279955),#UPDATED
+    originalEvents = cms.untracked.double(59079955),#July 14 prod (298/300)
+#    originalEvents = cms.untracked.double(59279955),#Apri 14 prod
+#    originalEvents = cms.untracked.double(58279955),#CSV production (294/300)
+    RelIsoCut = cms.untracked.double(relIsoCutElectrons),
     mcPUFile = cms.untracked.string("pileupdistr_TTBar.root"),
     puHistoName = cms.untracked.string("pileUpDumper/PileUpTTBar"),
     )
@@ -930,8 +934,9 @@ QCDMuMu = cms.PSet(
     crossSection = cms.untracked.double(84679.),
     channel = cms.untracked.string("QCDMu"),
     finalLumi = lumiMu,Season = cms.untracked.string(PileUpSeason),
- RelIsoCut = cms.untracked.double(relIsoCutMuons),
-    originalEvents = cms.untracked.double(25080241),
+    RelIsoCut = cms.untracked.double(relIsoCutMuons),
+    originalEvents = cms.untracked.double(25080241), #ORIGINAL
+#    originalEvents = cms.untracked.double(24900241), # CSV prod (142/143)
     mcPUFile = cms.untracked.string("pileupdistr_QCDMu.root"),
     puHistoName = cms.untracked.string("pileUpDumper/PileUpQCDMu"),
     )
@@ -940,9 +945,10 @@ QCDMuMu = cms.PSet(
 QCDMuEle = cms.PSet(
     crossSection = cms.untracked.double(84679.),
     channel = cms.untracked.string("QCDMu"),
-RelIsoCut = cms.untracked.double(relIsoCutElectrons),
+    RelIsoCut = cms.untracked.double(relIsoCutElectrons),
     finalLumi = lumiEle,Season = cms.untracked.string(PileUpSeason),
-    originalEvents = cms.untracked.double(25080241),
+    originalEvents = cms.untracked.double(25080241), #ORIGINAL
+#    originalEvents = cms.untracked.double(24900241), # CSV prod (142/143)
     mcPUFile = cms.untracked.string("pileupdistr_QCDMu.root"),
     puHistoName = cms.untracked.string("pileUpDumper/PileUpQCDMu"),
     )

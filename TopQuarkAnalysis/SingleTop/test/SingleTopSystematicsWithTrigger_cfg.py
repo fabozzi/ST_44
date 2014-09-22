@@ -34,7 +34,7 @@ process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(-1) )
 
 process.source = cms.Source ("PoolSource",
                              fileNames = cms.untracked.vstring (
-    'file:/data3/scratch/users/fabozzi/SingleTop/ntp14apr14_Merged/TChannelMerged.root',
+    'file:/data3/scratch/users/fabozzi/SingleTop/ntp11sep14_Merged/TChannelMerged.root',
 #    'file:/tmp/mmerola/TChannelMerged.root',
 #'rfio:/castor/cern.ch/user/m/mmerola/SingleTop_2012/MergedJune/TChannelMerged.root',
     ),
@@ -50,7 +50,7 @@ duplicateCheckMode = cms.untracked.string('noDuplicateCheck'),
 
 #Output
 #process.TFileService = cms.Service("TFileService", fileName = cms.string("/castor/cern.ch/user/m/mmerola/SingleTop_2012/TreesJune/TChannel.root"))
-process.TFileService = cms.Service("TFileService", fileName = cms.string("/data3/scratch/users/fabozzi/SingleTop/ntp14apr14_Merged_trees_v2/TChannel.root"))
+process.TFileService = cms.Service("TFileService", fileName = cms.string("/data3/scratch/users/fabozzi/SingleTop/ntp11sep14_Merged_trees/TChannel.root"))
 #process.TFileService = cms.Service("TFileService", fileName = cms.string("testNoPU.root"))
 
 #process.load("SingleTopAnalyzers_cfi")
@@ -106,10 +106,12 @@ if channel_instruction == "allmc":
     #    process.TreesEle.doTurnOn = cms.untracked.bool(True) 
     process.PathSysMu = cms.Path(
     process.HLTFilterMuMC *
+    process.HLTPassInfo *
     process.TreesMu
     )
     process.PathSysEle = cms.Path(
     process.HLTFilterEleMC *
+    process.HLTPassInfo *
     process.TreesEle
     )
 
@@ -121,6 +123,7 @@ if channel_instruction == "all":
     #    process.PlotsMu +
     #    process.PlotsEle +
     process.HLTFilterMuOrEle *
+    process.HLTPassInfo *
     process.TreesMu +
     process.TreesEle
     )
@@ -135,6 +138,7 @@ if channel_instruction == "mu":
     #    process.PlotsEle +
     #    process.HLTFilterMu *
     process.HLTFilterMuData *
+    process.HLTPassInfo *
     process.TreesMu 
     )
 
@@ -143,10 +147,12 @@ if channel_instruction == "ele":
     process.TreesEle.doPU = cms.untracked.bool(False) 
     process.TreesEle.doResol = cms.untracked.bool(False) 
     process.TreesEle.doPDF = cms.untracked.bool(False)
-    process.PathSysMu = cms.Path(
+##### probably to be changed from Mu to Ele ????
+    process.PathSysEle = cms.Path(
     #    process.PlotsMu +
     #    process.PlotsEle +
     process.HLTFilterEle *
+    process.HLTPassInfo *
     process.TreesEle 
     )
 
@@ -158,6 +164,7 @@ if channel_instruction == "muqcd":
     #    process.PlotsMu +
     #    process.PlotsEle +
     process.HLTFilterMuQCD *
+    process.HLTPassInfo *
     process.TreesMu 
     )
 
@@ -171,5 +178,6 @@ if channel_instruction == "eleqcd":
     #    process.PlotsMu +
     #    process.PlotsEle +
     process.HLTFilterEleQCD *
+    process.HLTPassInfo *
     process.TreesEle
     )

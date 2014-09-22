@@ -4,7 +4,7 @@ import FWCore.ParameterSet.Config as cms
 HLTPassInfo = cms.EDProducer(
     'SingleTopPassTriggerInfoProducer',
     HLTriggerResults = cms.InputTag("TriggerResults","","HLT"),
-    verbose = cms.untracked.bool(True)
+    verbose = cms.untracked.bool(False)
 )                         
 
 
