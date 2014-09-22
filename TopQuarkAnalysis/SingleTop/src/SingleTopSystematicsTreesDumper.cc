@@ -1073,9 +1073,9 @@ void SingleTopSystematicsTreesDumper::analyze(const Event& iEvent, const EventSe
   passIsoMu24 = *passIsoMu24_;
   passIsoMu24Eta2p1 = *passIsoMu24Eta2p1_;
 
-  cout << "Passing IsoMu17 trigger? " << passIsoMu17 << endl;
-  cout << "Passing IsoMu24 trigger? " << passIsoMu24 << endl;
-  cout << "Passing IsoMu24Eta2p1 trigger? " << passIsoMu24Eta2p1 << endl;
+  //  cout << "Passing IsoMu17 trigger? " << passIsoMu17 << endl;
+  //  cout << "Passing IsoMu24 trigger? " << passIsoMu24 << endl;
+  //  cout << "Passing IsoMu24Eta2p1 trigger? " << passIsoMu24Eta2p1 << endl;
 
 
   nJ = 9999;
@@ -1093,7 +1093,7 @@ void SingleTopSystematicsTreesDumper::analyze(const Event& iEvent, const EventSe
   iEvent.getByLabel(jetsEta_,jetsEta);
   iEvent.getByLabel(jetsPt_,jetsPt);
   //  if(jetsPt->size() < 2)return; 
-  if(jetsPt->size() > 25 && channel != "Data")return;  //Crazy events with huge jet multiplicity in mc
+  if(jetsPt->size() > 20 && channel != "Data")return;  //Crazy events with huge jet multiplicity in mc
   iEvent.getByLabel(jetsPhi_,jetsPhi);
 
   if(isFirstEvent && takeBTagSFFromDB_){
@@ -2245,6 +2245,25 @@ void SingleTopSystematicsTreesDumper::analyze(const Event& iEvent, const EventSe
     else if(ntchpt_tags == 2)B=2; 
     else continue; 
  
+    string category = "all";
+
+    if (nJets == 2) {
+      if(B==0) category="2J0B";
+      if(B==1) category="2J1B";
+      if(B==2) category="2J2B";
+    }
+
+    if (nJets == 3) {
+      if(B==0) category="3J0B";
+      if(B==1) category="3J1B";
+      if(B==2) category="3J2B";
+    }
+
+    if (nJets == 4) {
+      if(B==0) category="4J0B";
+      if(B==1) category="4J1B";
+      if(B==2) category="4J2B";
+    }
 
     //LEGENDA
     //    0T = 0;
@@ -2312,7 +2331,7 @@ void SingleTopSystematicsTreesDumper::analyze(const Event& iEvent, const EventSe
       
       if(//leptonsFlavour_ == "electron" &&
 	 doTurnOn_){
-	if(syst== "noSyst" && (B==1 || B==4)){
+	if(syst== "noSyst" && (B==1 || B==2 || B==4 || B==5)){
 	  jetprobs.clear();
 	  jetprobs_j1up.clear();
 	  jetprobs_j2up.clear();
@@ -2326,12 +2345,13 @@ void SingleTopSystematicsTreesDumper::analyze(const Event& iEvent, const EventSe
 	  jetprobs_b1down.clear();
 	  jetprobs_b2down.clear();
 	  jetprobs_b3down.clear();
+	  cout << "category = " << category << endl;
 	  for(size_t i = 0;i<jetsEta->size();++i){
 	    double eta = jetsEta->at(i);
 	    double btag = jetsBTagAlgo->at(i);
 	    double pt = jetsPt->at(i);
 	    
-	    pushJetProbs(pt,btag,eta);
+	    pushJetProbs(pt,btag,eta,category);
 	  }
 	  //cout << "right before turn on "<< endl;
 	  turnOnWeightValue = turnOnProbs("noSyst",1);
@@ -2364,7 +2384,7 @@ void SingleTopSystematicsTreesDumper::analyze(const Event& iEvent, const EventSe
 	    double btag = jetsBTagAlgo->at(i);
 	    double pt = jetsPt->at(i);
 	    if (fabs(eta)>2.6) jetprobs.push_back(0.);
-	    jetprobs.push_back(jetprob(pt,btag,eta,syst));
+	    jetprobs.push_back(jetprob(pt,btag,eta,syst,category));
 	  }
 	  
 	  //cout << "jetprobs @syst: " << syst << " test 2" <<endl;
@@ -3633,10 +3653,34 @@ jetprobs_b2down.push_back(jetprob(pt,btag,eta,"BTagTrig2Down"));
 jetprobs_b3up.push_back(jetprob(pt,btag,eta,"BTagTrig3Up"));
 jetprobs_b3down.push_back(jetprob(pt,btag,eta,"BTagTrig3Down"));
 
+}
+
+void SingleTopSystematicsTreesDumper::pushJetProbs(double pt, double btag, double eta, string category){
+
+  jetprobs.push_back(jetprob(pt,btag,eta,"noSyst",category));
+
+  jetprobs_j1up.push_back(jetprob(pt,btag,eta,"JetTrig1Up",category));
+  jetprobs_j1down.push_back(jetprob(pt,btag,eta,"JetTrig1Down",category));
+
+  jetprobs_j2up.push_back(jetprob(pt,btag,eta,"JetTrig2Up",category));
+  jetprobs_j2down.push_back(jetprob(pt,btag,eta,"JetTrig2Down",category));
+
+  jetprobs_j3up.push_back(jetprob(pt,btag,eta,"JetTrig3Up",category));
+  jetprobs_j3down.push_back(jetprob(pt,btag,eta,"JetTrig3Down",category));
 
 
+  jetprobs_b1up.push_back(jetprob(pt,btag,eta,"BTagTrig1Up",category));
+  jetprobs_b1down.push_back(jetprob(pt,btag,eta,"BTagTrig1Down",category));
+
+  jetprobs_b2up.push_back(jetprob(pt,btag,eta,"BTagTrig2Up",category));
+  jetprobs_b2down.push_back(jetprob(pt,btag,eta,"BTagTrig2Down",category));
+
+  jetprobs_b3up.push_back(jetprob(pt,btag,eta,"BTagTrig3Up",category));
+  jetprobs_b3down.push_back(jetprob(pt,btag,eta,"BTagTrig3Down",category));
 
 }
+
+
 
 void SingleTopSystematicsTreesDumper::InitializeTurnOnReWeight(string rootFile = "CentralJet30BTagIP_2ndSF_mu.root"){
   
@@ -3662,6 +3706,99 @@ double SingleTopSystematicsTreesDumper::turnOnReWeight (double preWeight, double
   return a;
   //  return 1;//preWeight;
 }
+
+
+double SingleTopSystematicsTreesDumper::jetprob(double pt, double btag, double eta, string syst, string category){
+  double prob =1.;
+  if (fabs(eta)>2.6) return 0.;
+
+  double a=0, b=1, c=1;
+  double Da=0, Db=0, Dc=0;
+
+  if (category == "all") {
+    if(btag<-5) {a=0.0077758; b=-60.116; c=-0.152068; Da=0.000153449; Db=2.5739; Dc=0.00252408;};
+    if(btag>-5 && btag<0) {a=0.0146409; b=-26.4576; c=-0.0980147; Da=0.000244945; Db=0.985844; Dc=0.00183925;};
+    if(btag>0 && btag<1) {a=0.0253948; b=-21.022; c=-0.0887282; Da=0.000357964; Db=1.03223; Dc=0.00209319;};
+    if(btag>1 && btag<2) {a=0.0703379; b=-29.0223; c=-0.104394; Da=0.000657983; Db=1.68124; Dc=0.00228541;};
+    if(btag>2 && btag<3.41) {a=0.352481; b=-48.4847; c=-0.132251; Da=0.00298977; Db=4.34394; Dc=0.00347916;};
+    if(btag>3.41 && btag<5) {a=0.763141; b=-44.8777; c=-0.129685; Da=0.00414074; Db=3.68594; Dc=0.00300442;};
+    if(btag>5 && btag<10) {a=0.88673; b=-37.2375; c=-0.124288; Da=0.00252594; Db=1.99587; Dc=0.00190432;};
+    if(btag>10) {a=0.893354; b=-32.0102; c=-0.117089; Da=0.00284272; Db=2.67267; Dc=0.00278808;};
+  }
+
+  if (category == "2J0B") {
+    if(btag<-5) {a=0.010149; b=-44.4852; c=-0.134193; Da=0.000424185; Db=5.98579; Dc=0.00711515;};
+    if(btag>-5 && btag<0) {a=0.0137939; b=-19.3191; c=-0.0915065; Da=0.000457595; Db=2.02092; Dc=0.00470593;};
+    if(btag>0 && btag<1) {a=0.0244409; b=-14.1205; c=-0.0777199; Da=0.000685284; Db=1.76325; Dc=0.00476051;};
+    if(btag>1 && btag<2) {a=0.063952; b=-23.3471; c=-0.102881; Da=0.00118529; Db=5.25208; Dc=0.0077888;};
+    if(btag>2 && btag<3.41) {a=0.320334; b=-55.552; c=-0.147639; Da=0.00543237; Db=15.6467; Dc=0.0107871;};
+    if(btag>3.41 && btag<5) {a=0.7; b=-31.4384; c=-0.119407; Da=0; Db=16.1475; Dc=0.0211104;};
+    if(btag>5 && btag<10) {a=0.8; b=-36.4544; c=-0.123358; Da=0; Db=21.3602; Dc=0.0227449;};
+    if(btag>10) {a=0.6; b=-32.6981; c=-0.137511; Da=0; Db=24.9604; Dc=0.0320551;};
+  }
+
+  if (category == "2J1B") {
+    if(btag<-5) {a=0.047924; b=-84.3775; c=-0.156228; Da=0.005622; Db=55.1893; Dc=0.0287191;};
+    if(btag>-5 && btag<0) {a=0.0404619; b=-33.1644; c=-0.121452; Da=0.00437376; Db=19.603; Dc=0.0270787;};
+    if(btag>0 && btag<1) {a=0.0772684; b=-16.5411; c=-0.0782293; Da=0.00774719; Db=9.97067; Dc=0.0209471;};
+    if(btag>1 && btag<2) {a=0.165568; b=-28.7429; c=-0.108699; Da=0.00999776; Db=22.209; Dc=0.0262953;};
+    if(btag>2 && btag<3.41) {a=0.51344; b=-52.8488; c=-0.144001; Da=0.0224112; Db=42.7758; Dc=0.0303205;};
+    if(btag>3.41 && btag<5) {a=0.754276; b=-32.3285; c=-0.127618; Da=0.00883339; Db=12.8681; Dc=0.0122165;};
+    if(btag>5 && btag<10) {a=0.881729; b=-53.2473; c=-0.143456; Da=0.00538207; Db=16.4537; Dc=0.00954425;};
+    if(btag>10) {a=0.887977; b=-18.8237; c=-0.108684; Da=0.00702462; Db=7.78114; Dc=0.0116665;};
+  }
+
+  if (category == "3J1B") {
+    if(btag<-5) {a=0.0679675; b=-24.7183; c=-0.0958252; Da=0.0083518; Db=9.49432; Dc=0.0167568;};
+    if(btag>-5 && btag<0) {a=0.0613161; b=-44.4129; c=-0.113647; Da=0.00521515; Db=24.3527; Dc=0.0214109;};
+    if(btag>0 && btag<1) {a=0.0761918; b=-7.28855; c=-0.0650233; Da=0.00671703; Db=5.19124; Dc=0.0233683;};
+    if(btag>1 && btag<2) {a=0.159455; b=-777.38; c=-0.217836; Da=0.00692603; Db=1186.74; Dc=0.0555289;};
+    if(btag>2 && btag<3.41) {a=0.485651; b=-254.221; c=-0.19753; Da=0.0171844; Db=490.376; Dc=0.0704269;};
+    if(btag>3.41 && btag<5) {a=0.793926; b=-99.2618; c=-0.153005; Da=0.00940551; Db=64.0769; Dc=0.0188753;};
+    if(btag>5 && btag<10) {a=0.902455; b=-41.6266; c=-0.13322; Da=0.00563464; Db=15.5405; Dc=0.0108613;};
+    if(btag>10) {a=0.900477; b=-68.1248; c=-0.14919; Da=0.00609345; Db=42.9801; Dc=0.0191141;};
+  }
+
+  if( (category == "3J2B") || (category == "2J2B") || (category == "4J2B")) {
+    if(btag<-5) {a=1.07958; b=-7.37709; c=-0.0129692; Da=1.94174; Db=1.45736; Dc=0.00922673;};
+    if(btag>-5 && btag<0) {a=0.05; b=-10.9527; c=-0.0526626; Da=0.0417526; Db=23.1368; Dc=0.049436;};
+    if(btag>0 && btag<1) {a=0.0326455; b=-6.07832e-10; c=-0.0850882; Da=0.000411279; Db=8.27379; Dc=8236.54;};
+    if(btag>1 && btag<2) {a=0.05; b=-10; c=-0.0658645; Da=0.0185228; Db=5.93494; Dc=0.0397298;};
+    if(btag>2 && btag<3.41) {a=0.641256; b=-3.68451; c=-0.0571733; Da=0.136284; Db=7.19057; Dc=0.10802;};
+    if(btag>3.41 && btag<5) {a=0.809165; b=-10; c=-0.116691; Da=0.0155407; Db=9.66356; Dc=0.0104582;};
+    if(btag>5 && btag<10) {a=0.925628; b=-10; c=-0.0990547; Da=0.00854606; Db=7.33478; Dc=0.00374808;};
+    if(btag>10) {a=0.924157; b=-3.32795; c=-0.0675522; Da=0.0122716; Db=2.67603; Dc=0.0211218;};
+  }
+
+  if(syst=="BTagTrig1Up"){
+    a = a + Da;
+  }
+
+  if(syst=="BTagTrig1Down"){
+    a = a - Da;
+  }
+
+  if(syst=="BTagTrig2Up"){
+    b = b + Db;
+  }
+
+  if(syst=="BTagTrig2Down"){
+    b = b - Db;
+  }
+
+  if(syst=="BTagTrig3Up"){
+    c = c + Dc;
+  }
+
+  if(syst=="BTagTrig3Down"){
+    c = c - Dc;
+  }
+
+  prob = a*exp(b*exp(c*pt));
+  return prob;
+
+}
+
 
 
 double SingleTopSystematicsTreesDumper::jetprob(double pt, double btag, double eta, string syst){

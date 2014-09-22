@@ -150,6 +150,7 @@ class SingleTopSystematicsTreesDumper : public edm::EDAnalyzer {
   double turnOnReWeight (double preWeight, double pt, double tchpt);
   double jetprob(double pt,double tchp); 
   double jetprob(double pt,double tchp,double eta, string syst); 
+  double jetprob(double pt,double tchp,double eta, string syst, string category); 
   double jetprobold(double pt,double tchp,double eta, string syst); 
   double jetprobpt(double pt); 
   double jetprobbtag(double tchp); 
@@ -164,6 +165,7 @@ class SingleTopSystematicsTreesDumper : public edm::EDAnalyzer {
 
   double turnOnProbs (string syst, int njets_req);
   void pushJetProbs (double pt, double btag, double eta);
+  void pushJetProbs (double pt, double btag, double eta, string category);
   void resetWeightsDoubles();
 
   
@@ -369,6 +371,7 @@ class SingleTopSystematicsTreesDumper : public edm::EDAnalyzer {
   //Variables to use as trees references
   double etaTree, etaTree2, cosTree, cosBLTree, cos1Tree, cos1BLTree, cos2Tree, cos2BLTree, topMassTree, top1MassTree, top2MassTree, totalWeightTree, weightTree, mtwMassTree, lowBTagTree, highBTagTree, mediumBTagTree,mediumlowBTagTree ,maxPtTree, minPtTree,maxLoosePtTree, topMassLowBTagTree, topMassBestTopTree, topMassMeas, bWeightTree, PUWeightTree,
     topMtwTree,HT,H,
+    lepTrigWeight,
     lepSF,
     lepSFIDUp,
     lepSFIDDown,
