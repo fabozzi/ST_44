@@ -87,7 +87,12 @@
   double lumi = 5006.;
   lumi = 1.;
   
-  TString folder = "/data3/scratch/users/fabozzi/SingleTop/ntp14apr14_Merged_trees_v2/";
+  bool useCompHep = false;
+
+  TString folder = "/data3/scratch/users/fabozzi/SingleTop/ntp28feb15_Merged_trees/";
+  //  TString folder = "/data3/scratch/users/fabozzi/SingleTop/ntp11sep14_Merged_trees_TETR/";
+
+  //  TString folder = "/data3/scratch/users/fabozzi/SingleTop/ntp11sep14_Merged_trees_Wjets_mtwcutBDT/";
   TString channel = "DataMu";
   TString lepton = "Mu";
 
@@ -118,14 +123,17 @@
   double TTBarScale = 1.0;
 
 
-  bool scaleToData = true; //  scaleToData = true;
+  bool scaleToData = false; //  scaleToData = true;
   bool nosig = false;
   bool dorescale = false;
   bool dolog = false;
 
+  // change postfix to _BDT if looking to BDT
   TString postfix_file = "";
+  //    TString postfix_file = "_BDT";
   //  TString postfix_file_data = "_IsoMu17";
   TString postfix_file_data = "";
+  //    TString postfix_file_data = "_BDT";
   TString postfix = "PU";
   
 
@@ -156,10 +164,19 @@
   //  TString cut = "weight*(4428)*bWeight";
   //  TString cut = "(weight*5099.074)"; //5099.074
 
+  // PUWeight, bWeight: clear
+  // weight: for norm to 1 pb-1
+  // turnOnWeight: for hadronic part of x-trigger
+
   //used the first time
   //    TString cut = "(PUWeight*bWeight*weight*5099.074)"; //5099.074
   // tried the 2nd time
-  TString cut = "(PUWeight*bWeight*weight*(3901.813*turnOnWeight+1197.261))"; //5099.074
+  //  TString cut = "(PUWeight*bWeight*weight*(3901.813*turnOnWeight+1197.261))"; //5099.074
+  TString cut = "(PUWeight*bWeight*weight*((877.710*leptonSFA+2135*leptonSFAB+897.095*leptonSFB)*turnOnWeight+leptonSF*1184.158))"; 
+
+
+  // 
+  //  TString cut = "(PUWeight*weight*5099.074*leptonTrigWeight)"; //5099.074
 
   // this is only for single lepton trigger era
   //  TString cut = "(PUWeight*bWeight*weight*1197.261)";
@@ -196,6 +213,10 @@
   TString histoname = observable+TString("_")+channel+sample+TString("")+lepton;
   TH1D * TbarChannel =  new TH1D( histoname, histoname,nBins,observableMin,observableMax);
 
+  channel = "SChannelCompHep";
+  TString histoname = observable+TString("_")+channel+sample+TString("")+lepton;
+  TH1D * SChannelCompHep =  new TH1D( histoname, histoname,nBins,observableMin,observableMax);
+  
   channel = "SChannel";
   TString histoname = observable+TString("_")+channel+sample+TString("")+lepton;
   TH1D * SChannel =  new TH1D( histoname, histoname,nBins,observableMin,observableMax);
@@ -239,6 +260,7 @@
 
   channel = "Data";
   TString filename = (folder + "/DataMu"+postfix_file_data+".root");
+  //  TString filename = (folder + "/Data"+postfix_file_data+".root");
   TFile * f = new TFile (filename,"OPEN");
   if( !f->IsOpen() ){
     cout<< " WARNING FILE " << filename << endl;
@@ -252,6 +274,7 @@
   Data->Add(tmp);
   delete tmp;
   f->Close("R");delete f;
+
   
   channel = "TTBar";
   filename = (folder + "/"+channel+""+postfix_file+".root");
@@ -269,7 +292,7 @@
   delete tmp;
   f->Close("R");  
   delete f;
-  
+
   channel = "TChannel";
   filename = (folder + "/"+channel+""+postfix_file+".root");
   f = TFile::Open(filename);
@@ -300,6 +323,23 @@
   delete tmp;
   f->Close("R");delete f;
 
+  channel = "SChannelCompHep";
+  filename = (folder + "/"+channel+""+postfix_file+".root");
+  cout << "filename schan chep " << filename << endl;
+  f = TFile::Open(filename);
+  if( !f->IsOpen() ){
+    cout<< " WARNING FILE " << filename << endl;
+    continue;
+  }  
+  TString mupath = "TreesMu/SChannel_"+sample+"";
+  TString elepath = "TreesMu/SChannel_"+sample+"";
+  cout << "treesmu path schan chep " << mupath << endl;
+  TH1D * tmp  = new TH1D("t","t",nBins,observableMin,observableMax);
+  ((TTree*)f->Get(mupath))->Project("t",observable,cut);
+  SChannelCompHep->Add(tmp,1.);
+  delete tmp;
+  f->Close("R");delete f;
+
   channel = "SChannel";
   filename = (folder + "/"+channel+""+postfix_file+".root");
   f = TFile::Open(filename);
@@ -315,7 +355,7 @@
   delete tmp;
   f->Close("R");delete f;
 
-    channel = "SbarChannel";
+  channel = "SbarChannel";
   filename = (folder + "/"+channel+""+postfix_file+".root");
   f = TFile::Open(filename);
   if( !f->IsOpen() ){
@@ -329,7 +369,7 @@
   SbarChannel->Add(tmp,1.);
   delete tmp;
   f->Close("R");delete f;
-  
+
   channel = "TWChannel";
   filename = (folder + "/"+channel+""+postfix_file+".root");
   f = TFile::Open(filename);
@@ -437,9 +477,32 @@
   delete tmp;
   f->Close("R");delete f;
 
+
+  // DO NOT UNCOMMENT THIS
+  /*
+
+  // Using QCD from MC
+  channel = "QCDMu";
+  filename = (folder + "/"+channel+""+postfix_file+".root");
+  f = TFile::Open(filename);
+  if( !f->IsOpen() ){
+    cout<< " WARNING FILE " << filename << endl;
+    continue;
+  }  
+  TString mupath = "TreesMu/"+channel+"_"+sample+"";
+  TString elepath = "TreesMu/"+channel+"_"+sample+"";
+  TH1D * tmp  = new TH1D("t","t",nBins,observableMin,observableMax);
+  ((TTree*)f->Get(mupath))->Project("t",observable,cut);
+  QCDMu->Add(tmp,1.);
+  delete tmp;
+  f->Close("R");delete f;
+
+  */
+
   channel = "QCDMu";
   //  TString filename = (folder + "/"+channel+postfix_file+".root");
   TString filename = (folder + "/DataMu"+postfix_file_data+".root");
+  //  TString filename = (folder + "/Data"+postfix_file_data+".root");
   cout << filename<<endl;
   f = TFile::Open(filename);
   if( !f->IsOpen() ){
@@ -486,6 +549,7 @@
   delete tmp;
   f->Close("R");delete f;
 
+
   //  QCDMu->Add(tmp,1.);
 
 
@@ -501,17 +565,22 @@
     TChannel->Reset("ICES");
   }
 
-//   TTBar->Scale(FracTTBar*lumi);
-//   TChannel->Scale(FracTChannel*lumi);
-//   TbarChannel->Scale(FracTbarChannel*lumi);
-//   SChannel->Scale(FracSChannel*lumi);
-//   SbarChannel->Scale(FracSbarChannel*lumi);
-//   TWChannel->Scale(FracTWChannel*lumi);
-//   TbarWChannel->Scale(FracTbarWChannel*lumi);
-//   WJets->Scale(FracWJets*lumi);
-//   ZJets->Scale(FracZJets*lumi);
-//  WJets->Smooth(2);
-
+  // scale for BDT plot
+  /*
+  WJets->Scale(2.); 
+  ZJets->Scale(2.); 
+  WW->Scale(2.); 
+  WZ->Scale(2.); 
+  ZZ->Scale(2.); 
+  TTBar->Scale(2.); 
+  TChannel->Scale(2.);
+  TbarChannel->Scale(2.); 
+  SChannelCompHep->Scale(2.); 
+  SChannel->Scale(2.); 
+  SbarChannel->Scale(2.); 
+  TWChannel->Scale(2.); 
+  TbarWChannel->Scale(2.); 
+  */
 
   if(scaleToData){
     double MCtot = QCDMu->Integral()+ 
@@ -528,6 +597,21 @@
     SChannel->Integral()+ 
     SbarChannel->Integral(); 
   
+    if (useCompHep) {
+      MCtot = QCDMu->Integral()+
+	WJets->Integral()+
+	ZJets->Integral()+
+	WW->Integral()+
+	WZ->Integral()+
+	ZZ->Integral()+
+	TTBar->Integral()+
+	TWChannel->Integral()+
+	TbarWChannel->Integral()+
+	TChannel->Integral()+
+	TbarChannel->Integral()+
+	SChannelCompHep->Integral();
+    }
+
   double DataMC_ratio = (Data->Integral()/(MCtot));
    
   QCDMu->Scale(DataMC_ratio); 
@@ -604,12 +688,19 @@
   SChannel->Add(SbarChannel);
   SChannel->SetFillColor(kYellow);
   SChannel->SetLineColor(kBlack);
-  hs1.Add(SChannel);
-  ttott += SChannel->Integral();
-  cout<< " s-ch " << SChannel->Integral() << " tot + schannel " << ttott <<endl;
+  SChannelCompHep->SetFillColor(kYellow);
+  SChannelCompHep->SetLineColor(kBlack);
+  if(useCompHep){
+    hs1.Add(SChannelCompHep);
+    ttott += SChannelCompHep->Integral();
+    cout<< " s-ch (CompHep) " << SChannelCompHep->Integral() << " tot + schannel " << ttott <<endl;
+  }  else {
+    hs1.Add(SChannel);
+    ttott += SChannel->Integral();
+    cout<< " s-ch " << SChannel->Integral() << " tot + schannel " << ttott <<endl;
+  }
   cout << " data tot "<< Data->Integral()<< " mc tot "<< ttott<< endl;
 
- 
  
   TCanvas C3("c3","c3"); 
   C3.cd()->SetRightMargin(0.04);
@@ -689,7 +780,10 @@
   leg->SetFillStyle(0);
 
   leg->AddEntry(Data,"data","pl");	
-  leg->AddEntry(SChannel,"s-channel","f");
+  if(useCompHep)
+    leg->AddEntry(SChannelCompHep,"s-channel","f");
+  else
+    leg->AddEntry(SChannel,"s-channel","f");
   leg->AddEntry(TChannel,"t-channel","f");
   leg->AddEntry(TWChannel,"tW-channel","f");
   leg->AddEntry(TTBar,"t#bar{t}","f");
@@ -715,7 +809,10 @@
   ALLMC->Add(TChannel);
   ALLMC->Add(TTBar);
   ALLMC->Add(WJets);
-  ALLMC->Add(SChannel);
+  if(useCompHep)
+    ALLMC->Add(SChannelCompHep);
+  else
+    ALLMC->Add(SChannel);
   ALLMC->Add(TWChannel);
   ALLMC->Add(WJets);
   ALLMC->Add(ZJets);
@@ -726,13 +823,15 @@
   cout << "test <<<<<" <<endl;
   
   if(scaleToData) {
-    C3.SaveAs(category+"/"+sample+"_"+oTitle+"_MuStack_resize_SToD.root");   
-    C3.SaveAs(category+"/"+sample+"_"+oTitle+"_MuStack_resize_SToD.png");  
-    C3.SaveAs(category+"/"+sample+"_"+oTitle+"_MuStack_resize_SToD.pdf");
+    C3.SaveAs(category+"/"+sample+"_"+oTitle+"_MuStack_resize_SToD_7TeV.root");   
+    C3.SaveAs(category+"/"+sample+"_"+oTitle+"_MuStack_resize_SToD_7TeV.png");  
+    C3.SaveAs(category+"/"+sample+"_"+oTitle+"_MuStack_resize_SToD_7TeV.pdf");
+    C3.SaveAs(category+"/"+sample+"_"+oTitle+"_MuStack_resize_SToD_7Tev.C");
   } else{
-   C3.SaveAs(category+"/"+sample+"_"+oTitle+"_MuStack_resize.root");   
-   C3.SaveAs(category+"/"+sample+"_"+oTitle+"_MuStack_resize.png");  
-   C3.SaveAs(category+"/"+sample+"_"+oTitle+"_MuStack_resize.pdf");
+   C3.SaveAs(category+"/"+sample+"_"+oTitle+"_MuStack_resize_7TeV.root");   
+   C3.SaveAs(category+"/"+sample+"_"+oTitle+"_MuStack_resize_7TeV.png");  
+   C3.SaveAs(category+"/"+sample+"_"+oTitle+"_MuStack_resize_7TeV.pdf");
+   C3.SaveAs(category+"/"+sample+"_"+oTitle+"_MuStack_resize_7TeV.C");
   }
 
 }

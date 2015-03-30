@@ -10,10 +10,10 @@ from macroFunctions import *
 #        ]
 
 
-#categories = ["2J_0T","2J_1T","2J_2T","3J_1T","3J_2T","4J_2T"]
+#categories = ["2J_2T","3J_2T"]
 #categories = ["4J_2T"]
-categories = ["2J_0T"]
-#categories = ["2J_2T"]
+#categories = ["2J_0T"]
+categories = ["3J_2T"]
 #categories = ["3J_2T"]
 #categories = ["NJets"] 
 cuts = ["noQCDCut"] ##,"noQCDCut_mtwCut"]
@@ -40,10 +40,15 @@ cuts = ["noQCDCut"] ##,"noQCDCut_mtwCut"]
 #variables = ["topMass","costhetalj","mtwMass","leptonPt"]
 #variables = ["bJetPt","metPt","topPt","DeltaR_lep_leadingjet"]
 #variables = ["firstJetPt","secondJetPt","thirdJetPt","nJLoose"]
-#variables = ["topMass","costhetalj","mtwMass","leptonPt","bJetPt","metPt","topPt","DeltaR_lep_leadingjet","firstJetPt","secondJetPt","thirdJetPt","nJLoose"]
+#variables = ["topMass","costhetalj","mtwMass","leptonPt","bJetPt","metPt","topPt","DeltaR_lep_leadingjet","firstJetPt","secondJetPt","thirdJetPt","nJLoose","leptonRelIso","looseJetPt","bJet1Pt","bJet2Pt","costhetalbl","HT","b1b2Pt","Mlb2","DeltaPhi_topbJet1","DeltaR_b1b2","fJetPt","DeltaPhi_topfJet","b1b2Mass"]
 
-#variables = ["topMass"]
-variables = ["looseJetPt"]
+# fjet = jet with lowest b-tag value
+
+#variables = ["DeltaPhi_topbJet1"]
+variables = ["topMass"]
+#variables = ["leptonPtZoom"]
+#variables = ["leptonPt"]
+#variables = ["looseJetPt"]
 
 
 
@@ -51,7 +56,9 @@ variables = ["looseJetPt"]
 
 
 #variables = ["BDT","BDT3J2T"]
-#variables = ["BDT"]
+#variables = ["BDT2J2T"]
+#variables = ["BDT2J1T","mtwMass"]
+#variables = ["BDT3J2T"]
 
 
 #variables = ["DeltaPhi_topbJetFin"]  #,"costhetalj_new","DeltaR_b1b2","metPt",,"mtwMass""Mlb1","Mlb2"]
