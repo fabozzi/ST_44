@@ -113,6 +113,9 @@ class SingleTopSystematicsTreesDumper : public edm::EDAnalyzer {
 
   double topMtw(math::PtEtaPhiELorentzVector lepton, math::PtEtaPhiELorentzVector jet, float metPx, float metPy);
 
+  // lepton SFs in the second period
+  void muonSFAB(float etaMu, float ptMu);
+  // lepton SFs in the first period
   void muonSF(float etaMu, float ptMu);
   void electronSF(float etaEle, float ptEle);
 
@@ -373,12 +376,21 @@ class SingleTopSystematicsTreesDumper : public edm::EDAnalyzer {
     topMtwTree,HT,H,
     lepTrigWeight,
     lepSF,
-    lepSFIDUp,
-    lepSFIDDown,
-    lepSFIsoUp,
-    lepSFIsoDown,
+    //    lepSFIDUp,
+    //    lepSFIDDown,
+    //    lepSFIsoUp,
+    //    lepSFIsoDown,
     lepSFTrigUp,
-    lepSFTrigDown;
+    lepSFTrigDown,
+    lepSFA,
+    lepSFATrigUp,
+    lepSFATrigDown,
+    lepSFAB,
+    lepSFABTrigUp,
+    lepSFABTrigDown,
+    lepSFB,
+    lepSFBTrigUp,
+    lepSFBTrigDown;
 
   /*
     sfID,sfIDup,sfIDdown,  
@@ -475,7 +487,7 @@ class SingleTopSystematicsTreesDumper : public edm::EDAnalyzer {
       float sf;
     };
     BTagWeight():
-      minTags(0),maxTags(0){;}
+      maxTags(0), minTags(0) {}
     BTagWeight(int jmin, int jmax) : 
       maxTags(jmax), minTags(jmin) {}
     
