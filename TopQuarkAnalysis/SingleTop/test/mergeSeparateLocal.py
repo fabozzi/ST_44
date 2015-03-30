@@ -3,8 +3,8 @@ import FWCore.ParameterSet.Config as cms
 import os,sys,re,shutil,commands
 
 
-inputDir = "/data3/scratch/users/fabozzi/SingleTop/ntp14apr14/"
-outputDir = "/data3/scratch/users/fabozzi/SingleTop/ntp14apr14_Merged/"
+inputDir = "/data3/scratch/users/fabozzi/SingleTop/ntp14jul14/"
+outputDir = "/data3/scratch/users/fabozzi/SingleTop/ntp11sep14_Merged/"
 
 #Original config file
 template = "copyFlavorSeparationTemplateSummer"
@@ -12,73 +12,72 @@ template = "copyFlavorSeparationTemplateSummer"
 #f = open(fName)
 
 
-option = "None"
+#option = "None"
 #option = "cmsRun"
 option = "qsub"
 
-nparts = 1
+#nparts = 40
+nparts = 4
 channels = [
-#"Mu_2011A_08Nov",
-#"Mu_2011B_19Nov",
-#"TTBar",
-#"TTBarQ2up",
-#"TTBarQ2down",
+#"WJetsMatchingup",
+#"WJetsMatchingdown",
 #"WJetsQ2up",
 #"WJetsQ2down",
-
+#"SbarChannelMassup",
+#"SbarChannelMassdown",
+#"SbarChannelQ2up",
+#"SbarChannelQ2down",
+#"SChannelMassup",
+#"SChannelMassdown",
+#"SChannelQ2up",
+#"SChannelQ2down",
+#"TTBarQ2up",
+#"TTBarQ2down",
 #"TTBarMatchingup",
-#"TTBarMatchingdown",
-    
-#"TChannel_Q2Up",
-#"TbarChannel_Q2Up",
-#"TChannel_Q2Down",
-#"TbarChannel_Q2Down",
-#"WJets",
-#"W1Jet",
-#"W2Jets"
-#"W3Jets"
-#"W4Jets"
-#"ZJets",
-#"TWChannel",
-#"TbarWChannel",
-#"TChannel",
-#"TbarChannel",
+#"TTBarMatchingdown",  
+#"TTBarMassup",  
+#"TTBarMassdown",  
+#"TChannelQ2up",
+#"TChannelQ2down",
+#"TChannelMassup",
+#"TChannelMassdown",
+#"TbarChannelMassup",
+#"TbarChannelMassdown",
+#"TbarChannelQ2up",
+#"TbarChannelQ2down",
+#---------------------------------------------
+#"TTBar",
+#"QCDMu",
 #"SChannel",
 #"SbarChannel",
+#"SChannelCompHep",
 #"TChannel",
-#"Ele_v1_A",
-#"Mu_v1_A",
-#"Mu_v1_B2",
-#"Mu_v1_B1",
-#"WW",
+#"TWChannel",
+#"TbarChannel",
+#"TbarWChannel",
 #"WZ",
-#"ZZ",
-#---------------------------------------------
-"QCDMu",
-"QCD_Pt_20to30_EMEnriched",
-"QCD_Pt_20to30_BCtoE",
-"QCD_Pt_30to80_EMEnriched",
-"QCD_Pt_30to80_BCtoE",
-"QCD_Pt_80to170_EMEnriched",
-"QCD_Pt_80to170_BCtoE",
-"QCD_HT_100_200_GJets",
-"QCD_HT_200_inf_GJets",
-"QCD_HT_40_100_GJets",
-"SChannel",
-"SbarChannel",
-"TChannel",
-"TWChannel",
-"TbarChannel",
-"TbarWChannel",
-"WW",
 #"ZJets",
-#"TTBar",
 #"W1Jet",
 #"W2Jets",
 #"W3Jets",
+#"W4Jets",
+#"ZZ",
+#"WW",
 #"Ele_2011A_08Nov",
 #"Ele_2011B_19Nov",
 #"Mu_2011A_08Nov",
+#"Mu_2011B_19Nov",
+#"QCD_Pt_20to30_EMEnriched",
+#"QCD_Pt_20to30_BCtoE",
+#"QCD_Pt_30to80_EMEnriched",
+#"QCD_Pt_30to80_BCtoE",
+#"QCD_Pt_80to170_EMEnriched",
+#"QCD_Pt_80to170_BCtoE",
+#"QCD_HT_100_200_GJets",
+#"QCD_HT_200_inf_GJets",
+#"QCD_HT_40_100_GJets",
+#"WJets",
+ 
 ]
 
 for channel in channels: 
