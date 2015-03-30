@@ -49,9 +49,7 @@ duplicateCheckMode = cms.untracked.string('noDuplicateCheck'),
 #PileUpSync
 
 #Output
-#process.TFileService = cms.Service("TFileService", fileName = cms.string("/castor/cern.ch/user/m/mmerola/SingleTop_2012/TreesJune/TChannel.root"))
-process.TFileService = cms.Service("TFileService", fileName = cms.string("/data3/scratch/users/fabozzi/SingleTop/ntp11sep14_Merged_trees/TChannel.root"))
-#process.TFileService = cms.Service("TFileService", fileName = cms.string("testNoPU.root"))
+process.TFileService = cms.Service("TFileService", fileName = cms.string("/data3/scratch/users/fabozzi/SingleTop/ntp28feb15_Merged_trees/TChannel.root"))
 
 #process.load("SingleTopAnalyzers_cfi")
 
